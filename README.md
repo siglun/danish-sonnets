@@ -113,9 +113,10 @@ Iambic verse consists of feet with two syllables, i.e. if there are
 five feet per line we could say that iambic verse has approximately 10
 vowels per line. It is an approximation since a iamb should have the
 stress on the second syllable (due to ignorance I ignore the musical
-aspect of this).
+aspect of this; we will include false positives since lines of poetry
+with five feet must not be *iambic*).
 
-This script counts the average number of vowels per line in a poem:
+Any way, this script calculates the average number of vowels per line in a poem:
 
 ```
   <xsl:variable name="vowel_numbers" as="xs:integer *">
@@ -155,7 +156,7 @@ You can easily find out the strophe structure for each poem:
     <xsl:for-each select=".//t:lg[t:l]">
        <xsl:value-of select="count(t:l)"/>
     </xsl:for-each>
-    </xsl:variable>
+ </xsl:variable>
  <xsl:value-of select="$lines_per_strophe"/>
 ```
 
@@ -163,7 +164,7 @@ That is, iterate over the line groups in a poem, and count the lines
 in each of them.
 
 I have summarized these data about all poems in ADL with 14
-lines. There are 243 of them (there are more, but they have erroneous
+lines. There are 243 of them (there are more, but they may have erroneous
 markup).
 
 You find these sonnet candidates in an html table here
@@ -249,9 +250,19 @@ It works, sort of until it doesn't. For poems with 4 4 3 3 strophe structure,  y
 grep -P '^[a-q]{14}' rhymes_3chars.text   | sort | uniq -c | sort -rn
 ```
 
-to get a list of rhyme structure and their frequencies. This silly
-algorithm does give two of the most common rhyme structure for
-sonnets, but misses a lot of order in the remaining chaos:
+to get a list of rhyme structure and their frequencies. The rhyme
+structures that occur more than twice are:
+
+```
+6 abbaabbacdecde
+5 abbaabbacdcdcd
+4 abcaadeafgghii
+4 abbaabbacdcede
+3 abcaadeafghgig
+```
+
+This silly algorithm does actually give two of the most common rhyme structure
+for sonnets, but misses a lot of order in the remaining chaos:
 
 ```
 abbaabbacdcdcd
@@ -273,7 +284,8 @@ Also it is one of the socalled Petrarchan rhyme schemes,
 ## What are the sonnets about?
 
 Any piece of art are meant to be consumed by human beings. Poems
-should ideally be understood when read aloud and listened to.
+should ideally be understood when read aloud and listened to. By
+humans.
 
 The cliché says that art and literature is about what it means to be
 human. Could we therefore hypothesize that the sonnets address this
@@ -284,31 +296,34 @@ Assume that, at least as a first approximation, the words chosen by
 poets mirror those subjects. For instance, if being human implies
 lethality we could, on a statistical level hypothesize that words like
 "mourning", "grief", "death", "grave", etc appear in the sonnet corpus
-more than in a random sample of text. The opposites would also
-expected, concepts related to "love", "birth", "compassion" etc belong
+more than in a random sample of text. The opposites would also be
+expected: Concepts related to "love", "birth", "compassion" belong
 to the sphere of being human.
 
 I have detagged the poems with 14 lines and strophe structure 4 4 3 3,
 tokenized their texts and calculated the word frequencies. As a matter
 of fact, I've done that in two ways:
 
-(i) The first being doing the classical tokenize and then pipe the stuff through
+(i) The first being doing the classical tokenization and followed by a
+pipe the stuff through
 
 ```
 sort | uniq -c | sort -n
 ```
 
-such that I get a list of the 4781 Danish words that are used in these sonnets.
+such that I get a list of the 4781 Danish words that are used in our
+sonnet sample.
 
-(ii) The second way is the same, but I do it twice, once for each sonnet and
-then for the whole corpus.
+(ii) The second way is the same, but I do it twice, once for each
+sonnet such that I get a list of words for each sonnet. Then I repeat
+that for the list I got in the first step.
 
-That means that I get 
+This means that I get 
 
 * one list of word frequencies and 
 * a second list giving not of the number of occurences of each word, but the number of sonnets the word occurs in.
 
-There are 160 sonnets thus selected in the corpus, and the most
+There are 160 sonnets in the selection, and the most
 frequent word occurs in all of them. These are the fifteen most
 commont word a measured by the [number of sonnets they occur
 in](poem_frequencies.text). Number of poems in the left column.
@@ -358,12 +373,12 @@ corpus](frequencies.text). Number of words in corpus in left column.
 As you can see this corroborates the established observation that the
 most frequent words in a corpus hardly ever describes the subject
 matter of the texts (these words are conjunctions, pronouns,
-prepositions and the like).
+prepositions and the like). The distribution of the number of sonnets
+the words appear in:
 
 ![Distribution](distro.png)
 
-The distribution of the number of sonnets the words appear in. There
-is just one word appearing in all 160 sonnets. It is 'og' meaning
+There is just one word appearing in all 160 sonnets. It is 'og' meaning
 'and'. Then there are 3304 words occurring in just one sonnet. The
 [distribution.text](distribution.text) is generated from
 [poem_frequencies.text](poem_frequencies.text) using
@@ -374,7 +389,7 @@ sed 's/\ [a-z]*$//' poem_frequencies.text | sort | uniq -c | sort -n -k 2 > dist
 ```
 Column 1 is plotted against column 2.
 
-In this corpus it seems that *aboutishness* start at words occuring in about
+In this particular corpus, it seems that *aboutishness* start at words occuring in about
 25% of the sonnets, or less.
 
 As example we have death, dead and lethal etc in a number of
