@@ -248,7 +248,7 @@ them. The actual text is then piped through a perl script that
 analyse the endings according to the silly and flawed method described
 above.
 
-It works, sort of until it doesn't. For poems with 4 4 3 3 strophe structure,  you can find the result in
+It works, sort of, until it doesn't. For poems with 4 4 3 3 strophe structure,  you can find the result in
 [rhymes_3chars.text](rhymes_3chars.text) and
 [rhymes_2chars.text](rhymes_2chars.text) for three and two letter rhymes, respectively. Run 
 
@@ -309,23 +309,23 @@ I have detagged the poems with 14 lines and strophe structure 4 4 3 3,
 tokenized their texts and calculated the word frequencies. As a matter
 of fact, I've done that in two ways:
 
-(i) The first being doing the classical tokenization and followed by a
-pipe the stuff through
+(i) The first being doing a classical tokenization followed by 
+piping the stuff through
 
 ```
 sort | uniq -c | sort -n
 ```
 
 such that I get a list of the 4781 Danish words that are used in our
-sonnet sample, together with their frequencies.
+sonnet sample, sorted by their frequencies.
 
 (ii) The second way is the same, but I do it twice, once for each
 sonnet such that I get a list of words for each sonnet. Then I repeat
-that for the concatenated lists I got in the first step.
+that for the concatenated lists for all sonnets.
 
 This means that I get 
 
-* one list of word frequencies in the sample and 
+* one list of word frequencies in the entire sample and 
 * a second list giving not of the number of occurences of each word, but the number of sonnets the word occurs in.
 
 There are 160 sonnets in the selection, and the most
@@ -451,7 +451,7 @@ Men more than women, and in particular words implying bravery and male virtues
       5 mandens
 ```
 
-Graves occur less than death.
+remember that these sonnets are by men. Graves occur, for some reason, less than deaths
 
 
 ```
