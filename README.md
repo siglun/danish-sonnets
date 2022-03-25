@@ -100,7 +100,7 @@ implemented this using a [shell script](find_sonnet_candidates.sh) and
 [a transform](sonnet_candidate.xsl). Finally, we don't do anything
 unless there are 14 lines of poetry.
 
-This creates [a long table with data](sonnet_candidates.xml) on the sonnet candidates it finds.
+The transform creates [a long table with data](sonnet_candidates.xml) on the sonnet candidates it finds.
 
 ## Approximately pentametric
 
