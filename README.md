@@ -1,6 +1,11 @@
 
 # Sex, death and sonnets
 
+Sigfrid Lundberg<br/>
+The Royal Danish Library
+
+## Introduction
+
 If there are any sonnets, do they rhyme and what are they about?
 
 I have since many years been a great fan of Kenneth Ward Church's
