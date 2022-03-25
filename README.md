@@ -283,9 +283,8 @@ Also it is one of the socalled Petrarchan rhyme schemes,
  
 ## What are the sonnets about?
 
-Any piece of art are meant to be consumed by human beings. Poems
-should ideally be understood when read aloud and listened to. By
-humans.
+Any piece of art is meant to be consumed by humans. Poems should
+ideally be understood when read aloud and listened to. By humans.
 
 The cliché says that art and literature is about what it means to be
 human. Could we therefore hypothesize that the sonnets address this
@@ -294,7 +293,7 @@ some 100 &ndash; 200 years ago?
 
 Assume that, at least as a first approximation, the words chosen by
 poets mirror those subjects. For instance, if being human implies
-lethality we could, on a statistical level hypothesize that words like
+lethality, we could, on a statistical level hypothesize that words like
 "mourning", "grief", "death", "grave", etc appear in the sonnet corpus
 more than in a random sample of text. The opposites would also be
 expected: Concepts related to "love", "birth", "compassion" belong
@@ -312,15 +311,15 @@ sort | uniq -c | sort -n
 ```
 
 such that I get a list of the 4781 Danish words that are used in our
-sonnet sample.
+sonnet sample, together with their frequencies.
 
 (ii) The second way is the same, but I do it twice, once for each
 sonnet such that I get a list of words for each sonnet. Then I repeat
-that for the list I got in the first step.
+that for the concatenated lists I got in the first step.
 
 This means that I get 
 
-* one list of word frequencies and 
+* one list of word frequencies in the sample and 
 * a second list giving not of the number of occurences of each word, but the number of sonnets the word occurs in.
 
 There are 160 sonnets in the selection, and the most
@@ -372,7 +371,7 @@ corpus](frequencies.text). Number of words in corpus in left column.
 
 As you can see this corroborates the established observation that the
 most frequent words in a corpus hardly ever describes the subject
-matter of the texts (these words are conjunctions, pronouns,
+matter of texts (the words are conjunctions, pronouns,
 prepositions and the like). The distribution of the number of sonnets
 the words appear in:
 
@@ -464,9 +463,9 @@ Graves occur less than death.
 
 I think I could go on studying this for a while. However, I have to
 conclude this here, before the actual conclusions. There are
-interesting things to find here, though.
+interesting things to find here, though. Some of the are possible to investigate with simple methods, such as described in Kenneth Ward Church's tutorial ["Unix for Poets"](https://web.stanford.edu/class/cs124/kwc-unix-for-poets.pdf).
 
-The result from my armchair text processing exercise supports the
+The preliminary result from my armchair text processing exercise supports the
 notion that life was already in early modern Europe about sex, death
 and rock n'roll. Since rock wasn't there just yet, people had to be
 content with sonnets for the time being.
