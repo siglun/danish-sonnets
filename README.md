@@ -466,7 +466,7 @@ Graves occur less than death.
 
 # Conclusions
 
-I think I could go on studying this for a while. However, I have to
+I think I could go on studying this for quite some time. However, I have to
 conclude this here, before the actual conclusions. There are
 interesting things to find here, though. Some of them are possible to study using simple methods, such as those described by Kenneth Ward Church in ["Unix for Poets"](https://web.stanford.edu/class/cs124/kwc-unix-for-poets.pdf).
 
