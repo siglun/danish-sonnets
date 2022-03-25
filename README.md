@@ -16,13 +16,12 @@ text. I am not even sure I really know what a sonnet is.
 ## Finding poems
 
 The ADL text corpus contains [literary
-texts](https://github.com/kb-dk/public-adl-text-sources). It is easy
+texts](https://github.com/kb-dk/public-adl-text-sources). Since the texts are encoded in according the [TEI guidelines](https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html) it is easy
 to find poetry in those files. Typically a piece of poetry is encoded
-as [lines within line
-groups](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-lg.html). More
-often than not it is embedded in a &lt;div> ... &lt;/div> element.
+as [lines within line groups](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-lg.html). More
+often than not the line groups are embedded in &lt;div> ... &lt;/div> elements.
 
-It may look like this in the source
+A poem may look like this in the source
 
 ```
   <div xml:id="workid68251" decls="#biblid68251">
@@ -95,13 +94,13 @@ We can use that query in XSLT like this:
 ```
 
 So we iterate over all &lt;div>...&lt;/div>s having line groups inside
-and have a @decls attribute containing a reference to metadata in the
-TEI header. The latter is not universal, but we use it in ADL. I have
+and have a `@decls` attribute containing a reference to metadata in the
+TEI header. The latter is not universal, but we use it in ADL and that attributes is only set on pieces that a cataloger has designated as a _work_. I have
 implemented this using a [shell script](find_sonnet_candidates.sh) and
 [a transform](sonnet_candidate.xsl). Finally, we don't do anything
 unless there are 14 lines of poetry.
 
-This creates a long table with data on the sonnet candidates it finds.
+This creates [a long table with data](sonnet_candidates.xml) on the sonnet candidates it finds.
 
 ## Approximately pentametric
 
@@ -115,6 +114,8 @@ five feet per line we could say that iambic verse has approximately 10
 vowels per line. It is an approximation since a iamb should have the
 stress on the second syllable (due to ignorance I ignore the musical
 aspect of this).
+
+This script counts the average number of vowels per line in a poem:
 
 ```
   <xsl:variable name="vowel_numbers" as="xs:integer *">
@@ -133,7 +134,7 @@ length which should equal the number of vowels per line and add them
 together for all lines in the poem. Finally we divide that sum with 14
 and get the average number of vowels per line.
 
-For a sonnet it would be 10, [or occasionally a little
+For a sonnet it would be about 10, [or occasionally a little
 more](https://en.wikipedia.org/wiki/Hendecasyllable). In the Michaëlis poem
 quoted above it is 10.4.
 
@@ -250,7 +251,7 @@ grep -P '^[a-q]{14}' rhymes_3chars.text   | sort | uniq -c | sort -rn
 
 to get a list of rhyme structure and their frequencies. This silly
 algorithm does give two of the most common rhyme structure for
-sonnets, but misses a lot of order in the chaos:
+sonnets, but misses a lot of order in the remaining chaos:
 
 ```
 abbaabbacdcdcd
@@ -289,18 +290,20 @@ to the sphere of being human.
 
 I have detagged the poems with 14 lines and strophe structure 4 4 3 3,
 tokenized their texts and calculated the word frequencies. As a matter
-of fact, I've done that in two ways: The first being doing the
-classical tokenize and then pipe the stuff through
+of fact, I've done that in two ways:
+
+(i) The first being doing the classical tokenize and then pipe the stuff through
 
 ```
 sort | uniq -c | sort -n
 ```
 
-such that I get a list of the 4781 Danish words that are used in these
-sonnets.
+such that I get a list of the 4781 Danish words that are used in these sonnets.
 
-The second way is the same, but I do it twice, once foreach sonnet and
-then for the whole corpus. That means that I get 
+(ii) The second way is the same, but I do it twice, once for each sonnet and
+then for the whole corpus.
+
+That means that I get 
 
 * one list of word frequencies and 
 * a second list giving not of the number of occurences of each word, but the number of sonnets the word occurs in.
@@ -371,7 +374,7 @@ sed 's/\ [a-z]*$//' poem_frequencies.text | sort | uniq -c | sort -n -k 2 > dist
 ```
 Column 1 is plotted against column 2.
 
-In this corpus it seems that aboutishness start at words occuring in
+In this corpus it seems that *aboutishness* start at words occuring in about
 25% of the sonnets, or less.
 
 As example we have death, dead and lethal etc in a number of
