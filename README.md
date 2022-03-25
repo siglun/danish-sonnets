@@ -463,7 +463,7 @@ Graves occur less than death.
 
 I think I could go on studying this for a while. However, I have to
 conclude this here, before the actual conclusions. There are
-interesting things to find here, though. Some of the are possible to investigate with simple methods, such as described in Kenneth Ward Church's tutorial ["Unix for Poets"](https://web.stanford.edu/class/cs124/kwc-unix-for-poets.pdf).
+interesting things to find here, though. Some of them are possible to study using simple methods, such as those described by Kenneth Ward Church in ["Unix for Poets"](https://web.stanford.edu/class/cs124/kwc-unix-for-poets.pdf).
 
 The preliminary result from my armchair text processing exercise supports the
 notion that life was already in early modern Europe about sex, death
