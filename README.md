@@ -15,8 +15,9 @@ is an investigation of what can be done with a corpus of
 literary text with very simple tools similar to the ones described by
 Church in his tutorial.
 
-I do not claim that there is anything novel or even significant in this
-text. Being a scientist, I am not even sure I really know what a sonnet is.
+I do not claim that there is anything novel or even significant in
+this text. Being a scientist, I think like a scientist and don't
+expect any deep literary theory here.
  
 ## Finding poems
 
