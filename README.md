@@ -22,7 +22,7 @@ expect any deep literary theory here.
 ## Finding poems
 
 The ADL text corpus contains [literary
-texts](https://github.com/kb-dk/public-adl-text-sources). Since the texts are encoded in according the [TEI guidelines](https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html) it is easy
+texts](https://github.com/kb-dk/public-adl-text-sources). Since the texts are encoded according to the [TEI guidelines](https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html) it is easy
 to find poetry in those files. Typically a piece of poetry is encoded
 as [lines within line groups](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-lg.html). More
 often than not the line groups are embedded in &lt;div> ... &lt;/div> elements.
@@ -101,7 +101,7 @@ We can use that query in XSLT like this:
 
 So we iterate over all &lt;div>...&lt;/div>s having line groups inside
 and have a `@decls` attribute containing a reference to metadata in the
-TEI header. The latter is not universal, but we use it in ADL and that attributes is only set on pieces that a cataloger has designated as a _work_. I have
+TEI header. The latter is not universal, but we use it in ADL and that attribute is only set on pieces that a cataloger has designated as a _work_. I have
 implemented this using a [shell script](find_sonnet_candidates.sh) and
 [a transform](sonnet_candidate.xsl). Finally, we don't do anything
 unless there are 14 lines of poetry.
