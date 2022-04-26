@@ -1,54 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet href="render.xsl" type="text/xsl" ?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="root">
-  <teiHeader xml:id="header">
-    <fileDesc xml:id="md">
-      <titleStmt xml:id="titles">
-        <title type="main">Sex, death and sonnets</title>
-        <title type="sub">Musings of a software developer</title>
-        <author><persName><forename>Sigfrid</forename><surname>Lundberg</surname></persName></author>
-      </titleStmt>
-      <publicationStmt>
-        <p>
-        </p>
-      </publicationStmt>
-      <sourceDesc>
-        <p>
-        </p>
-      </sourceDesc>
-    </fileDesc>
-  </teiHeader>
-  <text>
-    <front>
-      <docTitle>
-	<titlePart>
-          <title type="main">Sex, death and sonnets</title>
-          <title type="sub">Musings of a software developer</title>
-        </titlePart>
-      </docTitle>
-      <docAuthor>
-	<name>Sigfrid Lundberg</name>
-	<address>
-	  <addrLine>slu@kb.dk</addrLine>
-	  <addrLine>Digital Transformation</addrLine>
-	  <addrLine>Royal Danish Library</addrLine>
-	  <addrLine>Post box 2149</addrLine>
-	  <addrLine>1016 Copenhagen K</addrLine>
-	  <addrLine>Denmark</addrLine>
-	</address>
-      </docAuthor>
-      <div type="abstract">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Sex, death and sonnetsMusings of a software developer</title>
+    <style type="text/css" media="all">
+	  @import "html_print.css";
+	</style>
+  </head>
+  <body><h1 class="title">
+          Sex, death and sonnets
+          Musings of a software developer
+        </h1><p class="author">Sigfrid Lundberg<br/>slu@kb.dk<br/>Digital Transformation<br/>Royal Danish Library<br/>Post box 2149<br/>1016 Copenhagen K<br/>Denmark<br/></p><blockquote class="abstract"><h3>Abstract</h3>
 	<p>This note discusses how software can recognize sonnets, by
 	analysis of length, strophe structure and number of syllables
 	per line. It also makes a simple content analysis based on
 	word frequency analyses.</p>
         <p>The results clearly shows that simple Unix for Poets
         analyses combines seamlessly with TEI markup and XML technologies.</p>
-      </div>
-    </front>
-    <body>
-      <div>
-        <head>Introduction</head>
+      </blockquote>
+      
+        <h2>Introduction</h2>
 
         <p>If there are any sonnets, do they rhyme and what are they about?</p>
 
@@ -62,49 +32,49 @@
         <p>I do not claim that there is anything novel or even significant in
         this text. Being a scientist, I think like a scientist and don't
         expect any deep literary theory here.</p>
-      </div>
-      <div>
-        <head>Finding poems</head>
+      
+      
+        <h2>Finding poems</h2>
 
         <p>The ADL text corpus contains [literary
         texts](https://github.com/kb-dk/public-adl-text-sources). Since the texts are encoded according to the [TEI guidelines](https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html) it is easy
         to find poetry in those files. Typically a piece of poetry is encoded
         as [lines within line groups](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-lg.html). More
-        often than not the line groups are embedded in &lt;div> ... &lt;/div> elements.</p>
+        often than not the line groups are embedded in &lt;div&gt; ... &lt;/div&gt; elements.</p>
 
         <p>A poem may look like this in the source</p>
 
-        <eg xml:space="preserve"><![CDATA[ 
-        <div xml:id="workid68251" decls="#biblid68251">
-        <head xml:id="idm140093058532672">Jeg elsker —</head>
-        <lg xml:id="idm140093058532240">
-        <l xml:id="idm140093058531984">Jeg elsker Himlens høje Harmoni,</l>
-        <l xml:id="idm140093058531520">dens Purpurblomst, som blaaner i det Fjærne,</l>
-        <l xml:id="idm140093058531024">den Fred, som risler ned fra Nattens Stjerne,</l>
-        <l xml:id="idm140093058530576">det Glimt af Gud, der glider mig forbi;</l>
-        </lg>
-        <lg xml:id="idm140093058530016">
-        <l xml:id="idm140093058529760">og Evighedens tavse Melodi,</l>
-        <l xml:id="idm140093058529328">de svundne Slægters kaldende Orkester,</l>
-        <l xml:id="idm140093058528848">et Tonehav om en usynlig Mester,</l>
-        <l xml:id="idm140093058528416">en Klang af Gud, der bruser mig forbi;</l>
-        </lg>
-        <lg xml:id="idm140093058527856">
-        <l xml:id="idm140093058527600">en magisk Magt fra Hjertets mørke Celle,</l>
-        <l xml:id="idm140093058527120">de stærke Længsler, som mod Lyset vælde,</l>
-        <l xml:id="idm140093058526640">Naturens evigunge Fantasi;</l>
-        </lg>
-        <lg xml:id="idm140093058526080">
-        <l xml:id="idm140093058525824">det Liv, der spirer midt i selve Døden,</l>
-        <l xml:id="idm140093058525344">den Sol, der stiger midt i Aftenrøden,</l>
-        <l xml:id="idm140093058524864">— o Glimt af Gud, der glider mig forbi!</l>
-        </lg>
-        <p xml:id="idm140093058524288">
-        <date xml:id="idm140093058524032">12. Septbr. 1893.</date>
-        </p>
-        </div>
-        ]]>
-        </eg>
+         
+        &lt;div xml:id="workid68251" decls="#biblid68251"&gt;
+        &lt;head xml:id="idm140093058532672"&gt;Jeg elsker —&lt;/head&gt;
+        &lt;lg xml:id="idm140093058532240"&gt;
+        &lt;l xml:id="idm140093058531984"&gt;Jeg elsker Himlens høje Harmoni,&lt;/l&gt;
+        &lt;l xml:id="idm140093058531520"&gt;dens Purpurblomst, som blaaner i det Fjærne,&lt;/l&gt;
+        &lt;l xml:id="idm140093058531024"&gt;den Fred, som risler ned fra Nattens Stjerne,&lt;/l&gt;
+        &lt;l xml:id="idm140093058530576"&gt;det Glimt af Gud, der glider mig forbi;&lt;/l&gt;
+        &lt;/lg&gt;
+        &lt;lg xml:id="idm140093058530016"&gt;
+        &lt;l xml:id="idm140093058529760"&gt;og Evighedens tavse Melodi,&lt;/l&gt;
+        &lt;l xml:id="idm140093058529328"&gt;de svundne Slægters kaldende Orkester,&lt;/l&gt;
+        &lt;l xml:id="idm140093058528848"&gt;et Tonehav om en usynlig Mester,&lt;/l&gt;
+        &lt;l xml:id="idm140093058528416"&gt;en Klang af Gud, der bruser mig forbi;&lt;/l&gt;
+        &lt;/lg&gt;
+        &lt;lg xml:id="idm140093058527856"&gt;
+        &lt;l xml:id="idm140093058527600"&gt;en magisk Magt fra Hjertets mørke Celle,&lt;/l&gt;
+        &lt;l xml:id="idm140093058527120"&gt;de stærke Længsler, som mod Lyset vælde,&lt;/l&gt;
+        &lt;l xml:id="idm140093058526640"&gt;Naturens evigunge Fantasi;&lt;/l&gt;
+        &lt;/lg&gt;
+        &lt;lg xml:id="idm140093058526080"&gt;
+        &lt;l xml:id="idm140093058525824"&gt;det Liv, der spirer midt i selve Døden,&lt;/l&gt;
+        &lt;l xml:id="idm140093058525344"&gt;den Sol, der stiger midt i Aftenrøden,&lt;/l&gt;
+        &lt;l xml:id="idm140093058524864"&gt;— o Glimt af Gud, der glider mig forbi!&lt;/l&gt;
+        &lt;/lg&gt;
+        &lt;p xml:id="idm140093058524288"&gt;
+        &lt;date xml:id="idm140093058524032"&gt;12. Septbr. 1893.&lt;/date&gt;
+        &lt;/p&gt;
+        &lt;/div&gt;
+        
+        
 
         <p>
           Michaëlis, Sophus: ”Jeg elsker —”, i Michaëlis, Sophus:
@@ -129,44 +99,44 @@
 
         <p>To be more precise, a sonnet has one more characteristics than having 14 lines,
         the lines should be in [iambic pentameter](https://en.wikipedia.org/wiki/Iambic_pentameter).</p>
-      </div>
+      
 
-      <div>
-        <head>Finding sonnets</head>
+      
+        <h2>Finding sonnets</h2>
 
         <p>You can easily find all poems based on a XPATH query like:</p>
 
-        <eg xml:space="preserve"><![CDATA[ 
+         
         //t:div[t:lg and @decls]
-        ]]>
-        </eg>
+        
+        
 
         <p>We can use that query in XSLT like this:</p>
 
-        <eg xml:space="preserve"><![CDATA[ 
-        <xsl:for-each select="//t:div[t:lg and @decls]">
-        <xsl:if test="count(.//t:lg/t:l)=14">
-        ]]>
-        </eg>
+         
+        &lt;xsl:for-each select="//t:div[t:lg and @decls]"&gt;
+        &lt;xsl:if test="count(.//t:lg/t:l)=14"&gt;
+        
+        
 
-        <p>So we iterate over all <![CDATA[<div>...</div>]]>s having line
+        <p>So we iterate over all &lt;div&gt;...&lt;/div&gt;s having line
         groups inside and have a `@decls` attribute containing a
         reference to metadata in the TEI header. The latter is not
         universal, but we use it in ADL and that attribute is only
         set on pieces that a cataloger has designated as a _work_. I
         have implemented this using a [shell
         script](find_sonnet_candidates.sh) and [a
-        transform](sonnet_candidate.xsl). Finally, we don&apos;t do
+        transform](sonnet_candidate.xsl). Finally, we don't do
         anything unless there are 14 lines of poetry.</p>
 
         <p>The transform creates [a long table with data](sonnet_candidates.xml) on the sonnet candidates it finds.</p>
-      </div>
+      
 
-      <div>
-        <head>Approximately pentametric</head>
+      
+        <h2>Approximately pentametric</h2>
 
-        <p>Finding &lt;div>...&lt;/div>s having 14 lines of poetry isn&apos;t good
-        enough. We are expecting iambic pentameter, don&apos;t we? To actually analyse
+        <p>Finding &lt;div&gt;...&lt;/div&gt;s having 14 lines of poetry isn't good
+        enough. We are expecting iambic pentameter, don't we? To actually analyse
         the texts for their rythmical properties is beyond me, but we could
         make an approximation.</p>
 
@@ -179,18 +149,18 @@
 
         <p>Any way, this script calculates the average number of vowels per line in poems with 14 lines:</p>
 
-        <eg xml:space="preserve"><![CDATA[ 
-        <xsl:variable name="vowel_numbers" as="xs:integer *">
-        <xsl:for-each select=".//t:lg/t:l">
-        <xsl:variable name="vowels">
-        <xsl:value-of select="replace(.,'[^iyeæøauoå]','')"/>
-        </xsl:variable>
-        <xsl:value-of select="string-length($vowels)"/>
-        </xsl:for-each>
-        </xsl:variable>
-        <xsl:value-of select="format-number(sum($vowel_numbers) div 14, '#.####')"/>
-        ]]>
-        </eg>
+         
+        &lt;xsl:variable name="vowel_numbers" as="xs:integer *"&gt;
+        &lt;xsl:for-each select=".//t:lg/t:l"&gt;
+        &lt;xsl:variable name="vowels"&gt;
+        &lt;xsl:value-of select="replace(.,'[^iyeæøauoå]','')"/&gt;
+        &lt;/xsl:variable&gt;
+        &lt;xsl:value-of select="string-length($vowels)"/&gt;
+        &lt;/xsl:for-each&gt;
+        &lt;/xsl:variable&gt;
+        &lt;xsl:value-of select="format-number(sum($vowel_numbers) div 14, '#.####')"/&gt;
+        
+        
 
         <p>
           We use the replace function and a regular expression to remove
@@ -203,14 +173,14 @@
         more](https://en.wikipedia.org/wiki/Hendecasyllable). In the Michaëlis poem
         quoted above it is 10.4.</p>
 
-      </div>
+      
 
-      <div>
+      
 
-        <head>Strophe structure</head>
+        <h2>Strophe structure</h2>
 
         <p>You can write a lot of nice poetry with 14 lines. Like Gustaf
-        Munch-Petersen&apos;s [en borgers
+        Munch-Petersen's [en borgers
         livshymne](https://tekster.kb.dk/text/adl-texts-munp1-shoot-workid62017)
         with one strophe with one line, then three strophes with four lines
         and finally a single line. The number of syllables per line seem to
@@ -220,15 +190,15 @@
         <p>You can easily find out the strophe structure for each poem:</p>
 
 
-        <eg xml:space="preserve"><![CDATA[ 
-        <xsl:variable name="lines_per_strophe" as="xs:integer *">
-        <xsl:for-each select=".//t:lg[t:l]">
-        <xsl:value-of select="count(t:l)"/>
-        </xsl:for-each>
-        </xsl:variable>
-        <xsl:value-of select="$lines_per_strophe"/>
-        ]]>
-        </eg>
+         
+        &lt;xsl:variable name="lines_per_strophe" as="xs:integer *"&gt;
+        &lt;xsl:for-each select=".//t:lg[t:l]"&gt;
+        &lt;xsl:value-of select="count(t:l)"/&gt;
+        &lt;/xsl:for-each&gt;
+        &lt;/xsl:variable&gt;
+        &lt;xsl:value-of select="$lines_per_strophe"/&gt;
+        
+        
 
 
         <p>That is, iterate over the line groups in a poem, and count the lines
@@ -241,27 +211,27 @@
         <p>You find these sonnet candidates in a table here
         [sonnet_candidates.xml](sonnet_candidates.xml). Find an extract below.</p>
 
-        <table>
-          <head>sonnet candidates</head>
-          <row> 
-            <cell>File name</cell>
-            <cell>Title</cell>
-            <cell>xml:id</cell>
-            <cell>metadata reference</cell>
-            <cell>Strophe structure</cell>
-            <cell>average number of vowels per line</cell>
-          </row>
-          <row>
-          <cell>|./aarestrup07val.xml| [Jeg havde faaet Brev fra dig, Nanette ...](https://tekster.kb.dk/text/adl-texts-aarestrup07val-shoot-workid73888)|workid73888|#biblid73888|4 4 3 3|11.0|</cell></row>
-          <row><cell>./aarestrup07val.xml| [Tag dette Kys, og tusind til, du Søde ...](https://tekster.kb.dk/text/adl-texts-aarestrup07val-shoot-workid75376) |workid75376|#biblid75376|4 4 3 3|11.0714|</cell></row>
-          <row><cell>|./aarestrup07val.xml| [Sonet](https://tekster.kb.dk/text/adl-texts-aarestrup07val-shoot-workid76444) |workid76444|#biblid76444|4 4 3 3|11.5|</cell></row>
-          <row><cell>|./brorson03grval.xml|[1.](https://tekster.kb.dk/text/adl-texts-brorson03grval-shoot-workid76607) |workid76607|#biblid76607|14|8.7143|</cell></row>
-          <row><cell>|./claussen07val.xml|[SKUMRING](https://tekster.kb.dk/text/adl-texts-claussen07val-shoot-workid63580)|workid63580|#biblid63580|14|10.8571|</cell></row>
-          <row><cell>|./claussen07val.xml| [TAAGE OG REGNDAGE](https://tekster.kb.dk/text/adl-texts-claussen07val-shoot-workid66036) |workid66036|#biblid66036|4 4 3 3|13.9286|</cell></row>
-          <row><cell>|./claussen07val.xml| [MAANENS TUNGSIND](https://tekster.kb.dk/text/adl-texts-claussen07val-shoot-workid66131) |workid66131|#biblid66131|4 4 3 3|13.8571|</cell></row>
-          <row><cell>|./jacobjp08val.xml| [I Seraillets Have](https://tekster.kb.dk/text/adl-texts-jacobjp08val-shoot-workid63094) |workid63094|#biblid63094|14|6.7143|</cell></row>
+        
+          <h2>sonnet candidates</h2>
+           
+            File name
+            Title
+            xml:id
+            metadata reference
+            Strophe structure
+            average number of vowels per line
+          
+          
+          |./aarestrup07val.xml| [Jeg havde faaet Brev fra dig, Nanette ...](https://tekster.kb.dk/text/adl-texts-aarestrup07val-shoot-workid73888)|workid73888|#biblid73888|4 4 3 3|11.0|
+          ./aarestrup07val.xml| [Tag dette Kys, og tusind til, du Søde ...](https://tekster.kb.dk/text/adl-texts-aarestrup07val-shoot-workid75376) |workid75376|#biblid75376|4 4 3 3|11.0714|
+          |./aarestrup07val.xml| [Sonet](https://tekster.kb.dk/text/adl-texts-aarestrup07val-shoot-workid76444) |workid76444|#biblid76444|4 4 3 3|11.5|
+          |./brorson03grval.xml|[1.](https://tekster.kb.dk/text/adl-texts-brorson03grval-shoot-workid76607) |workid76607|#biblid76607|14|8.7143|
+          |./claussen07val.xml|[SKUMRING](https://tekster.kb.dk/text/adl-texts-claussen07val-shoot-workid63580)|workid63580|#biblid63580|14|10.8571|
+          |./claussen07val.xml| [TAAGE OG REGNDAGE](https://tekster.kb.dk/text/adl-texts-claussen07val-shoot-workid66036) |workid66036|#biblid66036|4 4 3 3|13.9286|
+          |./claussen07val.xml| [MAANENS TUNGSIND](https://tekster.kb.dk/text/adl-texts-claussen07val-shoot-workid66131) |workid66131|#biblid66131|4 4 3 3|13.8571|
+          |./jacobjp08val.xml| [I Seraillets Have](https://tekster.kb.dk/text/adl-texts-jacobjp08val-shoot-workid63094) |workid63094|#biblid63094|14|6.7143|
 
-        </table>
+        
 
         <p>Sophus Claussen's first poem may or may not be a sonnet,
         Brorson's poem is not. All of those with strophe structure 4
@@ -269,11 +239,11 @@
         structure and the "approximately pentametric" number of
         vowels per line (and, by the way, Aarestrup often points out
         that he is actually writing sonnets in text or titles).</p>
-      </div>
+      
 
-      <div>
+      
 
-        <head>Then we have the rhymes</head>
+        <h2>Then we have the rhymes</h2>
 
         <p>Beauty is in the eye of the beholder, says Shakespeare. I believe that
         he is right. Then, however, I would like to add that the rhymes and
@@ -285,35 +255,35 @@
         <p>This is error prone, though. [Consider this sonnet by
         P.M. Møller](https://tekster.kb.dk/text/adl-texts-moeller01val-shoot-workid62307).</p>
 
-        <figure>
+        <div id="">
 
-          <head>SONET</head>
+          <p><small>SONET</small></p>
 
-          <lg>
-            <l>Den Svend, som Tabet af sin elskte frister,</l>
-            <l>Vildfremmed vanker om blandt Jordens Hytter;</l>
-            <l>Med Haab han efter Kirkeklokken lytter,</l>
-            <l>Som lover ham igen, hvad her han mister.</l>
-          </lg>
+          
+            Den Svend, som Tabet af sin elskte frister,
+            Vildfremmed vanker om blandt Jordens Hytter;
+            Med Haab han efter Kirkeklokken lytter,
+            Som lover ham igen, hvad her han mister.
+          
 
-          <lg>
-            <l>Men næppe han med en usalig bytter,</l>
-            <l>Hvis Hjerte, stedse koldt for Elskov, brister,</l>
-            <l>Som sig uelsket gennem Livet lister,</l>
-          <l>Hans Armod kun mod Tabet ham beskytter.</l></lg>
+          
+            Men næppe han med en usalig bytter,
+            Hvis Hjerte, stedse koldt for Elskov, brister,
+            Som sig uelsket gennem Livet lister,
+          Hans Armod kun mod Tabet ham beskytter.
 
-          <lg>
-            <l>Til Livets Gaade rent han savner Nøglen,</l>
-            <l>Hver Livets Blomst i Hjærtets Vinter fryser,</l>
-            <l>Han gaar omkring med underlige Fagter.</l>
-          </lg>
+          
+            Til Livets Gaade rent han savner Nøglen,
+            Hver Livets Blomst i Hjærtets Vinter fryser,
+            Han gaar omkring med underlige Fagter.
+          
 
-          <lg>
-            <l>Ræd, Spøgelser han ser, naar Solen lyser,</l>
-            <l>Modløs og syg, foragtet han foragter</l>
-            <l>Det skønne Liv som tom og ussel Gøglen.</l>
-          </lg>
-        </figure>
+          
+            Ræd, Spøgelser han ser, naar Solen lyser,
+            Modløs og syg, foragtet han foragter
+            Det skønne Liv som tom og ussel Gøglen.
+          
+        </div>
 
         <p>The the last syllable of the eight first lines are the same '-ter'. If
         you use some script to compare the endings you'll only find single
@@ -336,41 +306,41 @@
         analyse the endings according to the silly and flawed method described
         above.</p>
 
-        <p>It works, sort of, until it doesn&apos;t. For poems with 4 4 3 3 strophe structure,  you can find the result in
+        <p>It works, sort of, until it doesn't. For poems with 4 4 3 3 strophe structure,  you can find the result in
         [rhymes_3chars.text](rhymes_3chars.text) and
         [rhymes_2chars.text](rhymes_2chars.text) for three and two letter rhymes, respectively. Run </p>
 
-        <eg xml:space="preserve"><![CDATA[ 
+         
         grep -P '^[a-q]{14}' rhymes_3chars.text   | sort | uniq -c | sort -rn
-        ]]>
-        </eg>
+        
+        
 
         <p>to get a list of rhyme structure and their frequencies. The rhyme
         structures that occur more than twice are:</p>
 
-        <eg xml:space="preserve"><![CDATA[
+        
         6 abbaabbacdecde
         5 abbaabbacdcdcd
         4 abcaadeafgghii
         4 abbaabbacdcede
         3 abcaadeafghgig
-        ]]>
-        </eg>
+        
+        
 
         <p>This silly algorithm does actually give two of the most common rhyme structure
         for sonnets, but misses a lot of order in the remaining chaos:</p>
 
-        <eg xml:space="preserve"><![CDATA[
+        
         abbaabbacdcdcd
-        ]]>
-        </eg>
+        
+        
 
         <p>and</p>
 
-        <eg xml:space="preserve"><![CDATA[
+        
         abbaabbacdecde
-        ]]>
-        </eg>
+        
+        
 
         <p>So while it may fail more often than it succeeds, the successes give
         results that are reasonable.</p>
@@ -379,11 +349,11 @@
         Also it is one of the socalled Petrarchan rhyme schemes,
         [Cf. this](https://poetscollective.org/everysonnet/tag/abbaabbacdecde/).</p>
 
-      </div>
+      
 
-      <div>
+      
 
-        <head>What are the sonnets about?</head>
+        <h2>What are the sonnets about?</h2>
 
         <p>Any piece of art is meant to be consumed by humans. Poems should
         ideally be understood when read aloud and listened to. By humans.</p>
@@ -403,14 +373,14 @@
 
         <p>I have detagged the poems with 14 lines and strophe structure 4 4 3 3,
         tokenized their texts and calculated the word frequencies. As a matter
-        of fact, I&apos;ve done that in two ways:</p>
+        of fact, I've done that in two ways:</p>
 
         <p>(i) The first being doing a classical tokenization followed by 
         piping the stuff through</p>
 
-        <eg xml:space="preserve"><![CDATA[ 
+         
         sort | uniq -c | sort -n
-        ]]></eg>
+        
 
         <p>such that I get a list of the 4781 Danish words that are used in our
         sonnet sample, sorted by their frequencies.</p>
@@ -421,17 +391,17 @@
 
         <p>This means that I get </p>
 
-        <list>
-          <item>one list of word frequencies in the entire sample and </item>
-          <item>a second list giving not of the number of occurences of each word, but the number of sonnets the word occurs in.</item>
-        </list>
+        <ul>
+          <li>one list of word frequencies in the entire sample and </li>
+          <li>a second list giving not of the number of occurences of each word, but the number of sonnets the word occurs in.</li>
+        </ul>
 
         <p>There are 160 sonnets in the selection, and the most
         frequent word occurs in all of them. These are the fifteen most
         commont word a measured by the [number of sonnets they occur
         in](poem_frequencies.text). Number of poems in the left column.</p>
 
-        <eg xml:space="preserve"><![CDATA[ 
+         
         75 du
         76 sig
         82 er
@@ -447,13 +417,13 @@
         122 med
         150 i
         160 og
-        ]]></eg>
+        
 
         <p>and this is the list of the same thing, but measured as the grand
         total [occurrence of the words in the
         corpus](frequencies.text). Number of words in corpus in left column.</p>
 
-        <eg xml:space="preserve"><![CDATA[ 
+         
         109 min
         130 for
         144 du
@@ -469,7 +439,7 @@
         246 jeg
         382 i
         588 og
-        ]]></eg>
+        
 
         <p>As you can see this corroborates the established observation that the
         most frequent words in a corpus hardly ever describes the subject
@@ -484,9 +454,9 @@
         [distribution.text](distribution.text) is generated from
         [poem_frequencies.text](poem_frequencies.text) using</p>
 
-        <eg xml:space="preserve"><![CDATA[ 
-        sed 's/\ [a-z]*$//' poem_frequencies.text | sort | uniq -c | sort -n -k 2 > distribution.text
-        ]]></eg>
+         
+        sed 's/\ [a-z]*$//' poem_frequencies.text | sort | uniq -c | sort -n -k 2 &gt; distribution.text
+        
 
         <p>Column 1 is plotted against column 2.</p>
 
@@ -496,7 +466,7 @@
         <p>As example we have death, dead and lethal etc in a number of
         sonnets. In the left column the number of sonnets containing the word.</p>
 
-        <eg xml:space="preserve"><![CDATA[ 
+         
         1 dødehavet
         1 dødeklokker
         1 dødelige
@@ -510,31 +480,31 @@
         9 død
         9 døden
         11 døde
-        ]]></eg>
+        
 
         <p>Love is not as popular as death</p>
 
-        <eg xml:space="preserve"><![CDATA[ 
+         
         1 elskoven
         1 elskovsbrev
         1 elskovsbrevet
         2 elskovsild
         6 elskovs
         7 elskov
-        ]]></eg>
+        
 
         <p>women not as popular as love</p>
 
-        <eg xml:space="preserve"><![CDATA[ 
+         
         1 dobbeltkvinde
         1 kvindens
         1 kvindetække
         4 kvinder
-        ]]></eg>
+        
 
         <p>Men more than women, and in particular words implying bravery and male virtues</p>
 
-        <eg xml:space="preserve"><![CDATA[ 
+         
         1 baadsmandstrille
         1 dobbeltmand
         1 ejermand
@@ -544,14 +514,14 @@
         2 mand
         2 manddoms
         5 mandens
-        ]]></eg>
+        
 
 
         <p>remember that these sonnets are by men.</p>
 
         <p>Graves occur, for some reason, less than deaths</p>
 
-        <eg xml:space="preserve"><![CDATA[ 
+         
         1 begravet
         1 graven
         1 gravene
@@ -560,13 +530,13 @@
         3 grav
         3 grave
         4 gravens
-        ]]></eg>
+        
 
-      </div>
+      
 
-      <div>
+      
 
-        <head>Conclusions</head>
+        <h2>Conclusions</h2>
 
         <p>I think I could go on studying this for quite some time. However, I have to
         conclude this here, before the actual conclusions. There are
@@ -577,36 +547,16 @@
         and rock n'roll. Since rock wasn't there just yet, people had to be
         content with sonnets for the time being.</p>
 
-      </div>
-      <div>
-        <listBibl>
-          <bibl>
-            <author>Church, Kenneth Ward</author>,
-            <date>publication date unknown</date><title>Unix for Poets</title>
-            <link target="https://web.stanford.edu/class/cs124/kwc-unix-for-poets.pdf"/>
-          </bibl>
-          <bibl>
-            <title>The ADL text corpus contains</title>
-            <link target="https://github.com/kb-dk/public-adl-text-sources"/>
-            <publisher>Det Kgl. Bibliotek</publisher>
-            <publisher>Det Danske Sprog- og Litteraturselskab</publisher>
-          </bibl>
-          <bibl>
-            <author>The TEI Consortium</author>, <date>2022</date>.
-            <title>TEI P5: Guidelines for Electronic Text Encoding and Interchange</title>
-            <link target="https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html"/>
-          </bibl>
-          <bibl>
-            <author>Michaëlis, Sophus</author>,
-            <date>1883</date>
-            <title level="a">Jeg elsker —”,</title> i Michaëlis, Sophus:
-            <title level="m">Solblomster</title>.
-            <note>Titelvignet af Frode Eskesen, Gyldendal, 1893, s. 151. Onlineudgave fra Arkiv for Dansk Litteratur.</note>
-            <link target="https://tekster.kb.dk/text/adl-texts-michs_03-shoot-workid68251"/>
-          </bibl>
-        </listBibl>
-      </div>
+      
+      
+        <p id=""><span class="biblAuthor">Church, Kenneth Ward</span>,
+      publication date unknown.
+      </p><p id=""><span class="biblAuthor">Michaëlis, Sophus</span>,
+      1883.
+      Jeg elsker —”, . <br/><small>Titelvignet af Frode Eskesen, Gyldendal, 1893, s. 151. Onlineudgave fra Arkiv for Dansk Litteratur.</small><br/></p><p id=""> </p><p id=""><span class="biblAuthor">The TEI Consortium</span>,
+      2022.
+      </p>
+      
 
-    </body>
-  </text>
-</TEI>
+    <pre/></body>
+</html>
