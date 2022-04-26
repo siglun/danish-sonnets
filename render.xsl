@@ -84,6 +84,12 @@
     <xsl:apply-templates/>
   </xsl:template>
 
+  <xsl:template match="t:eg">
+    <pre>
+      <xsl:value-of   select="."/>
+    </pre>
+  </xsl:template>
+  
   <xsl:template match="t:listBibl">
     <xsl:apply-templates select="t:head"/>
     <xsl:apply-templates select="t:bibl">

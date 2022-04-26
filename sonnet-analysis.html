@@ -44,7 +44,7 @@
 
         <p>A poem may look like this in the source</p>
 
-         
+        <pre> 
         &lt;div xml:id="workid68251" decls="#biblid68251"&gt;
         &lt;head xml:id="idm140093058532672"&gt;Jeg elsker —&lt;/head&gt;
         &lt;lg xml:id="idm140093058532240"&gt;
@@ -74,7 +74,7 @@
         &lt;/p&gt;
         &lt;/div&gt;
         
-        
+        </pre>
 
         <p>
           Michaëlis, Sophus: ”Jeg elsker —”, i Michaëlis, Sophus:
@@ -106,18 +106,18 @@
 
         <p>You can easily find all poems based on a XPATH query like:</p>
 
-         
+        <pre> 
         //t:div[t:lg and @decls]
         
-        
+        </pre>
 
         <p>We can use that query in XSLT like this:</p>
 
-         
+        <pre> 
         &lt;xsl:for-each select="//t:div[t:lg and @decls]"&gt;
         &lt;xsl:if test="count(.//t:lg/t:l)=14"&gt;
         
-        
+        </pre>
 
         <p>So we iterate over all &lt;div&gt;...&lt;/div&gt;s having line
         groups inside and have a `@decls` attribute containing a
@@ -149,7 +149,7 @@
 
         <p>Any way, this script calculates the average number of vowels per line in poems with 14 lines:</p>
 
-         
+        <pre> 
         &lt;xsl:variable name="vowel_numbers" as="xs:integer *"&gt;
         &lt;xsl:for-each select=".//t:lg/t:l"&gt;
         &lt;xsl:variable name="vowels"&gt;
@@ -160,7 +160,7 @@
         &lt;/xsl:variable&gt;
         &lt;xsl:value-of select="format-number(sum($vowel_numbers) div 14, '#.####')"/&gt;
         
-        
+        </pre>
 
         <p>
           We use the replace function and a regular expression to remove
@@ -190,7 +190,7 @@
         <p>You can easily find out the strophe structure for each poem:</p>
 
 
-         
+        <pre> 
         &lt;xsl:variable name="lines_per_strophe" as="xs:integer *"&gt;
         &lt;xsl:for-each select=".//t:lg[t:l]"&gt;
         &lt;xsl:value-of select="count(t:l)"/&gt;
@@ -198,7 +198,7 @@
         &lt;/xsl:variable&gt;
         &lt;xsl:value-of select="$lines_per_strophe"/&gt;
         
-        
+        </pre>
 
 
         <p>That is, iterate over the line groups in a poem, and count the lines
@@ -310,37 +310,37 @@
         [rhymes_3chars.text](rhymes_3chars.text) and
         [rhymes_2chars.text](rhymes_2chars.text) for three and two letter rhymes, respectively. Run </p>
 
-         
+        <pre> 
         grep -P '^[a-q]{14}' rhymes_3chars.text   | sort | uniq -c | sort -rn
         
-        
+        </pre>
 
         <p>to get a list of rhyme structure and their frequencies. The rhyme
         structures that occur more than twice are:</p>
 
-        
+        <pre>
         6 abbaabbacdecde
         5 abbaabbacdcdcd
         4 abcaadeafgghii
         4 abbaabbacdcede
         3 abcaadeafghgig
         
-        
+        </pre>
 
         <p>This silly algorithm does actually give two of the most common rhyme structure
         for sonnets, but misses a lot of order in the remaining chaos:</p>
 
-        
+        <pre>
         abbaabbacdcdcd
         
-        
+        </pre>
 
         <p>and</p>
 
-        
+        <pre>
         abbaabbacdecde
         
-        
+        </pre>
 
         <p>So while it may fail more often than it succeeds, the successes give
         results that are reasonable.</p>
@@ -378,9 +378,9 @@
         <p>(i) The first being doing a classical tokenization followed by 
         piping the stuff through</p>
 
-         
+        <pre> 
         sort | uniq -c | sort -n
-        
+        </pre>
 
         <p>such that I get a list of the 4781 Danish words that are used in our
         sonnet sample, sorted by their frequencies.</p>
@@ -401,7 +401,7 @@
         commont word a measured by the [number of sonnets they occur
         in](poem_frequencies.text). Number of poems in the left column.</p>
 
-         
+        <pre> 
         75 du
         76 sig
         82 er
@@ -417,13 +417,13 @@
         122 med
         150 i
         160 og
-        
+        </pre>
 
         <p>and this is the list of the same thing, but measured as the grand
         total [occurrence of the words in the
         corpus](frequencies.text). Number of words in corpus in left column.</p>
 
-         
+        <pre> 
         109 min
         130 for
         144 du
@@ -439,7 +439,7 @@
         246 jeg
         382 i
         588 og
-        
+        </pre>
 
         <p>As you can see this corroborates the established observation that the
         most frequent words in a corpus hardly ever describes the subject
@@ -454,9 +454,9 @@
         [distribution.text](distribution.text) is generated from
         [poem_frequencies.text](poem_frequencies.text) using</p>
 
-         
+        <pre> 
         sed 's/\ [a-z]*$//' poem_frequencies.text | sort | uniq -c | sort -n -k 2 &gt; distribution.text
-        
+        </pre>
 
         <p>Column 1 is plotted against column 2.</p>
 
@@ -466,7 +466,7 @@
         <p>As example we have death, dead and lethal etc in a number of
         sonnets. In the left column the number of sonnets containing the word.</p>
 
-         
+        <pre> 
         1 dødehavet
         1 dødeklokker
         1 dødelige
@@ -480,31 +480,31 @@
         9 død
         9 døden
         11 døde
-        
+        </pre>
 
         <p>Love is not as popular as death</p>
 
-         
+        <pre> 
         1 elskoven
         1 elskovsbrev
         1 elskovsbrevet
         2 elskovsild
         6 elskovs
         7 elskov
-        
+        </pre>
 
         <p>women not as popular as love</p>
 
-         
+        <pre> 
         1 dobbeltkvinde
         1 kvindens
         1 kvindetække
         4 kvinder
-        
+        </pre>
 
         <p>Men more than women, and in particular words implying bravery and male virtues</p>
 
-         
+        <pre> 
         1 baadsmandstrille
         1 dobbeltmand
         1 ejermand
@@ -514,14 +514,14 @@
         2 mand
         2 manddoms
         5 mandens
-        
+        </pre>
 
 
         <p>remember that these sonnets are by men.</p>
 
         <p>Graves occur, for some reason, less than deaths</p>
 
-         
+        <pre> 
         1 begravet
         1 graven
         1 gravene
@@ -530,7 +530,7 @@
         3 grav
         3 grave
         4 gravens
-        
+        </pre>
 
       
 
@@ -549,6 +549,7 @@
 
       
       
+        <h2>References</h2>
         <p id=""><span class="biblAuthor">Church, Kenneth Ward</span>,
       publication date unknown.
       </p><p id=""><span class="biblAuthor">Michaëlis, Sophus</span>,
