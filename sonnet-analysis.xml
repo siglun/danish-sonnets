@@ -39,7 +39,7 @@
       </docAuthor>
       <div type="abstract">
 	<p>This note discusses how software can recognize sonnets, by
-	analysis of length, strophe structure and number of syllables
+	analysis of text length, strophe structure and number of syllables
 	per line. It also makes a simple content analysis based on
 	word frequency analyses.</p>
         <p>The results clearly shows that simple Unix for Poets
@@ -52,12 +52,12 @@
 
         <p>If there are any sonnets, do they rhyme and what are they about?</p>
 
-        <p>I have since many years been a great fan of Kenneth Ward Church's
-        tutorial ["Unix for
-        Poets"](https://web.stanford.edu/class/cs124/kwc-unix-for-poets.pdf). This
-        is an investigation of what can be done with a corpus of
-        literary text with very simple tools similar to the ones described by
-        Church in his tutorial.</p>
+        <p>I have since many years been a great fan of <ref
+        target="#kennethchurch">Kenneth Ward Church's</ref> tutorial
+        <title>Unix&#2122; for Poets</title>. This is an investigation of
+        what can be done with a corpus of literary text with very
+        simple tools similar to the ones described by Church in his
+        tutorial.</p>
 
         <p>I do not claim that there is anything novel or even significant in
         this text. Being a scientist, I think like a scientist and don't
@@ -581,9 +581,9 @@
       <div>
         <head>References</head>
         <listBibl>
-          <bibl>
+          <bibl xml:id="kennethchurch">
             <author>Church, Kenneth Ward</author>,
-            <date>publication date unknown</date><title>Unix for Poets</title>
+            <date>[publication date unknown]</date><title level="m">Unix&#2122; for Poets</title>
             <link target="https://web.stanford.edu/class/cs124/kwc-unix-for-poets.pdf"/>
           </bibl>
           <bibl>

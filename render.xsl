@@ -61,7 +61,12 @@
   </xsl:template>
 
   <xsl:template match="t:front">
-    <h1 class="title"><xsl:apply-templates select="t:docTitle/t:titlePart" /></h1>
+    <h1 class="title">
+      <xsl:for-each select="t:docTitle/t:titlePart/t:title" >
+        <xsl:apply-templates/>
+        <xsl:if test="position() &lt; last()"><br/></xsl:if>
+      </xsl:for-each>
+    </h1>
     <p class="author">
       <xsl:apply-templates select="t:docAuthor/t:name" />
       <xsl:apply-templates select="t:docAuthor/t:address"/>
@@ -220,6 +225,10 @@
   </xsl:template>
 
   <xsl:template match="t:emph[@rend='italics']">
+    <em><xsl:apply-templates/></em>
+  </xsl:template>
+
+  <xsl:template match="t:p/t:title">
     <em><xsl:apply-templates/></em>
   </xsl:template>
 
