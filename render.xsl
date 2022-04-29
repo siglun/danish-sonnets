@@ -89,6 +89,28 @@
     <xsl:apply-templates/>
   </xsl:template>
 
+  <xsl:template match="t:table">
+    <table>
+      <xsl:apply-templates/>
+    </table>
+  </xsl:template>
+
+  <xsl:template match="t:row">
+    <tr><xsl:apply-templates/></tr>
+  </xsl:template>
+
+  <xsl:template match="t:cell[@role='label']">
+    <th><xsl:apply-templates/></th>
+  </xsl:template>
+
+  <xsl:template match="t:cell[@role='data']">
+    <td><xsl:apply-templates/></td>
+  </xsl:template>
+  
+  <xsl:template match="t:cell">
+    <td><xsl:apply-templates/></td>
+  </xsl:template>
+  
   <xsl:template match="t:eg">
     <pre>
       <xsl:value-of   select="."/>

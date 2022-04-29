@@ -243,16 +243,16 @@
 
         <table>
           <head>sonnet candidates</head>
-          <row> 
-            <cell>File name</cell>
-            <cell>Title</cell>
-            <cell>xml:id</cell>
-            <cell>metadata reference</cell>
-            <cell>Strophe structure</cell>
-            <cell>average number of vowels per line</cell>
+          <row role="label"> 
+            <cell role="label">File name</cell>
+            <cell role="label">Title</cell>
+            <cell role="label">xml:id</cell>
+            <cell role="label">metadata reference</cell>
+            <cell role="label">Strophe structure</cell>
+            <cell role="label">average number of vowels per line</cell>
           </row>
-          <row>
-          <cell>|./aarestrup07val.xml| [Jeg havde faaet Brev fra dig, Nanette ...](https://tekster.kb.dk/text/adl-texts-aarestrup07val-shoot-workid73888)|workid73888|#biblid73888|4 4 3 3|11.0|</cell></row>
+          <row role="data">
+          <cell>./aarestrup07val.xml</cell><cell><ref target="https://tekster.kb.dk/text/adl-texts-aarestrup07val-shoot-workid73888">Jeg havde faaet Brev fra dig, Nanette</ref></cell><cell>|workid73888</cell><cell>|#biblid73888</cell><cell>|4 4 3 3</cell><cell>|11.0|</cell></row>
           <row><cell>./aarestrup07val.xml| [Tag dette Kys, og tusind til, du Søde ...](https://tekster.kb.dk/text/adl-texts-aarestrup07val-shoot-workid75376) |workid75376|#biblid75376|4 4 3 3|11.0714|</cell></row>
           <row><cell>|./aarestrup07val.xml| [Sonet](https://tekster.kb.dk/text/adl-texts-aarestrup07val-shoot-workid76444) |workid76444|#biblid76444|4 4 3 3|11.5|</cell></row>
           <row><cell>|./brorson03grval.xml|[1.](https://tekster.kb.dk/text/adl-texts-brorson03grval-shoot-workid76607) |workid76607|#biblid76607|14|8.7143|</cell></row>
@@ -605,6 +605,7 @@
             <note>Titelvignet af Frode Eskesen, Gyldendal, 1893, s. 151. Onlineudgave fra Arkiv for Dansk Litteratur.</note>
             <link target="https://tekster.kb.dk/text/adl-texts-michs_03-shoot-workid68251"/>
           </bibl>
+
         </listBibl>
       </div>
 
