@@ -42,7 +42,7 @@
 	analysis of text length, strophe structure and number of syllables
 	per line. It also makes a simple content analysis based on
 	word frequency analyses.</p>
-        <p>The results clearly shows that simple Unix for Poets
+        <p>The results clearly shows that simple Unix™ for Poets
         analyses combines seamlessly with TEI markup and XML technologies.</p>
       </div>
     </front>
@@ -54,7 +54,7 @@
 
         <p>I have since many years been a great fan of <ref
         target="#kennethchurch">Kenneth Ward Church's</ref> tutorial
-        <title>Unix&#2122; for Poets</title>. This is an investigation of
+        <title>Unix™ for Poets</title>. This is an investigation of
         what can be done with a corpus of literary text with very
         simple tools similar to the ones described by Church in his
         tutorial.</p>
@@ -66,11 +66,15 @@
       <div>
         <head>Finding poems</head>
 
-        <p>The ADL text corpus contains [literary
-        texts](https://github.com/kb-dk/public-adl-text-sources). Since the texts are encoded according to the [TEI guidelines](https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html) it is easy
-        to find poetry in those files. Typically a piece of poetry is encoded
-        as [lines within line groups](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-lg.html). More
-        often than not the line groups are embedded in &lt;div> ... &lt;/div> elements.</p>
+        <p>The ADL text corpus contains <ref
+        target="#adlcorpus">literary texts</ref>. Since the texts are
+        encoded according to the <ref target="#teiguidelines">TEI
+        guidelines</ref> it is easy to find poetry in those
+        files. Typically a piece of poetry is encoded as [lines within
+        line
+        groups](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-lg.html). More
+        often than not the line groups are embedded in &lt;div>
+        ... &lt;/div> elements.</p>
 
         <p>A poem may look like this in the source</p>
 
@@ -105,12 +109,15 @@
         </div>
         ]]>
         </eg>
-
         <p>
-          Michaëlis, Sophus: ”Jeg elsker —”, i Michaëlis, Sophus:
-          Solblomster. Titelvignet af Frode Eskesen, Gyldendal, 1893,
-          s. 151. Onlineudgave fra Arkiv for Dansk Litteratur:
-          https://tekster.kb.dk/text/adl-texts-michs_03-shoot-workid68251
+          <bibl>
+            <author>Michaëlis, Sophus</author>,
+            <date>1883</date>
+            <title level="a">Jeg elsker —”,</title> i Michaëlis, Sophus:
+            <title level="m">Solblomster</title>.
+            <note>Titelvignet af Frode Eskesen, Gyldendal, 1893, s. 151. Onlineudgave fra Arkiv for Dansk Litteratur.</note>
+            <link target="https://tekster.kb.dk/text/adl-texts-michs_03-shoot-workid68251"/>
+          </bibl>
         </p>
 
         <p>The default name space is declared as
@@ -583,28 +590,31 @@
         <listBibl>
           <bibl xml:id="kennethchurch">
             <author>Church, Kenneth Ward</author>,
-            <date>[publication date unknown]</date><title level="m">Unix&#2122; for Poets</title>
-            <link target="https://web.stanford.edu/class/cs124/kwc-unix-for-poets.pdf"/>
+            <date>[publication date unknown]</date><title level="m">Unix™ for Poets</title>
+            <ref target="https://web.stanford.edu/class/cs124/kwc-unix-for-poets.pdf">https://web.stanford.edu/class/cs124/kwc-unix-for-poets.pdf</ref>
           </bibl>
-          <bibl>
-            <title>The ADL text corpus contains</title>
-            <link target="https://github.com/kb-dk/public-adl-text-sources"/>
-            <publisher>Det Kgl. Bibliotek</publisher>
-            <publisher>Det Danske Sprog- og Litteraturselskab</publisher>
+          <bibl xml:id="adlcorpus">
+            <author>Det Kgl. Bibliotek</author>
+            <author>Det Danske Sprog- og Litteraturselskab</author>
+            <date>2000 - 2022</date>
+            <title level="m">The ADL text corpus</title>
+            <ref
+            target="https://github.com/kb-dk/public-adl-text-sources">https://github.com/kb-dk/public-adl-text-sources"</ref>
           </bibl>
-          <bibl>
-            <author>The TEI Consortium</author>, <date>2022</date>.
-            <title>TEI P5: Guidelines for Electronic Text Encoding and Interchange</title>
-            <link target="https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html"/>
+          <bibl xml:id="teiguidelines">
+            <author>The TEI Consortium</author>
+            <date>2022</date>
+            <title level="m">TEI P5: Guidelines for Electronic Text Encoding and Interchange</title>
+            <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html">https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html</ref>
           </bibl>
-          <bibl>
-            <author>Michaëlis, Sophus</author>,
-            <date>1883</date>
-            <title level="a">Jeg elsker —”,</title> i Michaëlis, Sophus:
-            <title level="m">Solblomster</title>.
-            <note>Titelvignet af Frode Eskesen, Gyldendal, 1893, s. 151. Onlineudgave fra Arkiv for Dansk Litteratur.</note>
-            <link target="https://tekster.kb.dk/text/adl-texts-michs_03-shoot-workid68251"/>
+          <bibl xml:id="tei-ref-lg">
+            <author>The TEI Consortium</author>
+            <date>2022</date>
+            <title level="a">Passages of Verse or Drama</title>
+            <title level="m">TEI P5: Guidelines for Electronic Text Encoding and Interchange</title>
+            <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CODV">https://tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CODV</ref>
           </bibl>
+         
 
         </listBibl>
       </div>

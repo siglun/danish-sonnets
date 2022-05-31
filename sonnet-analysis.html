@@ -11,7 +11,7 @@
 	analysis of text length, strophe structure and number of syllables
 	per line. It also makes a simple content analysis based on
 	word frequency analyses.</p>
-        <p>The results clearly shows that simple Unix for Poets
+        <p>The results clearly shows that simple Unix™ for Poets
         analyses combines seamlessly with TEI markup and XML technologies.</p>
       </blockquote>
       
@@ -20,7 +20,7 @@
         <p>If there are any sonnets, do they rhyme and what are they about?</p>
 
         <p>I have since many years been a great fan of <a href="#kennethchurch">Kenneth Ward Church's</a> tutorial
-        <em>Unixࡊ for Poets</em>. This is an investigation of
+        <em>Unix™ for Poets</em>. This is an investigation of
         what can be done with a corpus of literary text with very
         simple tools similar to the ones described by Church in his
         tutorial.</p>
@@ -32,11 +32,14 @@
       
         <h2>Finding poems</h2>
 
-        <p>The ADL text corpus contains [literary
-        texts](https://github.com/kb-dk/public-adl-text-sources). Since the texts are encoded according to the [TEI guidelines](https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html) it is easy
-        to find poetry in those files. Typically a piece of poetry is encoded
-        as [lines within line groups](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-lg.html). More
-        often than not the line groups are embedded in &lt;div&gt; ... &lt;/div&gt; elements.</p>
+        <p>The ADL text corpus contains <a href="#adlcorpus">literary texts</a>. Since the texts are
+        encoded according to the <a href="#teiguidelines">TEI
+        guidelines</a> it is easy to find poetry in those
+        files. Typically a piece of poetry is encoded as [lines within
+        line
+        groups](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-lg.html). More
+        often than not the line groups are embedded in &lt;div&gt;
+        ... &lt;/div&gt; elements.</p>
 
         <p>A poem may look like this in the source</p>
 
@@ -71,12 +74,10 @@
         &lt;/div&gt;
         
         </pre>
-
         <p>
-          Michaëlis, Sophus: ”Jeg elsker —”, i Michaëlis, Sophus:
-          Solblomster. Titelvignet af Frode Eskesen, Gyldendal, 1893,
-          s. 151. Onlineudgave fra Arkiv for Dansk Litteratur:
-          https://tekster.kb.dk/text/adl-texts-michs_03-shoot-workid68251
+          <p id=""><span class="biblAuthor">Michaëlis, Sophus</span>,
+      1883.
+      Jeg elsker —”,. In: <em>Solblomster</em>. <br/><small>Titelvignet af Frode Eskesen, Gyldendal, 1893, s. 151. Onlineudgave fra Arkiv for Dansk Litteratur.</small><br/></p>
         </p>
 
         <p>The default name space is declared as
@@ -548,11 +549,21 @@
         <h2>References</h2>
         <p id="kennethchurch"><span class="biblAuthor">Church, Kenneth Ward</span>,
       [publication date unknown].
-      <em>Unixࡊ for Poets</em>. </p><p id=""><span class="biblAuthor">Michaëlis, Sophus</span>,
-      1883.
-      Jeg elsker —”, . <br/><small>Titelvignet af Frode Eskesen, Gyldendal, 1893, s. 151. Onlineudgave fra Arkiv for Dansk Litteratur.</small><br/></p><p id=""> </p><p id=""><span class="biblAuthor">The TEI Consortium</span>,
+      In: <em>Unix™ for Poets</em>. 
+    &lt;URL:<a href="https://web.stanford.edu/class/cs124/kwc-unix-for-poets.pdf">https://web.stanford.edu/class/cs124/kwc-unix-for-poets.pdf</a>&gt;
+  </p><p id="adlcorpus"><span class="biblAuthor">Det Kgl. Bibliotek</span>,  and <span class="biblAuthor">Det Danske Sprog- og Litteraturselskab</span>,
+      2000 - 2022.
+      In: <em>The ADL text corpus</em>. 
+    &lt;URL:<a href="https://github.com/kb-dk/public-adl-text-sources">https://github.com/kb-dk/public-adl-text-sources"</a>&gt;
+  </p><p id="teiguidelines"><span class="biblAuthor">The TEI Consortium</span>,
       2022.
-      </p>
+      In: <em>TEI P5: Guidelines for Electronic Text Encoding and Interchange</em>. 
+    &lt;URL:<a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html">https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html</a>&gt;
+  </p><p id="tei-ref-lg"><span class="biblAuthor">The TEI Consortium</span>,
+      2022.
+      Passages of Verse or Drama. In: <em>TEI P5: Guidelines for Electronic Text Encoding and Interchange</em>. 
+    &lt;URL:<a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CODV">https://tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CODV</a>&gt;
+  </p>
       
 
     <pre/></body>

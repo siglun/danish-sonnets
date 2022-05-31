@@ -138,21 +138,16 @@
       <xsl:choose><xsl:when test="t:date"><xsl:text>,
       </xsl:text><xsl:apply-templates select="t:date"/><xsl:text>.
       </xsl:text></xsl:when><xsl:otherwise><xsl:if test="t:author">.</xsl:if><xsl:text> </xsl:text></xsl:otherwise></xsl:choose>
-      <xsl:if test="t:title">
-	<xsl:choose>
-	  <xsl:when test="t:title[@level = 'a']">
-	    <xsl:apply-templates select="t:title[@level = 'a']"/><xsl:text> </xsl:text>
-	    <xsl:if test="t:title[@level = 'j']">
-	      <em><xsl:apply-templates select="t:title[@level = 'j']"/></em>
-	    </xsl:if><xsl:text>. </xsl:text>
-	  </xsl:when>
-	  <xsl:when test="t:title[@level = 'm']">
-	    <em>
-	      <xsl:apply-templates select="t:title[@level = 'm']"/>
-	    </em><xsl:text>. </xsl:text>
-	  </xsl:when>
-	</xsl:choose>
+      
+      <xsl:if test="t:title[@level = 'a']">
+        <xsl:apply-templates select="t:title[@level = 'a']"/><xsl:text>. </xsl:text>
       </xsl:if>
+      <xsl:for-each select="t:title[@level = 'j']|t:title[@level = 'm']">
+        <xsl:if test="position() = 1"><xsl:text>In: </xsl:text></xsl:if>
+	<em><xsl:apply-templates/></em>
+        <xsl:if test="position() = last()"><xsl:text>. </xsl:text></xsl:if>
+      </xsl:for-each>
+
       <xsl:if test="t:biblScope[@type='volume']">
 	<xsl:text>Vol. </xsl:text><xsl:apply-templates select="t:biblScope[@type='volume']"/>
 	<xsl:if test="t:biblScope[@type='number']">
