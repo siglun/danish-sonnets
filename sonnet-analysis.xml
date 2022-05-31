@@ -70,10 +70,8 @@
         target="#adlcorpus">literary texts</ref>. Since the texts are
         encoded according to the <ref target="#teiguidelines">TEI
         guidelines</ref> it is easy to find poetry in those
-        files. Typically a piece of poetry is encoded as [lines within
-        line
-        groups](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-lg.html). More
-        often than not the line groups are embedded in &lt;div>
+        files. Typically a piece of poetry is encoded as <ref target="#tei-ref-lg">lines within
+        line groups</ref>. More often than not the line groups are embedded in &lt;div>
         ... &lt;/div> elements.</p>
 
         <p>A poem may look like this in the source</p>
@@ -109,33 +107,25 @@
         </div>
         ]]>
         </eg>
-        <p>
-          <bibl>
-            <author>Michaëlis, Sophus</author>,
-            <date>1883</date>
-            <title level="a">Jeg elsker —”,</title> i Michaëlis, Sophus:
-            <title level="m">Solblomster</title>.
-            <note>Titelvignet af Frode Eskesen, Gyldendal, 1893, s. 151. Onlineudgave fra Arkiv for Dansk Litteratur.</note>
-            <link target="https://tekster.kb.dk/text/adl-texts-michs_03-shoot-workid68251"/>
-          </bibl>
-        </p>
+        <p><ref target="sophus">Sophus Michaëlis (<date>1883</date>)</ref></p>
 
+        
         <p>The default name space is declared as
         xmlns="http://www.tei-c.org/ns/1.0", which we in following refer to
         with the namespace prefix 't'.</p>
 
         <p>The poem comprises four line groups with four, four, three and three
         lines. That is a very common strophe structure for
-        [sonnets](https://en.wikipedia.org/wiki/Sonnet), at least in
+        <ref target="sonnets">sonnets</ref>, at least in
         Scandinavia. It is not always like that, but they all contain 14
         lines.</p>
 
         <p>Shakespeare wrote often his 14 lines typographically in one strophe,
         whereas Francesco Petrarca wrote them in two strophes with eight and
-        six lines, respectively.</p>
+        six lines, respectively (see <ref target="sonnets">sonnets</ref>).</p>
 
         <p>To be more precise, a sonnet has one more characteristics than having 14 lines,
-        the lines should be in [iambic pentameter](https://en.wikipedia.org/wiki/Iambic_pentameter).</p>
+        the lines should be in <ref target="#pentameter">iambic pentameter</ref>.</p>
       </div>
 
       <div>
@@ -614,8 +604,26 @@
             <title level="m">TEI P5: Guidelines for Electronic Text Encoding and Interchange</title>
             <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CODV">https://tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CODV</ref>
           </bibl>
-         
+          <bibl xml:id="sophus">
+            <author>Michaëlis, Sophus</author>
+            <date>1883</date>
+            <title level="a">Jeg elsker —</title>
+            <title level="m">Solblomster</title>
+            <ref target="https://tekster.kb.dk/text/adl-texts-michs_03-shoot-workid68251">https://tekster.kb.dk/text/adl-texts-michs_03-shoot-workid68251"/></ref>
+          </bibl>
 
+          <bibl xml:id="sonnets">
+            <title level="a">Sonnet</title>
+            <title level="m">Wikipedia</title>
+            <ref target="https://en.wikipedia.org/wiki/Sonnet">https://en.wikipedia.org/wiki/Sonnet</ref>
+          </bibl>
+
+          <bibl xml:id="pentameter">
+            <title level="a">Iambic pentameter</title>
+            <title level="m">Wikipedia</title>
+            <ref target="https://en.wikipedia.org/wiki/Iambic_pentameter">https://en.wikipedia.org/wiki/Iambic_pentameter</ref>
+          </bibl>
+          
         </listBibl>
       </div>
 
