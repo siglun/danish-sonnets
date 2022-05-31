@@ -76,7 +76,7 @@
 
         <p>A poem may look like this in the source</p>
 
-        <eg xml:space="preserve"><![CDATA[ 
+        <p><eg xml:space="preserve"><![CDATA[ 
         <div xml:id="workid68251" decls="#biblid68251">
         <head xml:id="idm140093058532672">Jeg elsker —</head>
         <lg xml:id="idm140093058532240">
@@ -106,8 +106,8 @@
         </p>
         </div>
         ]]>
-        </eg>
-        <p><ref target="sophus">Sophus Michaëlis (<date>1883</date>)</ref></p>
+        </eg> <ref target="sophus">Sophus Michaëlis (<date>1883</date>)</ref></p>
+        
 
         
         <p>The default name space is declared as
