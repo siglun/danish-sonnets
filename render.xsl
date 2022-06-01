@@ -237,12 +237,20 @@
     <ul><xsl:apply-templates/></ul>
   </xsl:template>
 
-  <xsl:template match="t:emph[@rend='bold']">
+  <xsl:template match="t:emph[@rend='bold']|t:hi[@rend='bold']">
     <strong><xsl:apply-templates/></strong>
   </xsl:template>
 
-  <xsl:template match="t:emph[@rend='italics']">
+  <xsl:template match="t:hi[@rend='italics']|t:emph[@rend='italics']">
     <em><xsl:apply-templates/></em>
+  </xsl:template>
+
+  <xsl:template match="t:lg">
+    <p><xsl:apply-templates/></p>
+  </xsl:template>
+
+  <xsl:template match="t:l">
+    <xsl:apply-templates/><br/>
   </xsl:template>
 
   <xsl:template match="t:p/t:title">

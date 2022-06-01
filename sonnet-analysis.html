@@ -43,32 +43,32 @@
 
         <p><pre> 
         &lt;div xml:id="workid68251" decls="#biblid68251"&gt;
-        &lt;head xml:id="idm140093058532672"&gt;Jeg elsker —&lt;/head&gt;
-        &lt;lg xml:id="idm140093058532240"&gt;
-        &lt;l xml:id="idm140093058531984"&gt;Jeg elsker Himlens høje Harmoni,&lt;/l&gt;
-        &lt;l xml:id="idm140093058531520"&gt;dens Purpurblomst, som blaaner i det Fjærne,&lt;/l&gt;
-        &lt;l xml:id="idm140093058531024"&gt;den Fred, som risler ned fra Nattens Stjerne,&lt;/l&gt;
-        &lt;l xml:id="idm140093058530576"&gt;det Glimt af Gud, der glider mig forbi;&lt;/l&gt;
-        &lt;/lg&gt;
-        &lt;lg xml:id="idm140093058530016"&gt;
-        &lt;l xml:id="idm140093058529760"&gt;og Evighedens tavse Melodi,&lt;/l&gt;
-        &lt;l xml:id="idm140093058529328"&gt;de svundne Slægters kaldende Orkester,&lt;/l&gt;
-        &lt;l xml:id="idm140093058528848"&gt;et Tonehav om en usynlig Mester,&lt;/l&gt;
-        &lt;l xml:id="idm140093058528416"&gt;en Klang af Gud, der bruser mig forbi;&lt;/l&gt;
-        &lt;/lg&gt;
-        &lt;lg xml:id="idm140093058527856"&gt;
-        &lt;l xml:id="idm140093058527600"&gt;en magisk Magt fra Hjertets mørke Celle,&lt;/l&gt;
-        &lt;l xml:id="idm140093058527120"&gt;de stærke Længsler, som mod Lyset vælde,&lt;/l&gt;
-        &lt;l xml:id="idm140093058526640"&gt;Naturens evigunge Fantasi;&lt;/l&gt;
-        &lt;/lg&gt;
-        &lt;lg xml:id="idm140093058526080"&gt;
-        &lt;l xml:id="idm140093058525824"&gt;det Liv, der spirer midt i selve Døden,&lt;/l&gt;
-        &lt;l xml:id="idm140093058525344"&gt;den Sol, der stiger midt i Aftenrøden,&lt;/l&gt;
-        &lt;l xml:id="idm140093058524864"&gt;— o Glimt af Gud, der glider mig forbi!&lt;/l&gt;
-        &lt;/lg&gt;
-        &lt;p xml:id="idm140093058524288"&gt;
-        &lt;date xml:id="idm140093058524032"&gt;12. Septbr. 1893.&lt;/date&gt;
-        &lt;/p&gt;
+           &lt;head xml:id="idm140093058532672"&gt;Jeg elsker —&lt;/head&gt;
+           &lt;lg xml:id="idm140093058532240"&gt;
+              &lt;l xml:id="idm140093058531984"&gt;Jeg elsker Himlens høje Harmoni,&lt;/l&gt;
+              &lt;l xml:id="idm140093058531520"&gt;dens Purpurblomst, som blaaner i det Fjærne,&lt;/l&gt;
+              &lt;l xml:id="idm140093058531024"&gt;den Fred, som risler ned fra Nattens Stjerne,&lt;/l&gt;
+              &lt;l xml:id="idm140093058530576"&gt;det Glimt af Gud, der glider mig forbi;&lt;/l&gt;
+           &lt;/lg&gt;
+           &lt;lg xml:id="idm140093058530016"&gt;
+              &lt;l xml:id="idm140093058529760"&gt;og Evighedens tavse Melodi,&lt;/l&gt;
+              &lt;l xml:id="idm140093058529328"&gt;de svundne Slægters kaldende Orkester,&lt;/l&gt;
+              &lt;l xml:id="idm140093058528848"&gt;et Tonehav om en usynlig Mester,&lt;/l&gt;
+              &lt;l xml:id="idm140093058528416"&gt;en Klang af Gud, der bruser mig forbi;&lt;/l&gt;
+           &lt;/lg&gt;
+           &lt;lg xml:id="idm140093058527856"&gt;
+              &lt;l xml:id="idm140093058527600"&gt;en magisk Magt fra Hjertets mørke Celle,&lt;/l&gt;
+              &lt;l xml:id="idm140093058527120"&gt;de stærke Længsler, som mod Lyset vælde,&lt;/l&gt;
+              &lt;l xml:id="idm140093058526640"&gt;Naturens evigunge Fantasi;&lt;/l&gt;
+           &lt;/lg&gt;
+           &lt;lg xml:id="idm140093058526080"&gt;
+              &lt;l xml:id="idm140093058525824"&gt;det Liv, der spirer midt i selve Døden,&lt;/l&gt;
+              &lt;l xml:id="idm140093058525344"&gt;den Sol, der stiger midt i Aftenrøden,&lt;/l&gt;
+              &lt;l xml:id="idm140093058524864"&gt;— o Glimt af Gud, der glider mig forbi!&lt;/l&gt;
+           &lt;/lg&gt;
+           &lt;p xml:id="idm140093058524288"&gt;
+              &lt;date xml:id="idm140093058524032"&gt;12. Septbr. 1893.&lt;/date&gt;
+           &lt;/p&gt;
         &lt;/div&gt;
         
         </pre> <a href="sophus">Sophus Michaëlis (1883)</a></p>
@@ -111,15 +111,15 @@
         
         </pre>
 
-        <p>So we iterate over all &lt;div&gt;...&lt;/div&gt;s having line
-        groups inside and have a `@decls` attribute containing a
+        <p>So we iterate over all &lt;div&gt;...&lt;/div&gt;s having
+        line groups inside and have a `@decls` attribute containing a
         reference to metadata in the TEI header. The latter is not
-        universal, but we use it in ADL and that attribute is only
-        set on pieces that a cataloger has designated as a _work_. I
-        have implemented this using a [shell
-        script](find_sonnet_candidates.sh) and [a
-        transform](sonnet_candidate.xsl). Finally, we don't do
-        anything unless there are 14 lines of poetry.</p>
+        universal, but we use it in ADL and that attribute is only set
+        on pieces that a cataloger has designated as a <em>work</em>. I have implemented this using the
+        <a href="find_sonnet_candidates.sh">shell script
+        find_sonnet_candidates.sh</a> and a transform <a href="sonnet_candidate.xsl">sonnet_candidate.xsl</a>. Finally,
+        we don't do anything unless there are 14 lines of
+        poetry.</p>
 
         <p>The transform creates [a long table with data](sonnet_candidates.xml) on the sonnet candidates it finds.</p>
       
@@ -171,13 +171,13 @@
 
         <h2>Strophe structure</h2>
 
-        <p>You can write a lot of nice poetry with 14 lines. Like Gustaf
-        Munch-Petersen's [en borgers
-        livshymne](https://tekster.kb.dk/text/adl-texts-munp1-shoot-workid62017)
-        with one strophe with one line, then three strophes with four lines
-        and finally a single line. The number of syllables per line seem to
-        decrease towards the end. Gustaf was a modernist. There are no fixed
-        structures and very few rhymes i his poetry.</p>
+        <p>You can write a lot of nice poetry with 14 lines. Like
+        Gustaf Munch-Petersen's <a href="https://tekster.kb.dk/text/adl-texts-munp1-shoot-workid62017">en
+        borgers livshymne</a> with one strophe with one line, then
+        three strophes with four lines and finally a single line. The
+        number of syllables per line seem to decrease towards the
+        end. Gustaf was a modernist. There are no fixed structures and
+        very few rhymes i his poetry.</p>
 
         <p>You can easily find out the strophe structure for each poem:</p>
 
@@ -200,8 +200,8 @@
         lines. There are 243 of them (there are more, but they may have erroneous
         markup).</p>
 
-        <p>You find these sonnet candidates in a table here
-        [sonnet_candidates.xml](sonnet_candidates.xml). Find an extract below.</p>
+        <p>You find these sonnet candidates in a table here <a href="sonnet_candidates.xml">sonnet_candidates.xml</a>. Please,
+        find an extract from it below.</p>
 
         <table>
           <h2>sonnet candidates</h2>
@@ -214,14 +214,94 @@
             <th>average number of vowels per line</th>
           </tr>
           <tr>
-          <td>./aarestrup07val.xml</td><td><a href="https://tekster.kb.dk/text/adl-texts-aarestrup07val-shoot-workid73888">Jeg havde faaet Brev fra dig, Nanette</a></td><td>|workid73888</td><td>|#biblid73888</td><td>|4 4 3 3</td><td>|11.0|</td></tr>
-          <tr><td>./aarestrup07val.xml| [Tag dette Kys, og tusind til, du Søde ...](https://tekster.kb.dk/text/adl-texts-aarestrup07val-shoot-workid75376) |workid75376|#biblid75376|4 4 3 3|11.0714|</td></tr>
-          <tr><td>|./aarestrup07val.xml| [Sonet](https://tekster.kb.dk/text/adl-texts-aarestrup07val-shoot-workid76444) |workid76444|#biblid76444|4 4 3 3|11.5|</td></tr>
-          <tr><td>|./brorson03grval.xml|[1.](https://tekster.kb.dk/text/adl-texts-brorson03grval-shoot-workid76607) |workid76607|#biblid76607|14|8.7143|</td></tr>
-          <tr><td>|./claussen07val.xml|[SKUMRING](https://tekster.kb.dk/text/adl-texts-claussen07val-shoot-workid63580)|workid63580|#biblid63580|14|10.8571|</td></tr>
-          <tr><td>|./claussen07val.xml| [TAAGE OG REGNDAGE](https://tekster.kb.dk/text/adl-texts-claussen07val-shoot-workid66036) |workid66036|#biblid66036|4 4 3 3|13.9286|</td></tr>
-          <tr><td>|./claussen07val.xml| [MAANENS TUNGSIND](https://tekster.kb.dk/text/adl-texts-claussen07val-shoot-workid66131) |workid66131|#biblid66131|4 4 3 3|13.8571|</td></tr>
-          <tr><td>|./jacobjp08val.xml| [I Seraillets Have](https://tekster.kb.dk/text/adl-texts-jacobjp08val-shoot-workid63094) |workid63094|#biblid63094|14|6.7143|</td></tr>
+            <td>
+              <a href="https://github.com/kb-dk/public-adl-text-sources/blob/master/texts/aarestrup07val.xml">./aarestrup07val.xml</a>
+            </td>
+            <td>
+              <a href="https://tekster.kb.dk/text/adl-texts-aarestrup07val-shoot-workid73888">Jeg havde faaet Brev fra dig, Nanette</a>
+            </td>
+            <td>workid73888</td>
+            <td>#biblid73888</td>
+            <td>4 4 3 3</td>
+            <td>11.0</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://github.com/kb-dk/public-adl-text-sources/blob/master/texts/aarestrup07val.xml">./aarestrup07val.xml</a>
+            </td>
+            <td>
+              <a href="https://tekster.kb.dk/text/adl-texts-aarestrup07val-shoot-workid75376">Tag dette Kys, og tusind til, du Søde ...</a>
+            </td>
+            <td>workid75376</td>
+            <td>#biblid75376</td>
+            <td>4 4 3 3</td>
+            <td>11.0714</td>
+          </tr>
+          <tr>
+            <td>
+          <a href="https://github.com/kb-dk/public-adl-text-sources/blob/master/texts/aarestrup07val.xml">./aarestrup07val.xml</a>
+            </td>
+            <td>
+            <a href="https://tekster.kb.dk/text/adl-texts-aarestrup07val-shoot-workid76444">Sonet</a> 
+            </td>
+            <td>workid76444</td>
+            <td>#biblid76444</td>
+            <td>4 4 3 3</td>
+            <td>11.5</td>
+          </tr>
+          <tr><td><a href="https://github.com/kb-dk/public-adl-text-sources/blob/master/texts/./brorson03grval.xml">./brorson03grval.xml</a></td>
+          <td><a href="https://tekster.kb.dk/text/adl-texts-brorson03grval-shoot-workid76607">1.</a></td>
+          <td>workid76607</td>
+          <td>#biblid76607</td>
+          <td>14</td>
+          <td>8.7143</td>
+          </tr>
+          <tr>
+            <td>
+          <a href="https://github.com/kb-dk/public-adl-text-sources/blob/master/claussen07val.xml">./claussen07val.xml</a>
+            </td>
+            <td>
+            <a href="https://tekster.kb.dk/text/adl-texts-claussen07val-shoot-workid63580">SKUMRING</a>
+            </td>
+            <td>workid63580</td>
+            <td>#biblid63580</td>
+            <td>14</td>
+            <td>10.8571</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://github.com/kb-dk/public-adl-text-sources/blob/master/texts/claussen07val.xml">./claussen07val.xml</a>
+            </td>
+            <td>
+              <a href="https://tekster.kb.dk/text/adl-texts-claussen07val-shoot-workid66036">TAAGE OG REGNDAGE</a>
+            </td>
+            <td>workid66036</td>
+            <td>#biblid66036</td>
+            <td>4 4 3 3</td>
+            <td>13.9286</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://github.com/kb-dk/public-adl-text-sources/blob/master/texts/claussen07val.xml">./claussen07val.xml</a>
+            </td>
+            <td>
+          <a href="https://tekster.kb.dk/text/adl-texts-claussen07val-shoot-workid66131">MAANENS TUNGSIND</a>
+            </td>
+            <td>workid66131</td>
+            <td>#biblid66131</td>
+            <td>4 4 3 3</td>
+            <td>13.8571</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://github.com/kb-dk/public-adl-text-sources/blob/master/texts/jacobjp08val.xml">./jacobjp08val.xml</a>
+            </td>
+            <td><a href="https://tekster.kb.dk/text/adl-texts-jacobjp08val-shoot-workid63094">I Seraillets Have</a></td>
+            <td>workid63094</td>
+            <td>#biblid63094</td>
+            <td>14</td>
+            <td>6.7143</td>
+          </tr>
 
         </table>
 
@@ -244,44 +324,44 @@
         rhyme structure. So an approximate idea of the rhymes could be have
         comparing the verse line endings.</p>
 
-        <p>This is error prone, though. [Consider this sonnet by
-        P.M. Møller](https://tekster.kb.dk/text/adl-texts-moeller01val-shoot-workid62307).</p>
+        <p>This is error prone, though. Consider this <a href="https://tekster.kb.dk/text/adl-texts-moeller01val-shoot-workid62307">sonnet
+        by P.M. Møller</a>.</p>
 
         <div id="">
 
           <p><small>SONET</small></p>
 
-          
-            Den Svend, som Tabet af sin elskte frister,
-            Vildfremmed vanker om blandt Jordens Hytter;
-            Med Haab han efter Kirkeklokken lytter,
-            Som lover ham igen, hvad her han mister.
-          
+          <p>
+            Den Svend, som Tabet af sin elskte frister,<br/>
+            Vildfremmed vanker om blandt Jordens Hytter;<br/>
+            Med Haab han efter Kirkeklokken lytter,<br/>
+            Som lover ham igen, hvad her han mister.<br/>
+          </p>
 
-          
-            Men næppe han med en usalig bytter,
-            Hvis Hjerte, stedse koldt for Elskov, brister,
-            Som sig uelsket gennem Livet lister,
-          Hans Armod kun mod Tabet ham beskytter.
+          <p>
+            Men næppe han med en usalig bytter,<br/>
+            Hvis Hjerte, stedse koldt for Elskov, brister,<br/>
+            Som sig uelsket gennem Livet lister,<br/>
+          Hans Armod kun mod Tabet ham beskytter.<br/></p>
 
-          
-            Til Livets Gaade rent han savner Nøglen,
-            Hver Livets Blomst i Hjærtets Vinter fryser,
-            Han gaar omkring med underlige Fagter.
-          
+          <p>
+            Til Livets Gaade rent han savner Nøglen,<br/>
+            Hver Livets Blomst i Hjærtets Vinter fryser,<br/>
+            Han gaar omkring med underlige Fagter.<br/>
+          </p>
 
-          
-            Ræd, Spøgelser han ser, naar Solen lyser,
-            Modløs og syg, foragtet han foragter
-            Det skønne Liv som tom og ussel Gøglen.
-          
+          <p>
+            Ræd, Spøgelser han ser, naar Solen lyser,<br/>
+            Modløs og syg, foragtet han foragter<br/>
+            Det skønne Liv som tom og ussel Gøglen.<br/>
+          </p>
         </div>
 
         <p>The the last syllable of the eight first lines are the same '-ter'. If
         you use some script to compare the endings you'll only find single
         syllable rhymes and miss double syllable ones rhymes. I.e., you can
         erroneously categorize feminine rhymes (with two syllables) as
-        masculine ones (with one syllable). (Sorry, I don't know the
+        masculine ones (with one syllable). (Sorry, I don't know a
         politically correct vocabulary for these concepts.)</p>
 
         <p>In order to understand what we hear when reading, we have to consider
@@ -289,8 +369,8 @@
         not 'aaaaaaaa'. Furthermore, it continues 'cdedec'.</p>
 
         <p>I have written a set of scripts that traverse the
-        [sonnet_candidates.xml](sonnet_candidates.xml) table. Transform that
-        file using [iterate_the_rhyming.xsl](iterate_the_rhyming.xsl) selects
+        <a href="sonnet_candidates.xml">sonnet_candidates.xml</a> table. Transform that
+        file using <a href="iterate_the_rhyming.xsl">iterate_the_rhyming.xsl</a> selects
         poems with 14 lines and strophe structure 4 4 3 3. It generates a
         shell script which when executed pipes the content through other
         scripts that retrieve content, remove punctuation and finally detags
@@ -298,9 +378,9 @@
         analyse the endings according to the silly and flawed method described
         above.</p>
 
-        <p>It works, sort of, until it doesn't. For poems with 4 4 3 3 strophe structure,  you can find the result in
-        [rhymes_3chars.text](rhymes_3chars.text) and
-        [rhymes_2chars.text](rhymes_2chars.text) for three and two letter rhymes, respectively. Run </p>
+        <p>It works, sort of, until it doesn't. For poems with 4
+        4 3 3 strophe structure, you can find the result in <a href="rhymes_3chars.text">rhymes_3chars.text</a> and <a href="rhymes_2chars.text">rhymes_2chars.text</a> for three
+        and two letter rhymes, respectively. Run </p>
 
         <pre> 
         grep -P '^[a-q]{14}' rhymes_3chars.text   | sort | uniq -c | sort -rn
@@ -337,9 +417,10 @@
         <p>So while it may fail more often than it succeeds, the successes give
         results that are reasonable.</p>
 
-        <p>The rhyme structure abbaabbacdecde is one is the most common ones found.
-        Also it is one of the socalled Petrarchan rhyme schemes,
-        [Cf. this](https://poetscollective.org/everysonnet/tag/abbaabbacdecde/).</p>
+        <p>The rhyme structure abbaabbacdecde is one is the most
+        common ones found.  Also it is one of the socalled Petrarchan
+        rhyme schemes (<a href="everysonnet">Eberhart,
+        2018</a>).</p>
 
       
 
@@ -550,6 +631,10 @@
       2000 - 2022.
       In: <em>The ADL text corpus</em>. 
     &lt;URL:<a href="https://github.com/kb-dk/public-adl-text-sources">https://github.com/kb-dk/public-adl-text-sources"</a>&gt;
+  </p><p id="everysonnet"><span class="biblAuthor">Eberhart, Larry</span>,
+      2018.
+      Italian or Petrarchan Sonnet. In: <em>Every Sonnet: The sonnet forms database</em>. 
+    &lt;URL:<a href="https://poetscollective.org/everysonnet/tag/abbaabbacdecde/#post-119">https://poetscollective.org/everysonnet/tag/abbaabbacdecde/#post-119</a>&gt;
   </p><p id="pentameter"> Iambic pentameter. In: <em>Wikipedia</em>. 
     &lt;URL:<a href="https://en.wikipedia.org/wiki/Iambic_pentameter">https://en.wikipedia.org/wiki/Iambic_pentameter</a>&gt;
   </p><p id="sophus"><span class="biblAuthor">Michaëlis, Sophus</span>,
