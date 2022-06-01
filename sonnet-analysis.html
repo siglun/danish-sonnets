@@ -102,7 +102,6 @@
 
         <pre> 
         //t:div[t:lg and @decls]
-        
         </pre>
 
         <p>We can use that query in XSLT like this:</p>
@@ -110,7 +109,6 @@
         <pre> 
         &lt;xsl:for-each select="//t:div[t:lg and @decls]"&gt;
         &lt;xsl:if test="count(.//t:lg/t:l)=14"&gt;
-        
         </pre>
 
         <p>So we iterate over all &lt;div&gt;...&lt;/div&gt;s having
@@ -155,7 +153,6 @@
            &lt;/xsl:for-each&gt;
         &lt;/xsl:variable&gt;
         &lt;xsl:value-of select="format-number(sum($vowel_numbers) div 14, '#.####')"/&gt;
-        
         </pre>
 
         <p>We use the replace function and a regular expression to
@@ -192,9 +189,7 @@
            &lt;/xsl:for-each&gt;
         &lt;/xsl:variable&gt;
         &lt;xsl:value-of select="$lines_per_strophe"/&gt;
-        
         </pre>
-
 
         <p>That is, iterate over the line groups in a poem, and count the lines
         in each of them.</p>
@@ -387,7 +382,6 @@
 
         <pre> 
         grep -P '^[a-q]{14}' rhymes_3chars.text   | sort | uniq -c | sort -rn
-        
         </pre>
 
         <p>to get a list of rhyme structure and their frequencies. The rhyme
@@ -399,7 +393,6 @@
         4 abcaadeafgghii
         4 abbaabbacdcede
         3 abcaadeafghgig
-        
         </pre>
 
         <p>This silly algorithm does actually give two of the most common rhyme structure
@@ -407,14 +400,12 @@
 
         <pre>
         abbaabbacdcdcd
-        
         </pre>
 
         <p>and</p>
 
         <pre>
         abbaabbacdecde
-        
         </pre>
 
         <p>So while it may fail more often than it succeeds, the successes give

@@ -137,16 +137,14 @@
 
         <eg xml:space="preserve"><![CDATA[ 
         //t:div[t:lg and @decls]
-        ]]>
-        </eg>
+        ]]></eg>
 
         <p>We can use that query in XSLT like this:</p>
 
         <eg xml:space="preserve"><![CDATA[ 
         <xsl:for-each select="//t:div[t:lg and @decls]">
         <xsl:if test="count(.//t:lg/t:l)=14">
-        ]]>
-        </eg>
+        ]]></eg>
 
         <p>So we iterate over all <![CDATA[<div>...</div>]]>s having
         line groups inside and have a `@decls` attribute containing a
@@ -193,8 +191,7 @@
            </xsl:for-each>
         </xsl:variable>
         <xsl:value-of select="format-number(sum($vowel_numbers) div 14, '#.####')"/>
-        ]]>
-        </eg>
+        ]]></eg>
 
         <p>We use the replace function and a regular expression to
         remove everything in each line except the vowels. Then we
@@ -232,9 +229,7 @@
            </xsl:for-each>
         </xsl:variable>
         <xsl:value-of select="$lines_per_strophe"/>
-        ]]>
-        </eg>
-
+        ]]></eg>
 
         <p>That is, iterate over the line groups in a poem, and count the lines
         in each of them.</p>
@@ -431,8 +426,7 @@
 
         <eg xml:space="preserve"><![CDATA[ 
         grep -P '^[a-q]{14}' rhymes_3chars.text   | sort | uniq -c | sort -rn
-        ]]>
-        </eg>
+        ]]></eg>
 
         <p>to get a list of rhyme structure and their frequencies. The rhyme
         structures that occur more than twice are:</p>
@@ -443,23 +437,20 @@
         4 abcaadeafgghii
         4 abbaabbacdcede
         3 abcaadeafghgig
-        ]]>
-        </eg>
+        ]]></eg>
 
         <p>This silly algorithm does actually give two of the most common rhyme structure
         for sonnets, but misses a lot of order in the remaining chaos:</p>
 
         <eg xml:space="preserve"><![CDATA[
         abbaabbacdcdcd
-        ]]>
-        </eg>
+        ]]></eg>
 
         <p>and</p>
 
         <eg xml:space="preserve"><![CDATA[
         abbaabbacdecde
-        ]]>
-        </eg>
+        ]]></eg>
 
         <p>So while it may fail more often than it succeeds, the successes give
         results that are reasonable.</p>
