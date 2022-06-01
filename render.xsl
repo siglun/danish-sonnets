@@ -141,9 +141,11 @@
       
       <xsl:if test="t:title[@level = 'a']">
         <xsl:apply-templates select="t:title[@level = 'a']"/><xsl:text>. </xsl:text>
+        <xsl:if test="t:title[@level = 'j']|t:title[@level = 'm']">
+          <xsl:text>In: </xsl:text>
+        </xsl:if>
       </xsl:if>
       <xsl:for-each select="t:title[@level = 'j']|t:title[@level = 'm']">
-        <xsl:if test="position() = 1"><xsl:text>In: </xsl:text></xsl:if>
 	<em><xsl:apply-templates/></em>
         <xsl:if test="position() = last()"><xsl:text>. </xsl:text></xsl:if>
       </xsl:for-each>
