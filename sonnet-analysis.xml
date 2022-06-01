@@ -120,9 +120,11 @@
         Scandinavia. It is not always like that, but they all contain 14
         lines.</p>
 
-        <p>Shakespeare wrote often his 14 lines typographically in one strophe,
-        whereas Francesco Petrarca wrote them in two strophes with eight and
-        six lines, respectively (see <ref target="sonnets">sonnets</ref>).</p>
+        <p>Shakespeare wrote often his 14 lines typographically in one
+        strophe, whereas Francesco Petrarca wrote them in two strophes
+        with eight and six lines, respectively (see article
+        <title><ref target="#sonnets">Sonnets</ref></title> in
+        Wikipedia).</p>
 
         <p>To be more precise, a sonnet has one more characteristics than having 14 lines,
         the lines should be in <ref target="#pentameter">iambic pentameter</ref>.</p>
@@ -131,7 +133,7 @@
       <div>
         <head>Finding sonnets</head>
 
-        <p>You can easily find all poems based on a XPATH query like:</p>
+        <p>You can easily find all poems in the corpus based on a XPATH query like:</p>
 
         <eg xml:space="preserve"><![CDATA[ 
         //t:div[t:lg and @decls]
@@ -152,13 +154,15 @@
         universal, but we use it in ADL and that attribute is only set
         on pieces that a cataloger has designated as a <hi
         rend="italics">work</hi>. I have implemented this using the
-        <ref target="find_sonnet_candidates.sh">shell script
+        shell script <ref target="find_sonnet_candidates.sh">
         find_sonnet_candidates.sh</ref> and a transform <ref
         target="sonnet_candidate.xsl">sonnet_candidate.xsl</ref>. Finally,
         we don&apos;t do anything unless there are 14 lines of
         poetry.</p>
 
-        <p>The transform creates [a long table with data](sonnet_candidates.xml) on the sonnet candidates it finds.</p>
+        <p>This transformation creates a long, <ref
+        target="sonnet_candidates.xml">sonnet_candidates.xml</ref>, table with data about
+        the sonnet candidates it finds.</p>
       </div>
 
       <div>
@@ -174,33 +178,34 @@
         vowels per line. It is an approximation since a iamb should have the
         stress on the second syllable (due to ignorance I ignore the musical
         aspect of this; we will include false positives since lines of poetry
-        with five feet must not be *iambic*).</p>
+        with five feet must not be <hi rend="bold">iambic</hi>.</p>
 
-        <p>Any way, this script calculates the average number of vowels per line in poems with 14 lines:</p>
+        <p>Any way, this script calculates the average number of
+        vowels per line in poems with 14 lines:</p>
 
         <eg xml:space="preserve"><![CDATA[ 
         <xsl:variable name="vowel_numbers" as="xs:integer *">
-        <xsl:for-each select=".//t:lg/t:l">
-        <xsl:variable name="vowels">
-        <xsl:value-of select="replace(.,'[^iyeæøauoå]','')"/>
-        </xsl:variable>
-        <xsl:value-of select="string-length($vowels)"/>
-        </xsl:for-each>
+           <xsl:for-each select=".//t:lg/t:l">
+              <xsl:variable name="vowels">
+                 <xsl:value-of select="replace(.,'[^iyeæøauoå]','')"/>
+              </xsl:variable>
+              <xsl:value-of select="string-length($vowels)"/>
+           </xsl:for-each>
         </xsl:variable>
         <xsl:value-of select="format-number(sum($vowel_numbers) div 14, '#.####')"/>
         ]]>
         </eg>
 
-        <p>
-          We use the replace function and a regular expression to remove
-          everything in each line except the vowels. Then we measure the string
-          length which should equal the number of vowels per line and add them
-          together for all lines in the poem. Finally we divide that sum with 14
-        and get the average number of vowels per line.</p>
+        <p>We use the replace function and a regular expression to
+        remove everything in each line except the vowels. Then we
+        measure the string length which should equal the number of
+        vowels per line and add them together for all lines in the
+        poem. Finally we divide that sum with 14 and get the average
+        number of vowels per line.</p>
 
-        <p>For a sonnet it would be about 10, [or occasionally a little
-        more](https://en.wikipedia.org/wiki/Hendecasyllable). In the Michaëlis poem
-        quoted above it is 10.4.</p>
+        <p>For a sonnet it would be about 10, <ref
+        target="#hendecasyllable">or occasionally a little
+        more</ref>. In the Michaëlis poem quoted above it is 10.4.</p>
 
       </div>
 
@@ -222,9 +227,9 @@
 
         <eg xml:space="preserve"><![CDATA[ 
         <xsl:variable name="lines_per_strophe" as="xs:integer *">
-        <xsl:for-each select=".//t:lg[t:l]">
-        <xsl:value-of select="count(t:l)"/>
-        </xsl:for-each>
+           <xsl:for-each select=".//t:lg[t:l]">
+              <xsl:value-of select="count(t:l)"/>
+           </xsl:for-each>
         </xsl:variable>
         <xsl:value-of select="$lines_per_strophe"/>
         ]]>
@@ -297,7 +302,7 @@
           </row>
           <row>
             <cell>
-          <ref target="https://github.com/kb-dk/public-adl-text-sources/blob/master/claussen07val.xml">./claussen07val.xml</ref>
+          <ref target="https://github.com/kb-dk/public-adl-text-sources/blob/master/texts/claussen07val.xml">./claussen07val.xml</ref>
             </cell>
             <cell>
             <ref target="https://tekster.kb.dk/text/adl-texts-claussen07val-shoot-workid63580">SKUMRING</ref>
@@ -344,8 +349,8 @@
 
         </table>
 
-        <p>Sophus Claussen's first poem may or may not be a sonnet,
-        Brorson's poem is not. All of those with strophe structure 4
+        <p>Sophus Claussen&apos;s first poem may or may not be a sonnet,
+        Brorson&apos;s poem is not. All of those with strophe structure 4
         4 3 3 are definitely sonnets, as implied by strophe
         structure and the "approximately pentametric" number of
         vowels per line (and, by the way, Aarestrup often points out
@@ -575,8 +580,8 @@
 
         <p>Column 1 is plotted against column 2.</p>
 
-        <p>In this particular corpus, it seems that *aboutishness* start at words occuring in about
-        25% of the sonnets, or less.</p>
+        <p>In this particular corpus, it seems that <hi rend="bold">aboutishness</hi>
+        start at words occuring in about 25% of the sonnets, or less.</p>
 
         <p>As example we have death, dead and lethal etc in a number of
         sonnets. In the left column the number of sonnets containing the word.</p>
@@ -715,6 +720,11 @@
             <ref target="https://en.wikipedia.org/wiki/Iambic_pentameter">https://en.wikipedia.org/wiki/Iambic_pentameter</ref>
           </bibl>
 
+          <bibl xml:id="hendecasyllable">
+            <title level="a">Hendecasyllable</title>
+            <title level="m">Wikipedia</title>
+            <ref target="https://en.wikipedia.org/wiki/Hendecasyllable">https://en.wikipedia.org/wiki/Hendecasyllable</ref>
+</bibl>
           <bibl xml:id="everysonnet">
             <author>Eberhart, Larry</author>
             <date>2018</date>
