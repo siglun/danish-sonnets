@@ -398,7 +398,7 @@
         </figure>
 
         <p>The the last syllable of the eight first lines are the same '-ter'. If
-        you use some script to compare the endings you'll only find single
+        you use some script to compare the endings you&apos;ll only find single
         syllable rhymes and miss double syllable ones rhymes. I.e., you can
         erroneously categorize feminine rhymes (with two syllables) as
         masculine ones (with one syllable). (Sorry, I don&apos;t know a
@@ -457,7 +457,7 @@
 
         <p>The rhyme structure abbaabbacdecde is one is the most
         common ones found.  Also it is one of the socalled Petrarchan
-        rhyme schemes (<ref target="everysonnet">Eberhart,
+        rhyme schemes (<ref target="#everysonnet">Eberhart,
         2018</ref>).</p>
 
       </div>
@@ -509,8 +509,8 @@
 
         <p>There are 160 sonnets in the selection, and the most
         frequent word occurs in all of them. These are the fifteen most
-        commont word a measured by the [number of sonnets they occur
-        in](poem_frequencies.text). Number of poems in the left column.</p>
+        commont word a measured by the <ref target="poem_frequencies.text">number of sonnets they occur
+        in</ref>. Number of poems in the left column.</p>
 
         <eg xml:space="preserve"><![CDATA[ 
         75 du
@@ -531,8 +531,8 @@
         ]]></eg>
 
         <p>and this is the list of the same thing, but measured as the grand
-        total [occurrence of the words in the
-        corpus](frequencies.text). Number of words in corpus in left column.</p>
+        total <ref target="frequencies.text">occurrence of the words in the
+        corpus</ref>. Number of words in corpus in left column.</p>
 
         <eg xml:space="preserve"><![CDATA[ 
         109 min
@@ -565,8 +565,8 @@
 
         <p>There is just one word appearing in all 160 sonnets. It is 'og' meaning
         'and'. Then there are 3304 words occurring in just one sonnet. The
-        [distribution.text](distribution.text) is generated from
-        [poem_frequencies.text](poem_frequencies.text) using</p>
+        <ref target="distribution.text">distribution.text</ref> is generated from
+        <ref target="poem_frequencies.text">poem_frequencies.text</ref> using</p>
 
         <eg xml:space="preserve"><![CDATA[ 
         sed 's/\ [a-z]*$//' poem_frequencies.text | sort | uniq -c | sort -n -k 2 > distribution.text
@@ -670,7 +670,7 @@
         <listBibl>
           <bibl xml:id="kennethchurch">
             <author>Church, Kenneth Ward</author>,
-            <date>[publication date unknown]</date><title level="m">Unix™ for Poets</title>
+            <date>[date unknown]</date><title level="m">Unix™ for Poets</title>
             <ref target="https://web.stanford.edu/class/cs124/kwc-unix-for-poets.pdf">https://web.stanford.edu/class/cs124/kwc-unix-for-poets.pdf</ref>
           </bibl>
           <bibl xml:id="adlcorpus">
