@@ -245,8 +245,8 @@
         <table>
           <head>sonnet candidates</head>
           <row role="label"> 
-            <cell role="label">File name</cell>
-            <cell role="label">Title</cell>
+            <cell role="label">File name (link to source)</cell>
+            <cell role="label">Title (link to view)</cell>
             <cell role="label">xml:id</cell>
             <cell role="label">metadata reference</cell>
             <cell role="label">Strophe structure</cell>
