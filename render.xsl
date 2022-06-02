@@ -10,8 +10,9 @@
 <xsl:stylesheet 
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:t="http://www.tei-c.org/ns/1.0"
-    xmlns="http://www.w3.org/1999/xhtml" 
-    exclude-result-prefixes="t"
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    exclude-result-prefixes="t xi"
     version="1.0">
 
   <xsl:output method="xml"
@@ -25,13 +26,11 @@
   <xsl:template match="t:TEI">
     <xsl:element name="html">
       <xsl:element name="head">
+        <base href="https://github.com/siglun/danish-sonnets/blob/main/" />
 	<xsl:element name="title">
 	  <xsl:apply-templates select="t:teiHeader/t:fileDesc/t:titleStmt/t:title"/>
 	</xsl:element>
-	<style type="text/css" media="all"><xsl:text>
-	  @import "html_print.css";
-	</xsl:text></style>
-
+        <xi:include href="html_print_css.xml"/>
       </xsl:element>
       <xsl:element name="body">
 	<xsl:apply-templates select="t:text"/>
