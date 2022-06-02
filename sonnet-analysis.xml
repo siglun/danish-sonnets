@@ -122,18 +122,20 @@
 
         <p>Shakespeare wrote often his 14 lines typographically in one
         strophe, whereas Francesco Petrarca wrote them in two strophes
-        with eight and six lines, respectively (see article
+        with eight and six lines, respectively (again see article
         <title><ref target="#sonnets">Sonnets</ref></title> in
         Wikipedia).</p>
 
-        <p>To be more precise, a sonnet has one more characteristics than having 14 lines,
-        the lines should be in <ref target="#pentameter">iambic pentameter</ref>.</p>
+        <p>To be more precise, a sonnet has one more characteristics
+        than having 14 lines, the lines should be in <ref
+        target="#pentameter">iambic pentameter</ref>.</p>
       </div>
 
       <div>
         <head>Finding sonnets</head>
 
-        <p>You can easily find all poems in the corpus based on a XPATH query like:</p>
+        <p>You can easily find all poems in the corpus based on a
+        XPATH query like:</p>
 
         <eg xml:space="preserve"><![CDATA[ 
         //t:div[t:lg and @decls]
@@ -143,7 +145,10 @@
 
         <eg xml:space="preserve"><![CDATA[ 
         <xsl:for-each select="//t:div[t:lg and @decls]">
-        <xsl:if test="count(.//t:lg/t:l)=14">
+           <xsl:if test="count(.//t:lg/t:l)=14">
+              <!--  man's got to do what a man's got to do -->
+           </xsl:if>
+        </xsl:for-each>
         ]]></eg>
 
         <p>So we iterate over all <![CDATA[<div>...</div>]]>s having

@@ -79,26 +79,27 @@
         xmlns="http://www.tei-c.org/ns/1.0", which we in following refer to
         with the namespace prefix 't'.</p>
 
-        <p>The poem comprises four line groups with four, four, three and three
-        lines. That is a very common strophe structure for
-        <a href="sonnets">sonnets</a>, at least in
-        Scandinavia. It is not always like that, but they all contain 14
-        lines.</p>
+        <p>The poem comprises four line groups with four, four, three
+        and three lines. That is a very common strophe structure
+        (according to the <a href="#sonnets">Sonnets</a> article
+        in Wikipedia), at least in Scandinavia. It is not always like
+        that, but they all contain 14 lines.</p>
 
         <p>Shakespeare wrote often his 14 lines typographically in one
         strophe, whereas Francesco Petrarca wrote them in two strophes
-        with eight and six lines, respectively (see article
+        with eight and six lines, respectively (again see article
         <em><a href="#sonnets">Sonnets</a></em> in
         Wikipedia).</p>
 
-        <p>To be more precise, a sonnet has one more characteristics than having 14 lines,
-        the lines should be in <a href="#pentameter">iambic pentameter</a>.</p>
+        <p>To be more precise, a sonnet has one more characteristics
+        than having 14 lines, the lines should be in <a href="#pentameter">iambic pentameter</a>.</p>
       
 
       
         <h2>Finding sonnets</h2>
 
-        <p>You can easily find all poems in the corpus based on a XPATH query like:</p>
+        <p>You can easily find all poems in the corpus based on a
+        XPATH query like:</p>
 
         <pre> 
         //t:div[t:lg and @decls]
@@ -108,7 +109,10 @@
 
         <pre> 
         &lt;xsl:for-each select="//t:div[t:lg and @decls]"&gt;
-        &lt;xsl:if test="count(.//t:lg/t:l)=14"&gt;
+           &lt;xsl:if test="count(.//t:lg/t:l)=14"&gt;
+              &lt;!--  man's got to do what a man's got to do --&gt;
+           &lt;/xsl:if&gt;
+        &lt;/xsl:for-each&gt;
         </pre>
 
         <p>So we iterate over all &lt;div&gt;...&lt;/div&gt;s having
