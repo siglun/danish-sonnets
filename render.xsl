@@ -212,7 +212,7 @@
     <xsl:element name="a">
       <xsl:if test="@target">
 	<xsl:attribute name="href">
-	  <xsl:apply-templates select="@target"/>
+          <xsl:value-of select="@target"/>
 	</xsl:attribute>
       </xsl:if>
       <xsl:apply-templates/>
