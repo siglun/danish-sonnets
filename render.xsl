@@ -15,6 +15,8 @@
     exclude-result-prefixes="t xi"
     version="1.0">
 
+  <xsl:param name="base_href">https://github.com/siglun/danish-sonnets/blob/main/</xsl:param>
+  
   <xsl:output method="xml"
 	      encoding="UTF-8"
 	      indent="yes"/>
@@ -26,7 +28,6 @@
   <xsl:template match="t:TEI">
     <xsl:element name="html">
       <xsl:element name="head">
-        <base href="https://github.com/siglun/danish-sonnets/blob/main/" />
 	<xsl:element name="title">
 	  <xsl:apply-templates select="t:teiHeader/t:fileDesc/t:titleStmt/t:title"/>
 	</xsl:element>
@@ -212,7 +213,14 @@
     <xsl:element name="a">
       <xsl:if test="@target">
 	<xsl:attribute name="href">
-          <xsl:value-of select="@target"/>
+          <xsl:choose>
+            <xsl:when test="contains(@target,'#') or contains(@target,'http')">
+              <xsl:value-of select="@target"/>
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:value-of select="concat($base_href,@target)"/>
+            </xsl:otherwise>
+          </xsl:choose>
 	</xsl:attribute>
       </xsl:if>
       <xsl:apply-templates/>

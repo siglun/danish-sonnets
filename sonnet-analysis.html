@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <base href="https://github.com/siglun/danish-sonnets/blob/main/"/>
     <title>Sex, death and sonnetsMusings of a software developer</title>
     <style type="text/css" media="all">
 body {
@@ -322,7 +321,7 @@ p.version {
            &lt;/p&gt;
         &lt;/div&gt;
         
-        </pre> <a href="sophus">Sophus Michaëlis (1883)</a></p>
+        </pre> <a href="https://github.com/siglun/danish-sonnets/blob/main/sophus">Sophus Michaëlis (1883)</a></p>
         
 
         
@@ -371,12 +370,12 @@ p.version {
         reference to metadata in the TEI header. The latter is not
         universal, but we use it in ADL and that attribute is only set
         on pieces that a cataloger has designated as a <em>work</em>. I have implemented this using the
-        shell script <a href="find_sonnet_candidates.sh">
-        find_sonnet_candidates.sh</a> and a transform <a href="sonnet_candidate.xsl">sonnet_candidate.xsl</a>. Finally,
+        shell script <a href="https://github.com/siglun/danish-sonnets/blob/main/find_sonnet_candidates.sh">
+        find_sonnet_candidates.sh</a> and a transform <a href="https://github.com/siglun/danish-sonnets/blob/main/sonnet_candidate.xsl">sonnet_candidate.xsl</a>. Finally,
         we don't do anything unless there are 14 lines of
         poetry.</p>
 
-        <p>This transformation creates a long, <a href="sonnet_candidates.xml">sonnet_candidates.xml</a>, table with data about
+        <p>This transformation creates a long, <a href="https://github.com/siglun/danish-sonnets/blob/main/sonnet_candidates.xml">sonnet_candidates.xml</a>, table with data about
         the sonnet candidates it finds.</p>
       
 
@@ -453,7 +452,7 @@ p.version {
         lines. There are 243 of them (there are more, but they may have erroneous
         markup).</p>
 
-        <p>You find these sonnet candidates in a table here <a href="sonnet_candidates.xml">sonnet_candidates.xml</a>. Please,
+        <p>You find these sonnet candidates in a table here <a href="https://github.com/siglun/danish-sonnets/blob/main/sonnet_candidates.xml">sonnet_candidates.xml</a>. Please,
         find an extract from it below.</p>
 
         <table>
@@ -622,8 +621,8 @@ p.version {
         not 'aaaaaaaa'. Furthermore, it continues 'cdedec'.</p>
 
         <p>I have written a set of scripts that traverse the
-        <a href="sonnet_candidates.xml">sonnet_candidates.xml</a> table. Transform that
-        file using <a href="iterate_the_rhyming.xsl">iterate_the_rhyming.xsl</a> selects
+        <a href="https://github.com/siglun/danish-sonnets/blob/main/sonnet_candidates.xml">sonnet_candidates.xml</a> table. Transform that
+        file using <a href="https://github.com/siglun/danish-sonnets/blob/main/iterate_the_rhyming.xsl">iterate_the_rhyming.xsl</a> selects
         poems with 14 lines and strophe structure 4 4 3 3. It generates a
         shell script which when executed pipes the content through other
         scripts that retrieve content, remove punctuation and finally detags
@@ -632,7 +631,7 @@ p.version {
         above.</p>
 
         <p>It works, sort of, until it doesn't. For poems with 4
-        4 3 3 strophe structure, you can find the result in <a href="rhymes_3chars.text">rhymes_3chars.text</a> and <a href="rhymes_2chars.text">rhymes_2chars.text</a> for three
+        4 3 3 strophe structure, you can find the result in <a href="https://github.com/siglun/danish-sonnets/blob/main/rhymes_3chars.text">rhymes_3chars.text</a> and <a href="https://github.com/siglun/danish-sonnets/blob/main/rhymes_2chars.text">rhymes_2chars.text</a> for three
         and two letter rhymes, respectively. Run </p>
 
         <pre> 
@@ -720,7 +719,7 @@ p.version {
 
         <p>There are 160 sonnets in the selection, and the most
         frequent word occurs in all of them. These are the fifteen most
-        commont word a measured by the <a href="poem_frequencies.text">number of sonnets they occur
+        commont word a measured by the <a href="https://github.com/siglun/danish-sonnets/blob/main/poem_frequencies.text">number of sonnets they occur
         in</a>. Number of poems in the left column.</p>
 
         <pre> 
@@ -742,7 +741,7 @@ p.version {
         </pre>
 
         <p>and this is the list of the same thing, but measured as the grand
-        total <a href="frequencies.text">occurrence of the words in the
+        total <a href="https://github.com/siglun/danish-sonnets/blob/main/frequencies.text">occurrence of the words in the
         corpus</a>. Number of words in corpus in left column.</p>
 
         <pre> 
@@ -776,8 +775,8 @@ p.version {
 
         <p>There is just one word appearing in all 160 sonnets. It is 'og' meaning
         'and'. Then there are 3304 words occurring in just one sonnet. The
-        <a href="distribution.text">distribution.text</a> is generated from
-        <a href="poem_frequencies.text">poem_frequencies.text</a> using</p>
+        <a href="https://github.com/siglun/danish-sonnets/blob/main/distribution.text">distribution.text</a> is generated from
+        <a href="https://github.com/siglun/danish-sonnets/blob/main/poem_frequencies.text">poem_frequencies.text</a> using</p>
 
         <pre> 
         sed 's/\ [a-z]*$//' poem_frequencies.text | sort | uniq -c | sort -n -k 2 &gt; distribution.text
