@@ -33,7 +33,8 @@
 	</xsl:element>
 	<link rel="stylesheet"
 	      type="text/css"
-	      href="https://raw.githubusercontent.com/siglun/danish-sonnets/main/html_print_css"/>
+	      href="./html_print_css"/>
+	<!-- href="https://raw.githubusercontent.com/siglun/danish-sonnets/main/html_print_css"/ -->
       </xsl:element>
       <xsl:element name="body">
 	<xsl:apply-templates select="t:text"/>
