@@ -29,8 +29,8 @@
 	<xsl:element name="title">
 	  <xsl:apply-templates select="t:teiHeader/t:fileDesc/t:titleStmt/t:title"/>
 	</xsl:element>
-	  <xsl:value-of
-	      select="document('https://raw.githubusercontent.com/siglun/danish-sonnets/main/html_print_css.xml')"/>
+	<xsl:copy-of
+	    select="document('https://raw.githubusercontent.com/siglun/danish-sonnets/main/html_print_css.xml')"/>
       </xsl:element>
       <xsl:element name="body">
 	<xsl:apply-templates select="t:text"/>
