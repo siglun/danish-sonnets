@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet href="render.xsl" type="text/xsl" ?>
+<?xml-stylesheet href="https://raw.githubusercontent.com/siglun/danish-sonnets/main/render.xsl" type="text/xsl" ?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="root">
   <teiHeader xml:id="header">
     <fileDesc xml:id="md">
       <titleStmt xml:id="titles">
         <title type="main">Sex, death and sonnets</title>
         <title type="sub">Musings of a software developer</title>
-        <author><persName><forename>Sigfrid</forename><surname>Lundberg</surname></persName></author>
+        <author>
+	  <persName>
+	    <forename>Sigfrid</forename>
+	    <surname>Lundberg</surname>
+	  </persName>
+	</author>
       </titleStmt>
       <publicationStmt>
         <p>

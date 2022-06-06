@@ -31,7 +31,10 @@
 	<xsl:element name="title">
 	  <xsl:apply-templates select="t:teiHeader/t:fileDesc/t:titleStmt/t:title"/>
 	</xsl:element>
-        <xi:include href="html_print_css.xml"/>
+	<link rel="stylesheet"
+	      type="text/css"
+	      href="https://raw.githubusercontent.com/siglun/danish-sonnets/main/html_print_css"/>
+        <!-- xi:include href="html_print_css.xml"/ -->
       </xsl:element>
       <xsl:element name="body">
 	<xsl:apply-templates select="t:text"/>
