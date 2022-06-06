@@ -35,8 +35,8 @@
 	<style type="text/css">
 	  @import url("https://raw.githubusercontent.com/siglun/danish-sonnets/main/html_print.css");
 	</style>
-	<!-- xsl:copy-of
-	    select="document(https://raw.githubusercontent.com/siglun/danish-sonnets/main/html_print_css.xml)/"/ -->
+	<xsl:value-of
+	    select="document('https://raw.githubusercontent.com/siglun/danish-sonnets/main/html_print_css.xml')"/>
       </xsl:element>
       <xsl:element name="body">
 	<xsl:apply-templates select="t:text"/>
