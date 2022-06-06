@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE xsl:stylesheet [
-<!ENTITY lsquor   "&#x201A;" ><!--=rising single quote, left (low)-->
-<!ENTITY ldquor   "&#x201E;" ><!--=rising dbl quote, left (low)-->
 <!ENTITY rdquor   "&#x201D;" ><!--rising dbl quote, right (high)-->
 <!ENTITY rsquor   "&#x2019;" ><!--rising single quote, right (high)-->
 <!ENTITY ldquo    "&#x201C;"  ><!--=double quotation mark, left-->
