@@ -29,14 +29,10 @@
 	<xsl:element name="title">
 	  <xsl:apply-templates select="t:teiHeader/t:fileDesc/t:titleStmt/t:title"/>
 	</xsl:element>
-	<link rel="stylesheet"
-	      type="text/css"
-	      href="https://raw.githubusercontent.com/siglun/danish-sonnets/main/html_print.css"/>
 	<style type="text/css">
-	  @import url("https://raw.githubusercontent.com/siglun/danish-sonnets/main/html_print.css");
+	  <xsl:value-of
+	      select="document('https://raw.githubusercontent.com/siglun/danish-sonnets/main/html_print_css.xml')"/>
 	</style>
-	<xsl:value-of
-	    select="document('https://raw.githubusercontent.com/siglun/danish-sonnets/main/html_print_css.xml')"/>
       </xsl:element>
       <xsl:element name="body">
 	<xsl:apply-templates select="t:text"/>
