@@ -790,25 +790,34 @@ p.version {
 
         <div id="">
           <img src="https://github.com/siglun/danish-sonnets/raw/main/distro.png"/>
-         </div>
+        </div>
 
+        <p>The distribution shows number of words graphed against
+        number of sonnets.  There are 3304 words occurring in just one
+        sonnet. The leftmost, and highest, point on the graph has the coordinate (1,3304).</p>
+         
+        <p>There is just one word appearing in all 160 sonnets. It is
+        'og' meaning 'and' correspoding to the rightmost point on the
+        graph which has the coordinate (160,1).</p>
 
-        <p>There is just one word appearing in all 160 sonnets. It is 'og' meaning
-        'and'. Then there are 3304 words occurring in just one sonnet. The
-        <a href="https://github.com/siglun/danish-sonnets/blob/main/distribution.text">distribution.text</a> is generated from
-        <a href="https://github.com/siglun/danish-sonnets/blob/main/poem_frequencies.text">poem_frequencies.text</a> using</p>
+        <p>The <a href="https://github.com/siglun/danish-sonnets/blob/main/distribution.text">distribution.text</a>
+        is generated from <a href="https://github.com/siglun/danish-sonnets/blob/main/poem_frequencies.text">poem_frequencies.text</a>
+        using</p>
 
         <pre> 
         sed 's/\ [a-z]*$//' poem_frequencies.text | sort | uniq -c | sort -n -k 2 &gt; distribution.text
         </pre>
 
-        <p>Column 1 is plotted against column 2.</p>
+        <p>See above. Column 1 is plotted against column 2.</p>
 
-        <p>In this particular corpus, it seems that <strong>aboutishness</strong>
-        start at words occuring in about 25% of the sonnets, or less.</p>
+        <p>In this particular corpus, it seems that <strong>aboutishness</strong> start at words occuring in about
+        25% of the sonnets, or less. I.e., words occuring in 40
+        sonnets, or fewer.</p>
 
-        <p>As example we have death, dead and lethal etc in a number of
-        sonnets. In the left column the number of sonnets containing the word.</p>
+        <p>As example we have death, dead and lethal etc (basically
+        words containing <strong>død</strong>) in a number of
+        sonnets. In the left column the number of sonnets containing
+        the word. These appear in about 7% of the sonnets.</p>
 
         <pre> 
         1 dødehavet
@@ -826,7 +835,7 @@ p.version {
         11 døde
         </pre>
 
-        <p>Love is not as popular as death</p>
+        <p>Love (elskov) is not as popular as death (about 5% of the sonnets).</p>
 
         <pre> 
         1 elskoven
@@ -837,7 +846,7 @@ p.version {
         7 elskov
         </pre>
 
-        <p>women not as popular as love</p>
+        <p>women (kvinde) are not as popular as love</p>
 
         <pre> 
         1 dobbeltkvinde
@@ -861,7 +870,14 @@ p.version {
         </pre>
 
 
-        <p>remember that these sonnets are by men.</p>
+        <p>Remember that these sonnets are by men. mandom implies a man's existence as a
+        grownup man. Originally, in <a href="#oldnorse">old
+        norse</a>, mand meant, just as in Old English, human. That,
+        however, was when it was doubtful if women were actually
+        human. Baadsmandstrille is a derivative of baadsmand
+        (boatswain) which is another name for a sailor or petty
+        officer. A baadsmandstrille is presumably a song sung by
+        sailors.</p>
 
         <p>Graves occur, for some reason, less than deaths</p>
 
@@ -876,8 +892,13 @@ p.version {
         4 gravens
         </pre>
 
-      
+        <p>indgraves is most likely a kind of <em>homonym</em>, if you look up that sonnet it is
+        clear that it means engrave. There both the verb in past tense
+        begravet (buried) from begrave (as in bury) and grav (as in
+        grave) and gravhøi (tumulus).</p>
 
+      
+      
       
 
         <h2>Conclusions</h2>
@@ -928,6 +949,9 @@ p.version {
       1883.
       Jeg elsker —. In: <em>Solblomster</em>. 
     &lt;URL:<a href="https://tekster.kb.dk/text/adl-texts-michs_03-shoot-workid68251">https://tekster.kb.dk/text/adl-texts-michs_03-shoot-workid68251"/&gt;</a>&gt;
+  </p>
+      <p id="oldnorse"> Old Norse. In: <em>Wikipedia</em>. 
+    &lt;URL:<a href="https://en.wikipedia.org/wiki/Old_Norse">https://en.wikipedia.org/wiki/Old_Norse</a>&gt;
   </p>
       <p id="sonnets"> Sonnet. In: <em>Wikipedia</em>. 
     &lt;URL:<a href="https://en.wikipedia.org/wiki/Sonnet">https://en.wikipedia.org/wiki/Sonnet</a>&gt;
