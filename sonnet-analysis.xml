@@ -599,7 +599,7 @@
         <p>As example we have death, dead and lethal etc (basically
         words containing <hi rend="bold">død</hi>) in a number of
         sonnets. In the left column the number of sonnets containing
-        the word.</p>
+        the word. These appear in about 7% of the sonnets.</p>
 
         <eg xml:space="preserve"><![CDATA[ 
         1 dødehavet
@@ -617,7 +617,7 @@
         11 døde
         ]]></eg>
 
-        <p>Love is not as popular as death</p>
+        <p>Love (elskov) is not as popular as death (about 5% of the sonnets).</p>
 
         <eg xml:space="preserve"><![CDATA[ 
         1 elskoven
@@ -628,7 +628,7 @@
         7 elskov
         ]]></eg>
 
-        <p>women not as popular as love</p>
+        <p>women (kvinde) are not as popular as love</p>
 
         <eg xml:space="preserve"><![CDATA[ 
         1 dobbeltkvinde
@@ -652,7 +652,15 @@
         ]]></eg>
 
 
-        <p>remember that these sonnets are by men.</p>
+        <p>Remember that these sonnets are by men. <hi
+        rend="italic">mandom</hi> implies a man&apos;s existence as a
+        grownup man. Originally, in <ref target="#oldnorse">old
+        norse</ref>, mand meant, just as in Old English, human. That,
+        however, was when it was doubtful if women were actually
+        human. baadsmandstrille is a derivative of baadsmand
+        (boatswain) which is another name for a sailor or petty
+        officer. A baadsmandstrille is presumably a song sung by
+        sailors.</p>
 
         <p>Graves occur, for some reason, less than deaths</p>
 
@@ -667,8 +675,13 @@
         4 gravens
         ]]></eg>
 
-      </div>
+        <p>indgraves is most likely a kind of <hi rend="italic">homonym</hi>, if you
+        look up that sonnet it is clear that it means engrave.
+          
+        </p>
 
+      </div>
+      
       <div>
 
         <head>Conclusions</head>
@@ -739,7 +752,14 @@
             <title level="a">Hendecasyllable</title>
             <title level="m">Wikipedia</title>
             <ref target="https://en.wikipedia.org/wiki/Hendecasyllable">https://en.wikipedia.org/wiki/Hendecasyllable</ref>
-</bibl>
+          </bibl>
+
+          <bibl xml:id="oldnorse">
+            <title level="a">Old Norse</title>
+            <title level="m">Wikipedia</title>
+            <ref target="https://en.wikipedia.org/wiki/Old_Norse">https://en.wikipedia.org/wiki/Old_Norse</ref>
+          </bibl>
+          
           <bibl xml:id="everysonnet">
             <author>Eberhart, Larry</author>
             <date>2018</date>
