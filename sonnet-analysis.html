@@ -1,10 +1,268 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <title>Sex, death and sonnetsMusings of a software developer</title>
-  </head>
-  <body><h1 class="title">Sex, death and sonnets<br/>Musings of a software developer</h1><p class="author">Sigfrid Lundberg<br/>slu@kb.dk<br/>Digital Transformation<br/>Royal Danish Library<br/>Post box 2149<br/>1016 Copenhagen K<br/>Denmark<br/></p><blockquote class="abstract"><h3>Abstract</h3>
-	<p>This note discusses how software can recognize sonnets, by
+   <head>
+      <title>Sex, death and sonnetsMusings of a software developer</title>
+      <style xmlns="" type="text/css" media="all">
+body {
+    color: black;
+    font-family: serif;
+    font-weight: normal;
+    font-size: 12pt;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+blockquote.abstract {
+    font-style: normal;
+    width: 80%;
+    font-size: 90%;
+    text-align: left;
+    margin-left: +10%;
+    background-color: white;
+}
+
+blockquote {
+    font-style: italic;
+    text-align: left;
+    margin-left: +10%;
+    background-color: white;
+}
+
+dl, p, li {
+    text-align: left;
+    margin-left:  +1%;
+    margin-right: +1%;
+    background-color: white;
+}
+
+p.navigation {
+    text-align: right;
+    background-color: white;
+}
+
+p.right {
+    text-align: right;
+    background-color: white;
+}
+
+div#table-of-contents {
+    position: fixed;
+    font-size:80%;
+    left:0.1em;
+    top:1.0em;
+    width: 16em;
+    height: 40em;
+    overflow: scroll;
+    background-color: white;
+}
+
+div#main-content {
+    position: absolute;
+    top: 0.5em;
+    left: 17em;
+    margin-right: +2%;
+    background-color: white;
+}
+
+
+div {
+    text-align: left;
+    margin-left:  +2%;
+    background-color: white;
+}
+
+
+pre {
+    font-family: courier,fixed;
+    margin-left:  +2%;
+    width: 95%;
+}
+
+p.author {
+    font-style: italic;
+    text-align: center;
+    background-color: white;
+}
+
+h1.title {
+    font-size: 120%;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+    background-color: white;
+    margin-left:  +2%;
+    margin-right: +2%;
+}
+
+.level1 {
+    background-color: white;
+}
+
+.level2 {
+    background-color: white;
+}
+
+.level3 {
+    background-color: white;
+}
+
+.level4 {
+    background-color: white;
+}
+
+h1 {
+    font-weight: bold;
+    font-family: sans-serif;
+    background-color: white;
+    margin-left:  +2%;
+    margin-right: +2%;
+    font-size: 110%;
+}
+
+h2 {
+    font-family: sans-serif;
+    font-weight: bold;
+    background-color: white;
+    border-top: none;
+    border-bottom: solid thin;
+    border-right: none;
+    border-left: none;
+    font-size: 110%;
+}
+
+
+h3 {
+    font-family: sans-serif;
+    font-weight: bold;
+    background-color: white;
+    border-top: none;
+    border-bottom: dashed thin;
+    border-right: none;
+    border-left: none;
+    font-size: 110%;
+}
+
+h4 {
+    font-family: sans-serif;
+    font-weight: bold;
+    background-color: white;
+    border-top: none;
+    border-bottom: none;
+    border-right: none;
+    border-left: none;
+    font-size: 110%;
+}
+
+table {
+    text-align: left;
+    width: 80%;
+    color: black;
+    margin-left: +5%;
+    vertical-align: top;
+}
+
+caption {
+    text-align: center;
+    color: black;
+    background-color: #eeeeee;
+    font-weight: bold;
+    vertical-align: top;
+    margin-left: +5%;
+}
+
+td {
+    text-align: left;
+    color: black;
+    background-color: #ffffff;
+    vertical-align: top;
+/*border-top: solid thin;
+border-bottom: none;
+border-right: none;
+border-left: solid thin;*/
+}
+
+th {
+    text-align: left;
+    color: black;
+    background-color: #ffffff;
+    vertical-align: top;
+}
+
+table.navigation {
+    text-align: center;
+    color: black;
+    background-color: white;
+    vertical-align: top;
+}
+
+td.left {
+    text-align: left;
+    color: black;
+    background-color: white;
+    vertical-align: top;
+    border: none;
+}
+
+td.center {
+    text-align: center;
+    color: black;
+    background-color: white;
+    vertical-align: top;
+    border:none;
+    background-color: white;
+}
+
+td.right {
+    text-align: right;
+    color: black;
+    background-color: white;
+    vertical-align: top;
+    border:none;
+    background-color: white;
+}
+
+span.biblAuthor {
+    font-variant: small-caps;
+}
+
+span.red {
+    color: red;
+}
+
+a:active {
+    color: #660000;
+}
+
+a:link {
+    color: #000066;
+}
+
+a:visited {
+    color: #660000;
+}
+
+hr {
+    border-top: solid thin;
+    border-bottom: none;
+    border-right: none;
+    border-left: none;
+} 
+
+p.version {
+    text-align: right;
+    width: 30%;
+    margin-left:  65%;
+}
+</style>
+   </head>
+   <body>
+      <h1 class="title">Sex, death and sonnets<br/>Musings of a software developer</h1>
+      <p class="author">Sigfrid Lundberg<br/>slu@kb.dk<br/>Digital Transformation<br/>Royal Danish Library<br/>Post box 2149<br/>1016 Copenhagen K<br/>Denmark<br/>
+      </p>
+      <blockquote class="abstract">
+         <h3>Abstract</h3>
+	        <p>This note discusses how software can recognize sonnets, by
 	analysis of text length, strophe structure and number of syllables
 	per line. It also makes a simple content analysis based on
 	word frequency analyses.</p>
@@ -38,7 +296,8 @@
 
         <p>A poem may look like this in the source</p>
 
-        <p><pre> 
+        <p>
+         <pre> 
         &lt;div xml:id="workid68251" decls="#biblid68251"&gt;
            &lt;head xml:id="idm140093058532672"&gt;Jeg elsker —&lt;/head&gt;
            &lt;lg xml:id="idm140093058532240"&gt;
@@ -68,7 +327,9 @@
            &lt;/p&gt;
         &lt;/div&gt;
         
-        </pre> <a href="https://github.com/siglun/danish-sonnets/blob/main/sophus">Sophus Michaëlis (1883)</a></p>
+        </pre> 
+         <a href="https://github.com/siglun/danish-sonnets/blob/main/sophus">Sophus Michaëlis (1883)</a>
+      </p>
         
 
         
@@ -85,7 +346,9 @@
         <p>Shakespeare wrote often his 14 lines typographically in one
         strophe, whereas Francesco Petrarca wrote them in two strophes
         with eight and six lines, respectively (again see article
-        <em><a href="#sonnets">Sonnets</a></em> in
+        <em>
+            <a href="#sonnets">Sonnets</a>
+         </em> in
         Wikipedia).</p>
 
         <p>To be more precise, a sonnet has one more characteristics
@@ -238,29 +501,34 @@
           </tr>
           <tr>
             <td>
-          <a href="https://github.com/kb-dk/public-adl-text-sources/blob/master/texts/aarestrup07val.xml">./aarestrup07val.xml</a>
+               <a href="https://github.com/kb-dk/public-adl-text-sources/blob/master/texts/aarestrup07val.xml">./aarestrup07val.xml</a>
             </td>
             <td>
-            <a href="https://tekster.kb.dk/text/adl-texts-aarestrup07val-shoot-workid76444">Sonet</a> 
+               <a href="https://tekster.kb.dk/text/adl-texts-aarestrup07val-shoot-workid76444">Sonet</a> 
             </td>
             <td>workid76444</td>
             <td>#biblid76444</td>
             <td>4 4 3 3</td>
             <td>11.5</td>
           </tr>
-          <tr><td><a href="https://github.com/kb-dk/public-adl-text-sources/blob/master/texts/./brorson03grval.xml">./brorson03grval.xml</a></td>
-          <td><a href="https://tekster.kb.dk/text/adl-texts-brorson03grval-shoot-workid76607">1.</a></td>
-          <td>workid76607</td>
-          <td>#biblid76607</td>
-          <td>14</td>
-          <td>8.7143</td>
+          <tr>
+            <td>
+               <a href="https://github.com/kb-dk/public-adl-text-sources/blob/master/texts/./brorson03grval.xml">./brorson03grval.xml</a>
+            </td>
+            <td>
+               <a href="https://tekster.kb.dk/text/adl-texts-brorson03grval-shoot-workid76607">1.</a>
+            </td>
+            <td>workid76607</td>
+            <td>#biblid76607</td>
+            <td>14</td>
+            <td>8.7143</td>
           </tr>
           <tr>
             <td>
-          <a href="https://github.com/kb-dk/public-adl-text-sources/blob/master/texts/claussen07val.xml">./claussen07val.xml</a>
+               <a href="https://github.com/kb-dk/public-adl-text-sources/blob/master/texts/claussen07val.xml">./claussen07val.xml</a>
             </td>
             <td>
-            <a href="https://tekster.kb.dk/text/adl-texts-claussen07val-shoot-workid63580">SKUMRING</a>
+               <a href="https://tekster.kb.dk/text/adl-texts-claussen07val-shoot-workid63580">SKUMRING</a>
             </td>
             <td>workid63580</td>
             <td>#biblid63580</td>
@@ -284,7 +552,7 @@
               <a href="https://github.com/kb-dk/public-adl-text-sources/blob/master/texts/claussen07val.xml">./claussen07val.xml</a>
             </td>
             <td>
-          <a href="https://tekster.kb.dk/text/adl-texts-claussen07val-shoot-workid66131">MAANENS TUNGSIND</a>
+               <a href="https://tekster.kb.dk/text/adl-texts-claussen07val-shoot-workid66131">MAANENS TUNGSIND</a>
             </td>
             <td>workid66131</td>
             <td>#biblid66131</td>
@@ -295,7 +563,9 @@
             <td>
               <a href="https://github.com/kb-dk/public-adl-text-sources/blob/master/texts/jacobjp08val.xml">./jacobjp08val.xml</a>
             </td>
-            <td><a href="https://tekster.kb.dk/text/adl-texts-jacobjp08val-shoot-workid63094">I Seraillets Have</a></td>
+            <td>
+               <a href="https://tekster.kb.dk/text/adl-texts-jacobjp08val-shoot-workid63094">I Seraillets Have</a>
+            </td>
             <td>workid63094</td>
             <td>#biblid63094</td>
             <td>14</td>
@@ -328,7 +598,9 @@
 
         <div id="">
 
-          <p><small>SONET</small></p>
+          <p>
+            <small>SONET</small>
+         </p>
 
           <p>
             Den Svend, som Tabet af sin elskte frister,<br/>
@@ -341,7 +613,8 @@
             Men næppe han med en usalig bytter,<br/>
             Hvis Hjerte, stedse koldt for Elskov, brister,<br/>
             Som sig uelsket gennem Livet lister,<br/>
-          Hans Armod kun mod Tabet ham beskytter.<br/></p>
+          Hans Armod kun mod Tabet ham beskytter.<br/>
+         </p>
 
           <p>
             Til Livets Gaade rent han savner Nøglen,<br/>
@@ -614,7 +887,9 @@
         conclusions. There are interesting things to find here,
         though. Some of them are possible to study using simple
         methods, such as those described by Kenneth Ward Church in his 
-        <em><a href="#kennethchurch"> Unix™ for Poets</a></em>.</p>
+        <em>
+            <a href="#kennethchurch"> Unix™ for Poets</a>
+         </em>.</p>
 
         <p>The preliminary result from my armchair text processing exercise supports the
         notion that life was already in early modern Europe about sex, death
@@ -624,38 +899,53 @@
       
       
         <h2>References</h2>
-        <p id="kennethchurch"><span class="biblAuthor">Church, Kenneth Ward</span>,
+        <p id="kennethchurch">
+         <span class="biblAuthor">Church, Kenneth Ward</span>,
       [date unknown].
       <em>Unix™ for Poets</em>. 
     &lt;URL:<a href="https://web.stanford.edu/class/cs124/kwc-unix-for-poets.pdf">https://web.stanford.edu/class/cs124/kwc-unix-for-poets.pdf</a>&gt;
-  </p><p id="adlcorpus"><span class="biblAuthor">Det Kgl. Bibliotek</span>,  and <span class="biblAuthor">Det Danske Sprog- og Litteraturselskab</span>,
+  </p>
+      <p id="adlcorpus">
+         <span class="biblAuthor">Det Kgl. Bibliotek</span>,  and <span class="biblAuthor">Det Danske Sprog- og Litteraturselskab</span>,
       2000 - 2022.
       <em>The ADL text corpus</em>. 
     &lt;URL:<a href="https://github.com/kb-dk/public-adl-text-sources">https://github.com/kb-dk/public-adl-text-sources"</a>&gt;
-  </p><p id="everysonnet"><span class="biblAuthor">Eberhart, Larry</span>,
+  </p>
+      <p id="everysonnet">
+         <span class="biblAuthor">Eberhart, Larry</span>,
       2018.
       Italian or Petrarchan Sonnet. In: <em>Every Sonnet: The sonnet forms database</em>. 
     &lt;URL:<a href="https://poetscollective.org/everysonnet/tag/abbaabbacdecde/#post-119">https://poetscollective.org/everysonnet/tag/abbaabbacdecde/#post-119</a>&gt;
-  </p><p id="hendecasyllable"> Hendecasyllable. In: <em>Wikipedia</em>. 
+  </p>
+      <p id="hendecasyllable"> Hendecasyllable. In: <em>Wikipedia</em>. 
     &lt;URL:<a href="https://en.wikipedia.org/wiki/Hendecasyllable">https://en.wikipedia.org/wiki/Hendecasyllable</a>&gt;
-  </p><p id="pentameter"> Iambic pentameter. In: <em>Wikipedia</em>. 
+  </p>
+      <p id="pentameter"> Iambic pentameter. In: <em>Wikipedia</em>. 
     &lt;URL:<a href="https://en.wikipedia.org/wiki/Iambic_pentameter">https://en.wikipedia.org/wiki/Iambic_pentameter</a>&gt;
-  </p><p id="sophus"><span class="biblAuthor">Michaëlis, Sophus</span>,
+  </p>
+      <p id="sophus">
+         <span class="biblAuthor">Michaëlis, Sophus</span>,
       1883.
       Jeg elsker —. In: <em>Solblomster</em>. 
     &lt;URL:<a href="https://tekster.kb.dk/text/adl-texts-michs_03-shoot-workid68251">https://tekster.kb.dk/text/adl-texts-michs_03-shoot-workid68251"/&gt;</a>&gt;
-  </p><p id="sonnets"> Sonnet. In: <em>Wikipedia</em>. 
+  </p>
+      <p id="sonnets"> Sonnet. In: <em>Wikipedia</em>. 
     &lt;URL:<a href="https://en.wikipedia.org/wiki/Sonnet">https://en.wikipedia.org/wiki/Sonnet</a>&gt;
-  </p><p id="teiguidelines"><span class="biblAuthor">The TEI Consortium</span>,
+  </p>
+      <p id="teiguidelines">
+         <span class="biblAuthor">The TEI Consortium</span>,
       2022.
       <em>TEI P5: Guidelines for Electronic Text Encoding and Interchange</em>. 
     &lt;URL:<a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html">https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html</a>&gt;
-  </p><p id="tei-ref-lg"><span class="biblAuthor">The TEI Consortium</span>,
+  </p>
+      <p id="tei-ref-lg">
+         <span class="biblAuthor">The TEI Consortium</span>,
       2022.
       Passages of Verse or Drama. In: <em>TEI P5: Guidelines for Electronic Text Encoding and Interchange</em>. 
     &lt;URL:<a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CODV">https://tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CODV</a>&gt;
   </p>
       
 
-    <pre/></body>
+      <pre/>
+   </body>
 </html>
