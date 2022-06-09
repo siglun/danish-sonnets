@@ -170,6 +170,15 @@ Notes
 
 <xsl:template match="t:emph|t:p/t:title">\fI<xsl:apply-templates  mode="preserve"/>\fP</xsl:template>
 
+
+<xsl:template match="t:eg">
+.ID
+<xsl:value-of   select="."/>
+.DE
+</xsl:template>
+
+
+
 <xsl:template mode="preserve"  match="text()">
 <xsl:value-of select="."/>
 </xsl:template>
