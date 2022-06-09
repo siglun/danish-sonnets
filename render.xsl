@@ -253,6 +253,10 @@
     <em><xsl:apply-templates/></em>
   </xsl:template>
 
+  <xsl:template match="t:hi[@rend='monospaced']|t:emph[@rend='monospaced']">
+    <kbd><xsl:apply-templates/></kbd>
+  </xsl:template>
+
   <xsl:template match="t:lg">
     <p><xsl:apply-templates/></p>
   </xsl:template>

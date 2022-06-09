@@ -519,7 +519,7 @@
 
         <p>There are 160 sonnets in the selection, and the most
         frequent word occurs in all of them. These are the fifteen most
-        commont word a measured by the <ref target="poem_frequencies.text">number of sonnets they occur
+        commont word measured by the <ref target="poem_frequencies.text">number of sonnets they occur
         in</ref>. Number of poems in the left column.</p>
 
         <eg xml:space="preserve"><![CDATA[ 
@@ -574,11 +574,14 @@
 
         <p>The distribution shows number of words graphed against
         number of sonnets.  There are 3304 words occurring in just one
-        sonnet. The leftmost, and highest, point on the graph has the coordinate (1,3304).</p>
+        sonnet. The leftmost, and highest, point on the graph has the
+        coordinate (1,3304).</p>
          
         <p>There is just one word appearing in all 160 sonnets. It is
         'og' meaning 'and' correspoding to the rightmost point on the
-        graph which has the coordinate (160,1).</p>
+        graph which has the coordinate (160,1). As a rule of thumb the
+        most common words are all conjunctions, next to them comes
+        prepositions and after those come pronomina.</p>
 
         <p>The <ref target="distribution.text">distribution.text</ref>
         is generated from <ref
@@ -596,8 +599,14 @@
         25% of the sonnets, or less. I.e., words occuring in 40
         sonnets, or fewer.</p>
 
+        <p>In what follows, I have simply used the utility <hi
+        rend='monospaced'>grep</hi> find words and derivates in the
+        file <ref
+        target="poem_frequencies.text">poem_frequencies.text</ref>
+        mentioned above.</p>
+
         <p>As example we have death, dead and lethal etc (basically
-        words containing <hi rend="bold">død</hi>) in a number of
+        words containing <hi rend="italics">død</hi>) in a number of
         sonnets. In the left column the number of sonnets containing
         the word. These appear in about 7% of the sonnets.</p>
 
@@ -617,7 +626,16 @@
         11 døde
         ]]></eg>
 
-        <p>Love (elskov) is not as popular as death (about 5% of the sonnets).</p>
+        <p>There are interesting derivatives and compound words on the
+        list. Like <hi rend="italics">dødsberedthed</hi> meaning
+        preparedness for death and <hi
+        rend="italics">glemselsdøden</hi>. Looking up the word in the
+        corpus I believe it refers to the death or disappearance due
+        to the disappearance of the traces or memories of someone who
+        has been in earlier generations.</p>
+
+        <p>Love (elskov) is not as popular as death (about 5% of the
+        sonnets).</p>
 
         <eg xml:space="preserve"><![CDATA[ 
         1 elskoven
@@ -628,7 +646,10 @@
         7 elskov
         ]]></eg>
 
-        <p>women (kvinde) are not as popular as love</p>
+        <p><hi rend="italics">elskovsild</hi> means the fire of
+        love. <hi rend="italics">elskovsbrev</hi> has to be love
+        letter. <hi rend="italics">women (kvinde)</hi> are not as
+        popular as love</p>
 
         <eg xml:space="preserve"><![CDATA[ 
         1 dobbeltkvinde
