@@ -68,52 +68,51 @@
         this text. Being a scientist, I think like a scientist and don't
         expect any deep literary theory here.</p>
       </div>
+      
       <div>
         <head>Finding poems</head>
 
-        <p>The ADL text corpus contains <ref
-        target="#adlcorpus">literary texts</ref>. Since the texts are
-        encoded according to the <ref target="#teiguidelines">TEI
-        guidelines</ref> it is easy to find poetry in those
-        files. Typically a piece of poetry is encoded as <ref target="#tei-ref-lg">lines within
-        line groups</ref>. More often than not the line groups are embedded in &lt;div>
-        ... &lt;/div> elements.</p>
+        <p>The ADL text corpus contains <ref target="#adlcorpus">literary texts</ref>.
+        Since the texts are encoded according to the <ref target="#teiguidelines">TEI guidelines</ref> it is easy to find poetry in those files.
+        Typically a piece of poetry is encoded as <ref target="#tei-ref-lg">lines within line groups</ref>.
+        More often than not the line groups are embedded in &lt;div> ... &lt;/div> elements.</p>
 
-        <p>A poem may look like this in the source</p>
+        <p>A poem may look like this in the source.
+        The poem is by <ref target="sophus">Sophus Michaëlis (<date>1883</date>).</ref></p>
 
-        <p><eg xml:space="preserve"><![CDATA[ 
-        <div xml:id="workid68251" decls="#biblid68251">
-           <head xml:id="idm140093058532672">Jeg elsker —</head>
-           <lg xml:id="idm140093058532240">
-              <l xml:id="idm140093058531984">Jeg elsker Himlens høje Harmoni,</l>
-              <l xml:id="idm140093058531520">dens Purpurblomst, som blaaner i det Fjærne,</l>
-              <l xml:id="idm140093058531024">den Fred, som risler ned fra Nattens Stjerne,</l>
-              <l xml:id="idm140093058530576">det Glimt af Gud, der glider mig forbi;</l>
-           </lg>
-           <lg xml:id="idm140093058530016">
-              <l xml:id="idm140093058529760">og Evighedens tavse Melodi,</l>
-              <l xml:id="idm140093058529328">de svundne Slægters kaldende Orkester,</l>
-              <l xml:id="idm140093058528848">et Tonehav om en usynlig Mester,</l>
-              <l xml:id="idm140093058528416">en Klang af Gud, der bruser mig forbi;</l>
-           </lg>
-           <lg xml:id="idm140093058527856">
-              <l xml:id="idm140093058527600">en magisk Magt fra Hjertets mørke Celle,</l>
-              <l xml:id="idm140093058527120">de stærke Længsler, som mod Lyset vælde,</l>
-              <l xml:id="idm140093058526640">Naturens evigunge Fantasi;</l>
-           </lg>
-           <lg xml:id="idm140093058526080">
-              <l xml:id="idm140093058525824">det Liv, der spirer midt i selve Døden,</l>
-              <l xml:id="idm140093058525344">den Sol, der stiger midt i Aftenrøden,</l>
-              <l xml:id="idm140093058524864">— o Glimt af Gud, der glider mig forbi!</l>
-           </lg>
-           <p xml:id="idm140093058524288">
-              <date xml:id="idm140093058524032">12. Septbr. 1893.</date>
-           </p>
-        </div>
-        ]]>
-        </eg> <ref target="sophus">Sophus Michaëlis (<date>1883</date>)</ref></p>
-        
+        <eg xml:space="preserve">
+<![CDATA[
+<div decls="#biblid68251">
+   <head>Jeg elsker —</head>
+   <lg>
+      <l>Jeg elsker Himlens høje Harmoni,</l>
+      <l>dens Purpurblomst, som blaaner i det Fjærne,</l>
+      <l>den Fred, som risler ned fra Nattens Stjerne,</l>
+      <l>det Glimt af Gud, der glider mig forbi;</l>
+   </lg>
+    <lg>
+      <l>og Evighedens tavse Melodi,</l>
+      <l>de svundne Slægters kaldende Orkester,</l>
+      <l>et Tonehav om en usynlig Mester,</l>
+      <l>en Klang af Gud, der bruser mig forbi;</l>
+   </lg>
+   <lg>
+      <l>en magisk Magt fra Hjertets mørke Celle,</l>
+      <l>de stærke Længsler, som mod Lyset vælde,</l>
+      <l>Naturens evigunge Fantasi;</l>
+   </lg>
+   <lg>
+      <l>det Liv, der spirer midt i selve Døden,</l>
+      <l>den Sol, der stiger midt i Aftenrøden,</l>
+      <l>— o Glimt af Gud, der glider mig forbi!</l>
+   </lg>
+   <p>
+      <date>12. Septbr. 1893.</date>
+   </p>
+</div>
 
+]]>
+        </eg>
         
         <p>The default name space is declared as
         xmlns="http://www.tei-c.org/ns/1.0", which we in following refer to
@@ -128,15 +127,15 @@
         <p>Shakespeare wrote often his 14 lines typographically in one
         strophe, whereas Francesco Petrarca wrote them in two strophes
         with eight and six lines, respectively (again see article
-        <title><ref target="#sonnets">Sonnets</ref></title> in
-        Wikipedia).</p>
+        <title><ref target="#sonnets">Sonnets</ref></title> in Wikipedia).</p>
 
         <p>To be more precise, a sonnet has one more characteristics
-        than having 14 lines, the lines should be in <ref
-        target="#pentameter">iambic pentameter</ref>.</p>
+        than having 14 lines, the lines should be in <ref target="#pentameter">iambic pentameter</ref>.</p>
       </div>
 
+      
       <div>
+        
         <head>Finding sonnets</head>
 
         <p>You can easily find all poems in the corpus based on a
@@ -509,10 +508,9 @@
           <item>a second list giving not of the number of occurences of each word, but the number of sonnets the word occurs in.</item>
         </list>
 
-        <p>There are 160 sonnets in the selection, and the most
-        frequent word occurs in all of them. These are the fifteen most
-        commont word measured by the <ref target="poem_frequencies.text">number of sonnets they occur
-        in</ref>. Number of poems in the left column.</p>
+        <p>There are 160 sonnets in the selection, and the most frequent word occurs in all of them.
+        These are the fifteen most commont word measured by the <ref target="poem_frequencies.text">number of sonnets they occur in</ref>.
+        Number of poems in the left column.</p>
 
         <eg xml:space="preserve"><![CDATA[ 
         75 du
@@ -532,9 +530,9 @@
         160 og
         ]]></eg>
 
-        <p>and this is the list of the same thing, but measured as the grand
-        total <ref target="frequencies.text">occurrence of the words in the
-        corpus</ref>. Number of words in corpus in left column.</p>
+        <p>and this is the list of the same thing,
+        but measured as the grand total <ref target="frequencies.text">occurrence of the words in the corpus</ref>.
+        Number of words in corpus in left column.</p>
 
         <eg xml:space="preserve"><![CDATA[ 
         109 min
@@ -578,24 +576,20 @@
         <p>The <ref target="distribution.text">distribution.text</ref>
         is generated from <ref
         target="poem_frequencies.text">poem_frequencies.text</ref>
-        using</p>
+        using (the line has been folded)</p>
 
         <eg xml:space="preserve"><![CDATA[ 
-        sed 's/\ [a-z]*$//' poem_frequencies.text | sort | uniq -c | sort -n -k 2 > distribution.text
+        sed 's/\ [a-z]*$//' poem_frequencies.text | sort | uniq -c | 
+        sort -n -k 2 > distribution.text
         ]]></eg>
 
         <p>See above. Column 1 is plotted against column 2.</p>
 
-        <p>In this particular corpus, it seems that <hi
-        rend="bold">aboutishness</hi> start at words occuring in about
-        25% of the sonnets, or less. I.e., words occuring in 40
-        sonnets, or fewer.</p>
+        <p>In this particular corpus, it seems that <hi rend="bold">aboutishness</hi> start at words occuring in about 25% of the sonnets, or less.
+        I.e., words occuring in 40 sonnets, or fewer.</p>
 
-        <p>In what follows, I have simply used the utility <hi
-        rend='monospaced'>grep</hi> find words and derivates in the
-        file <ref
-        target="poem_frequencies.text">poem_frequencies.text</ref>
-        mentioned above.</p>
+        <p>In what follows,
+        I have simply used the utility <hi rend='monospaced'>grep</hi> find words and derivates in the file <ref target="poem_frequencies.text">poem_frequencies.text</ref> mentioned above.</p>
 
         <p>As example we have death, dead and lethal etc (basically
         words containing <hi rend="italics">død</hi>) in a number of
@@ -618,16 +612,12 @@
         11 døde
         ]]></eg>
 
-        <p>There are interesting derivatives and compound words on the
-        list. Like <hi rend="italics">dødsberedthed</hi> meaning
-        preparedness for death and <hi
-        rend="italics">glemselsdøden</hi>. Looking up the word in the
-        corpus I believe it refers to the death or disappearance due
-        to the disappearance of the traces or memories of someone who
-        has been in earlier generations.</p>
+        <p>There are interesting derivatives and compound words on the list.
+        Like <hi rend="italics">dødsberedthed</hi> meaning preparedness for death.
+        <hi rend="italics">Glemselsdøden</hi> refers, I believe, to the death or disappearance due
+        to the disappearance of traces or memories of someone who belonged to generations.</p>
 
-        <p>Love (elskov) is not as popular as death (about 5% of the
-        sonnets).</p>
+        <p>Love (elskov) is not as popular as death (about 5% of the sonnets).</p>
 
         <eg xml:space="preserve"><![CDATA[ 
         1 elskoven
@@ -665,15 +655,16 @@
         ]]></eg>
 
 
-        <p>Remember that these sonnets are by men. <hi
-        rend="italic">mandom</hi> implies a man&apos;s existence as a
-        grownup man. Originally, in <ref target="#oldnorse">old
-        norse</ref>, mand meant, just as in Old English, human. That,
-        however, was when it was doubtful if women were actually
-        human. Baadsmandstrille is a derivative of baadsmand
-        (boatswain) which is another name for a sailor or petty
-        officer. A baadsmandstrille is presumably a song sung by
-        sailors.</p>
+        <p>Remember that these sonnets are by men.
+        <hi rend="italic">mandom</hi> implies a man&apos;s existence as a grownup man.
+        Originally,
+        in <ref target="#oldnorse">old norse</ref>,
+        mand meant,
+        just as in Old English,
+        human.
+        That, however, was when it was doubtful if women were actually human.
+        Baadsmandstrille is a derivative of baadsmand (boatswain) which is another name for a sailor or petty officer.
+        A baadsmandstrille is presumably a song sung by sailors.</p>
 
         <p>Graves occur, for some reason, less than deaths</p>
 
@@ -703,9 +694,9 @@
         <p>I think I could go on studying this for quite some
         time. However, I have to conclude this here, before the actual
         conclusions. There are interesting things to find here,
-        though. Some of them are possible to study using simple
-        methods, such as those described by Kenneth Ward Church in his 
-        <title><ref target="#kennethchurch"> Unix™ for Poets</ref></title>.</p>
+        though.
+        Some of them are possible to study using simple methods,
+        such as those described by Kenneth Ward Church in his <title><ref target="#kennethchurch">Unix™ for Poets</ref></title>.</p>
 
         <p>The preliminary result from my armchair text processing exercise supports the
         notion that life was already in early modern Europe about sex, death

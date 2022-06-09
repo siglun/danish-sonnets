@@ -285,53 +285,51 @@ p.version {
         expect any deep literary theory here.</p>
       
       
+      
         <h2>Finding poems</h2>
 
-        <p>The ADL text corpus contains <a href="#adlcorpus">literary texts</a>. Since the texts are
-        encoded according to the <a href="#teiguidelines">TEI
-        guidelines</a> it is easy to find poetry in those
-        files. Typically a piece of poetry is encoded as <a href="#tei-ref-lg">lines within
-        line groups</a>. More often than not the line groups are embedded in &lt;div&gt;
-        ... &lt;/div&gt; elements.</p>
+        <p>The ADL text corpus contains <a href="#adlcorpus">literary texts</a>.
+        Since the texts are encoded according to the <a href="#teiguidelines">TEI guidelines</a> it is easy to find poetry in those files.
+        Typically a piece of poetry is encoded as <a href="#tei-ref-lg">lines within line groups</a>.
+        More often than not the line groups are embedded in &lt;div&gt; ... &lt;/div&gt; elements.</p>
 
-        <p>A poem may look like this in the source</p>
-
-        <p>
-         <pre> 
-        &lt;div xml:id="workid68251" decls="#biblid68251"&gt;
-           &lt;head xml:id="idm140093058532672"&gt;Jeg elsker —&lt;/head&gt;
-           &lt;lg xml:id="idm140093058532240"&gt;
-              &lt;l xml:id="idm140093058531984"&gt;Jeg elsker Himlens høje Harmoni,&lt;/l&gt;
-              &lt;l xml:id="idm140093058531520"&gt;dens Purpurblomst, som blaaner i det Fjærne,&lt;/l&gt;
-              &lt;l xml:id="idm140093058531024"&gt;den Fred, som risler ned fra Nattens Stjerne,&lt;/l&gt;
-              &lt;l xml:id="idm140093058530576"&gt;det Glimt af Gud, der glider mig forbi;&lt;/l&gt;
-           &lt;/lg&gt;
-           &lt;lg xml:id="idm140093058530016"&gt;
-              &lt;l xml:id="idm140093058529760"&gt;og Evighedens tavse Melodi,&lt;/l&gt;
-              &lt;l xml:id="idm140093058529328"&gt;de svundne Slægters kaldende Orkester,&lt;/l&gt;
-              &lt;l xml:id="idm140093058528848"&gt;et Tonehav om en usynlig Mester,&lt;/l&gt;
-              &lt;l xml:id="idm140093058528416"&gt;en Klang af Gud, der bruser mig forbi;&lt;/l&gt;
-           &lt;/lg&gt;
-           &lt;lg xml:id="idm140093058527856"&gt;
-              &lt;l xml:id="idm140093058527600"&gt;en magisk Magt fra Hjertets mørke Celle,&lt;/l&gt;
-              &lt;l xml:id="idm140093058527120"&gt;de stærke Længsler, som mod Lyset vælde,&lt;/l&gt;
-              &lt;l xml:id="idm140093058526640"&gt;Naturens evigunge Fantasi;&lt;/l&gt;
-           &lt;/lg&gt;
-           &lt;lg xml:id="idm140093058526080"&gt;
-              &lt;l xml:id="idm140093058525824"&gt;det Liv, der spirer midt i selve Døden,&lt;/l&gt;
-              &lt;l xml:id="idm140093058525344"&gt;den Sol, der stiger midt i Aftenrøden,&lt;/l&gt;
-              &lt;l xml:id="idm140093058524864"&gt;— o Glimt af Gud, der glider mig forbi!&lt;/l&gt;
-           &lt;/lg&gt;
-           &lt;p xml:id="idm140093058524288"&gt;
-              &lt;date xml:id="idm140093058524032"&gt;12. Septbr. 1893.&lt;/date&gt;
-           &lt;/p&gt;
-        &lt;/div&gt;
-        
-        </pre> 
-         <a href="https://github.com/siglun/danish-sonnets/blob/main/sophus">Sophus Michaëlis (1883)</a>
+        <p>A poem may look like this in the source.
+        The poem is by <a href="https://github.com/siglun/danish-sonnets/blob/main/sophus">Sophus Michaëlis (1883).</a>
       </p>
-        
 
+        <pre>
+
+&lt;div decls="#biblid68251"&gt;
+   &lt;head&gt;Jeg elsker —&lt;/head&gt;
+   &lt;lg&gt;
+      &lt;l&gt;Jeg elsker Himlens høje Harmoni,&lt;/l&gt;
+      &lt;l&gt;dens Purpurblomst, som blaaner i det Fjærne,&lt;/l&gt;
+      &lt;l&gt;den Fred, som risler ned fra Nattens Stjerne,&lt;/l&gt;
+      &lt;l&gt;det Glimt af Gud, der glider mig forbi;&lt;/l&gt;
+   &lt;/lg&gt;
+    &lt;lg&gt;
+      &lt;l&gt;og Evighedens tavse Melodi,&lt;/l&gt;
+      &lt;l&gt;de svundne Slægters kaldende Orkester,&lt;/l&gt;
+      &lt;l&gt;et Tonehav om en usynlig Mester,&lt;/l&gt;
+      &lt;l&gt;en Klang af Gud, der bruser mig forbi;&lt;/l&gt;
+   &lt;/lg&gt;
+   &lt;lg&gt;
+      &lt;l&gt;en magisk Magt fra Hjertets mørke Celle,&lt;/l&gt;
+      &lt;l&gt;de stærke Længsler, som mod Lyset vælde,&lt;/l&gt;
+      &lt;l&gt;Naturens evigunge Fantasi;&lt;/l&gt;
+   &lt;/lg&gt;
+   &lt;lg&gt;
+      &lt;l&gt;det Liv, der spirer midt i selve Døden,&lt;/l&gt;
+      &lt;l&gt;den Sol, der stiger midt i Aftenrøden,&lt;/l&gt;
+      &lt;l&gt;— o Glimt af Gud, der glider mig forbi!&lt;/l&gt;
+   &lt;/lg&gt;
+   &lt;p&gt;
+      &lt;date&gt;12. Septbr. 1893.&lt;/date&gt;
+   &lt;/p&gt;
+&lt;/div&gt;
+
+
+        </pre>
         
         <p>The default name space is declared as
         xmlns="http://www.tei-c.org/ns/1.0", which we in following refer to
@@ -348,14 +346,15 @@ p.version {
         with eight and six lines, respectively (again see article
         <em>
             <a href="#sonnets">Sonnets</a>
-         </em> in
-        Wikipedia).</p>
+         </em> in Wikipedia).</p>
 
         <p>To be more precise, a sonnet has one more characteristics
         than having 14 lines, the lines should be in <a href="#pentameter">iambic pentameter</a>.</p>
       
 
       
+      
+        
         <h2>Finding sonnets</h2>
 
         <p>You can easily find all poems in the corpus based on a
@@ -731,10 +730,9 @@ p.version {
           <li>a second list giving not of the number of occurences of each word, but the number of sonnets the word occurs in.</li>
         </ul>
 
-        <p>There are 160 sonnets in the selection, and the most
-        frequent word occurs in all of them. These are the fifteen most
-        commont word measured by the <a href="https://github.com/siglun/danish-sonnets/blob/main/poem_frequencies.text">number of sonnets they occur
-        in</a>. Number of poems in the left column.</p>
+        <p>There are 160 sonnets in the selection, and the most frequent word occurs in all of them.
+        These are the fifteen most commont word measured by the <a href="https://github.com/siglun/danish-sonnets/blob/main/poem_frequencies.text">number of sonnets they occur in</a>.
+        Number of poems in the left column.</p>
 
         <pre> 
         75 du
@@ -754,9 +752,9 @@ p.version {
         160 og
         </pre>
 
-        <p>and this is the list of the same thing, but measured as the grand
-        total <a href="https://github.com/siglun/danish-sonnets/blob/main/frequencies.text">occurrence of the words in the
-        corpus</a>. Number of words in corpus in left column.</p>
+        <p>and this is the list of the same thing,
+        but measured as the grand total <a href="https://github.com/siglun/danish-sonnets/blob/main/frequencies.text">occurrence of the words in the corpus</a>.
+        Number of words in corpus in left column.</p>
 
         <pre> 
         109 min
@@ -799,21 +797,20 @@ p.version {
 
         <p>The <a href="https://github.com/siglun/danish-sonnets/blob/main/distribution.text">distribution.text</a>
         is generated from <a href="https://github.com/siglun/danish-sonnets/blob/main/poem_frequencies.text">poem_frequencies.text</a>
-        using</p>
+        using (the line has been folded)</p>
 
         <pre> 
-        sed 's/\ [a-z]*$//' poem_frequencies.text | sort | uniq -c | sort -n -k 2 &gt; distribution.text
+        sed 's/\ [a-z]*$//' poem_frequencies.text | sort | uniq -c | 
+        sort -n -k 2 &gt; distribution.text
         </pre>
 
         <p>See above. Column 1 is plotted against column 2.</p>
 
-        <p>In this particular corpus, it seems that <strong>aboutishness</strong> start at words occuring in about
-        25% of the sonnets, or less. I.e., words occuring in 40
-        sonnets, or fewer.</p>
+        <p>In this particular corpus, it seems that <strong>aboutishness</strong> start at words occuring in about 25% of the sonnets, or less.
+        I.e., words occuring in 40 sonnets, or fewer.</p>
 
-        <p>In what follows, I have simply used the utility <kbd>grep</kbd> find words and derivates in the
-        file <a href="https://github.com/siglun/danish-sonnets/blob/main/poem_frequencies.text">poem_frequencies.text</a>
-        mentioned above.</p>
+        <p>In what follows,
+        I have simply used the utility <kbd>grep</kbd> find words and derivates in the file <a href="https://github.com/siglun/danish-sonnets/blob/main/poem_frequencies.text">poem_frequencies.text</a> mentioned above.</p>
 
         <p>As example we have death, dead and lethal etc (basically
         words containing <em>død</em>) in a number of
@@ -836,15 +833,12 @@ p.version {
         11 døde
         </pre>
 
-        <p>There are interesting derivatives and compound words on the
-        list. Like <em>dødsberedthed</em> meaning
-        preparedness for death and <em>glemselsdøden</em>. Looking up the word in the
-        corpus I believe it refers to the death or disappearance due
-        to the disappearance of the traces or memories of someone who
-        has been in earlier generations.</p>
+        <p>There are interesting derivatives and compound words on the list.
+        Like <em>dødsberedthed</em> meaning preparedness for death.
+        <em>Glemselsdøden</em> refers, I believe, to the death or disappearance due
+        to the disappearance of traces or memories of someone who belonged to generations.</p>
 
-        <p>Love (elskov) is not as popular as death (about 5% of the
-        sonnets).</p>
+        <p>Love (elskov) is not as popular as death (about 5% of the sonnets).</p>
 
         <pre> 
         1 elskoven
@@ -883,14 +877,16 @@ p.version {
         </pre>
 
 
-        <p>Remember that these sonnets are by men. mandom implies a man's existence as a
-        grownup man. Originally, in <a href="#oldnorse">old
-        norse</a>, mand meant, just as in Old English, human. That,
-        however, was when it was doubtful if women were actually
-        human. Baadsmandstrille is a derivative of baadsmand
-        (boatswain) which is another name for a sailor or petty
-        officer. A baadsmandstrille is presumably a song sung by
-        sailors.</p>
+        <p>Remember that these sonnets are by men.
+        mandom implies a man's existence as a grownup man.
+        Originally,
+        in <a href="#oldnorse">old norse</a>,
+        mand meant,
+        just as in Old English,
+        human.
+        That, however, was when it was doubtful if women were actually human.
+        Baadsmandstrille is a derivative of baadsmand (boatswain) which is another name for a sailor or petty officer.
+        A baadsmandstrille is presumably a song sung by sailors.</p>
 
         <p>Graves occur, for some reason, less than deaths</p>
 
@@ -919,10 +915,10 @@ p.version {
         <p>I think I could go on studying this for quite some
         time. However, I have to conclude this here, before the actual
         conclusions. There are interesting things to find here,
-        though. Some of them are possible to study using simple
-        methods, such as those described by Kenneth Ward Church in his 
-        <em>
-            <a href="#kennethchurch"> Unix™ for Poets</a>
+        though.
+        Some of them are possible to study using simple methods,
+        such as those described by Kenneth Ward Church in his <em>
+            <a href="#kennethchurch">Unix™ for Poets</a>
          </em>.</p>
 
         <p>The preliminary result from my armchair text processing exercise supports the

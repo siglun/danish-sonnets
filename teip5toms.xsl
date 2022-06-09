@@ -107,8 +107,8 @@ Notes
 
 <xsl:template match="t:head">
 .SH
-<xsl:apply-templates/>
-</xsl:template>
+<xsl:apply-templates/><xsl:text>
+</xsl:text></xsl:template>
 
 <xsl:template match="t:lg">
 .IP<xsl:text>
@@ -130,6 +130,9 @@ Notes
 
 <xsl:template match="t:bibl/t:ref">
 &lt;URL: <xsl:apply-templates select="@target"/>&gt;
+</xsl:template>
+
+<xsl:template match="t:table">
 </xsl:template>
 
 <xsl:template match="t:list[@type='ordered']">
@@ -175,14 +178,28 @@ Notes
 </xsl:text></xsl:template>
   
 
-<xsl:template match="t:emph[@rend='bold']">\fB<xsl:apply-templates  mode="preserve"/>\fP</xsl:template>
+<xsl:template match="t:emph[@rend='bold']">
+\fB<xsl:apply-templates  mode="preserve"/>\fP
+</xsl:template>
 
-<xsl:template match="t:emph|t:p/t:title">\fI<xsl:apply-templates  mode="preserve"/>\fP</xsl:template>
+<xsl:template match="t:emph|t:p/t:title">
+\fI<xsl:apply-templates  mode="preserve"/>\fP
+</xsl:template>
+
+<xsl:template match="t:hi[@rend='italic']|t:hi[@rend='italics']">
+\fI<xsl:apply-templates  mode="preserve"/>\fP
+</xsl:template>
+<xsl:template match="t:hi[@rend='bold']">
+\fB<xsl:apply-templates  mode="preserve"/>\fP
+</xsl:template>
+<xsl:template match="t:hi[@rend='monospaced']">
+\f(CR<xsl:apply-templates  mode="preserve"/>\fP
+</xsl:template>
 
 
 <xsl:template match="t:eg">
-.ID
-<xsl:value-of   select="."/>
+.DS L
+\f(CR\s-2<xsl:value-of   select="."/>\fP
 .DE
 </xsl:template>
 
