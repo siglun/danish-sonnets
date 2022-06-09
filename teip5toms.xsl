@@ -10,8 +10,8 @@
 	    encoding="UTF-8"
 	    indent="no"/>
 
-<!--xsl:strip-space elements="t:div t:p t:list t:item" />
-<xsl:preserve-space elements="t:emph t:author t:title t:ref"/-->
+<xsl:strip-space elements="t:p t:list t:item t:ref" />
+<!-- xsl:preserve-space elements="t:emph t:author t:title t:ref"/ -->
 
 <xsl:template match="/">
 <xsl:apply-templates/>
@@ -110,14 +110,23 @@ Notes
 <xsl:apply-templates/>
 </xsl:template>
 
+<xsl:template match="t:lg">
+.IP<xsl:text>
+</xsl:text><xsl:apply-templates/>  
+</xsl:template>
+
+<xsl:template match="t:l">
+<xsl:apply-templates/>
+.br
+</xsl:template>
+
+
 <xsl:template match="t:p">
 .LP
 <xsl:apply-templates/>
 </xsl:template>
 
-<xsl:template match="t:ref">
-<xsl:apply-templates mode="preserve"/>
-</xsl:template>
+<xsl:template match="t:ref"> <xsl:apply-templates mode="preserve"/></xsl:template>
 
 <xsl:template match="t:bibl/t:ref">
 &lt;URL: <xsl:apply-templates select="@target"/>&gt;
@@ -162,7 +171,7 @@ Notes
 </xsl:text></xsl:template>
 
 <xsl:template match="t:graphic"><xsl:text>
-.PSPIC </xsl:text><xsl:value-of select="concat(substring-before(@url,'.'),'.eps')"/><xsl:text> </xsl:text><xsl:value-of select="substring-before(@width,'m')"/><xsl:text>
+.PSPIC </xsl:text><xsl:value-of select="concat(substring-before(substring-after(@url,'main/'),'.'),'.eps')"/><xsl:text> </xsl:text><xsl:value-of select="substring-before(@width,'m')"/><xsl:text>
 </xsl:text></xsl:template>
   
 

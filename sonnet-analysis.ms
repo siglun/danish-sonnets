@@ -131,13 +131,11 @@ Any way, this script calculates the average number of vowels per line in poems w
 .LP
 We use the replace function and a regular expression to remove everything in each line except the vowels. Then we measure the string length which should equal the number of vowels per line and add them together for all lines in the poem. Finally we divide that sum with 14 and get the average number of vowels per line.
 .LP
-For a sonnet it would be about 10,or occasionally a little
-        more. In the Michaëlis poem quoted above it is 10.4.
+For a sonnet it would be about 10,or occasionally a little more. In the Michaëlis poem quoted above it is 10.4.
 .SH
 Strophe structure
 .LP
-You can write a lot of nice poetry with 14 lines. Like Gustaf Munch-Petersen'sen
-        borgers livshymnewith one strophe with one line, then three strophes with four lines and finally a single line. The number of syllables per line seem to decrease towards the end. Gustaf was a modernist. There are no fixed structures and very few rhymes i his poetry.
+You can write a lot of nice poetry with 14 lines. Like Gustaf Munch-Petersen'sen borgers livshymnewith one strophe with one line, then three strophes with four lines and finally a single line. The number of syllables per line seem to decrease towards the end. Gustaf was a modernist. There are no fixed structures and very few rhymes i his poetry.
 .LP
 You can easily find out the strophe structure for each poem:
 .ID
@@ -166,14 +164,49 @@ Then we have the rhymes
 .LP
 Beauty is in the eye of the beholder, says Shakespeare. I believe that he is right. Then, however, I would like to add that the rhymes and meters of poetry (like the pentameter) is in the ear of listener. It is time consuming to read houndreds of poems aloud and figure out the rhyme structure. So an approximate idea of the rhymes could be have comparing the verse line endings.
 .LP
-This is error prone, though. Consider thissonnet
-        by P.M. Møller.
+This is error prone, though. Consider thissonnet by P.M. Møller.
 .KF
 
 .sp
 .QP
 \s-2SONET\s+2
-Den Svend, som Tabet af sin elskte frister,Vildfremmed vanker om blandt Jordens Hytter;Med Haab han efter Kirkeklokken lytter,Som lover ham igen, hvad her han mister.Men næppe han med en usalig bytter,Hvis Hjerte, stedse koldt for Elskov, brister,Som sig uelsket gennem Livet lister,Hans Armod kun mod Tabet ham beskytter.Til Livets Gaade rent han savner Nøglen,Hver Livets Blomst i Hjærtets Vinter fryser,Han gaar omkring med underlige Fagter.Ræd, Spøgelser han ser, naar Solen lyser,Modløs og syg, foragtet han foragterDet skønne Liv som tom og ussel Gøglen.
+
+.IP
+Den Svend, som Tabet af sin elskte frister,
+.br
+Vildfremmed vanker om blandt Jordens Hytter;
+.br
+Med Haab han efter Kirkeklokken lytter,
+.br
+Som lover ham igen, hvad her han mister.
+.br
+
+.IP
+Men næppe han med en usalig bytter,
+.br
+Hvis Hjerte, stedse koldt for Elskov, brister,
+.br
+Som sig uelsket gennem Livet lister,
+.br
+Hans Armod kun mod Tabet ham beskytter.
+.br
+
+.IP
+Til Livets Gaade rent han savner Nøglen,
+.br
+Hver Livets Blomst i Hjærtets Vinter fryser,
+.br
+Han gaar omkring med underlige Fagter.
+.br
+
+.IP
+Ræd, Spøgelser han ser, naar Solen lyser,
+.br
+Modløs og syg, foragtet han foragter
+.br
+Det skønne Liv som tom og ussel Gøglen.
+.br
+
 .KE
 .sp
 
@@ -222,8 +255,7 @@ and
 .LP
 So while it may fail more often than it succeeds, the successes give results that are reasonable.
 .LP
-The rhyme structure abbaabbacdecde is one is the most common ones found. Also it is one of the socalled Petrarchan rhyme schemes (Eberhart,
-        2018).
+The rhyme structure abbaabbacdecde is one is the most common ones found. Also it is one of the socalled Petrarchan rhyme schemes (Eberhart, 2018).
 .SH
 What are the sonnets about?
 .LP
@@ -302,7 +334,7 @@ and this is the list of the same thing, but measured as the grand totaloccurrenc
 As you can see this corroborates the established observation that the most frequent words in a corpus hardly ever describes the subject matter of texts (the words are conjunctions, pronouns, prepositions and the like). The distribution of the number of sonnets the words appear in:
 .KF
 
-.PSPIC https://github.eps 
+.PSPIC distro.eps 
 
 .KE
 .sp

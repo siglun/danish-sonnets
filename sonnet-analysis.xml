@@ -210,9 +210,8 @@
         poem. Finally we divide that sum with 14 and get the average
         number of vowels per line.</p>
 
-        <p>For a sonnet it would be about 10, <ref
-        target="#hendecasyllable">or occasionally a little
-        more</ref>. In the Michaëlis poem quoted above it is 10.4.</p>
+        <p>For a sonnet it would be about 10, <ref target="#hendecasyllable">or occasionally a little more</ref>.
+        In the Michaëlis poem quoted above it is 10.4.</p>
 
       </div>
 
@@ -220,18 +219,13 @@
 
         <head>Strophe structure</head>
 
-        <p>You can write a lot of nice poetry with 14 lines. Like
-        Gustaf Munch-Petersen&apos;s <ref
-        target="https://tekster.kb.dk/text/adl-texts-munp1-shoot-workid62017">en
-        borgers livshymne</ref> with one strophe with one line, then
-        three strophes with four lines and finally a single line. The
-        number of syllables per line seem to decrease towards the
-        end. Gustaf was a modernist. There are no fixed structures and
-        very few rhymes i his poetry.</p>
+        <p>You can write a lot of nice poetry with 14 lines.
+        Like Gustaf Munch-Petersen&apos;s <ref target="https://tekster.kb.dk/text/adl-texts-munp1-shoot-workid62017">en borgers livshymne</ref> with one strophe with one line,
+        then three strophes with four lines and finally a single line.
+        The number of syllables per line seem to decrease towards the end.
+        Gustaf was a modernist. There are no fixed structures and very few rhymes i his poetry.</p>
 
         <p>You can easily find out the strophe structure for each poem:</p>
-
-
         <eg xml:space="preserve"><![CDATA[ 
         <xsl:variable name="lines_per_strophe" as="xs:integer *">
            <xsl:for-each select=".//t:lg[t:l]">
@@ -374,8 +368,7 @@
         comparing the verse line endings.</p>
 
         <p>This is error prone, though. Consider this <ref
-        target="https://tekster.kb.dk/text/adl-texts-moeller01val-shoot-workid62307">sonnet
-        by P.M. Møller</ref>.</p>
+        target="https://tekster.kb.dk/text/adl-texts-moeller01val-shoot-workid62307">sonnet by P.M. Møller</ref>.</p>
 
         <figure>
 
@@ -467,8 +460,7 @@
 
         <p>The rhyme structure abbaabbacdecde is one is the most
         common ones found.  Also it is one of the socalled Petrarchan
-        rhyme schemes (<ref target="#everysonnet">Eberhart,
-        2018</ref>).</p>
+        rhyme schemes (<ref target="#everysonnet">Eberhart, 2018</ref>).</p>
 
       </div>
 
