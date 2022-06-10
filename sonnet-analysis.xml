@@ -57,12 +57,9 @@
 
         <p>If there are any sonnets, do they rhyme and what are they about?</p>
 
-        <p>I have since many years been a great fan of <ref
-        target="#kennethchurch">Kenneth Ward Church's</ref> tutorial
-        <title>Unix™ for Poets</title>. This is an investigation of
-        what can be done with a corpus of literary text with very
-        simple tools similar to the ones described by Church in his
-        tutorial.</p>
+        <p>I have since many years been a great fan of the tutorial by <ref
+        target="#kennethchurch">Kenneth Ward Church</ref> <title>Unix™ for Poets</title>.
+        This is an investigation of what can be done with a corpus of literary text with very simple tools similar to the ones described by Church in his tutorial.</p>
 
         <p>I do not claim that there is anything novel or even significant in
         this text. Being a scientist, I think like a scientist and don't

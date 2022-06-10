@@ -20,19 +20,21 @@ Introduction
 .LP
 If there are any sonnets, do they rhyme and what are they about?
 .LP
-I have since many years been a great fan of
-.pdfhref W -D #kennethchurch -A "Kenneth Ward Church's"tutorial
-\fIUnix™ for Poets\fP
-. This is an investigation of what can be done with a corpus of literary text with very simple tools similar to the ones described by Church in his tutorial.
+I have since many years been a great fan of the tutorial by
+.pdfhref L -D kennethchurch -A Kenneth Ward Church
+\fIUnix™ for Poets\fP. This is an investigation of what can be done with a corpus of literary text with very simple tools similar to the ones described by Church in his tutorial.
 .LP
 I do not claim that there is anything novel or even significant in this text. Being a scientist, I think like a scientist and don't expect any deep literary theory here.
 .SH
 Finding poems
 .LP
 The ADL text corpus contains
-.pdfhref W -D #adlcorpus -A "literary texts". Since the texts are encoded according to the
-.pdfhref W -D #teiguidelines -A "TEI guidelines"it is easy to find poetry in those files. Typically a piece of poetry is encoded as
-.pdfhref W -D #tei-ref-lg -A "lines within line groups". More often than not the line groups are embedded in <div> ... </div> elements.
+.pdfhref L -D adlcorpus -A literary texts
+. Since the texts are encoded according to the
+.pdfhref L -D teiguidelines -A TEI guidelines
+it is easy to find poetry in those files. Typically a piece of poetry is encoded as
+.pdfhref L -D tei-ref-lg -A lines within line groups
+. More often than not the line groups are embedded in <div> ... </div> elements.
 .LP
 A poem may look like this in the source. The poem is by
 .pdfhref W -D sophus -A "Sophus Michaëlis (1883)."
@@ -72,14 +74,16 @@ A poem may look like this in the source. The poem is by
 The default name space is declared as xmlns="http://www.tei-c.org/ns/1.0", which we in following refer to with the namespace prefix 't'.
 .LP
 The poem comprises four line groups with four, four, three and three lines. That is a very common strophe structure (according to the
-.pdfhref W -D #sonnets -A "Sonnets"article in Wikipedia), at least in Scandinavia. It is not always like that, but they all contain 14 lines.
+.pdfhref L -D sonnets -A Sonnets
+article in Wikipedia), at least in Scandinavia. It is not always like that, but they all contain 14 lines.
 .LP
-Shakespeare wrote often his 14 lines typographically in one strophe, whereas Francesco Petrarca wrote them in two strophes with eight and six lines, respectively (again see article
-\fISonnets\fP
-in Wikipedia).
+Shakespeare wrote often his 14 lines typographically in one strophe, whereas Francesco Petrarca wrote them in two strophes with eight and six lines, respectively (again see article\fI
+.pdfhref L -D sonnets -A Sonnets
+\fPin Wikipedia).
 .LP
 To be more precise, a sonnet has one more characteristics than having 14 lines, the lines should be in
-.pdfhref W -D #pentameter -A "iambic pentameter".
+.pdfhref L -D pentameter -A iambic pentameter
+.
 .SH
 Finding sonnets
 .LP
@@ -136,7 +140,8 @@ Any way, this script calculates the average number of vowels per line in poems w
 We use the replace function and a regular expression to remove everything in each line except the vowels. Then we measure the string length which should equal the number of vowels per line and add them together for all lines in the poem. Finally we divide that sum with 14 and get the average number of vowels per line.
 .LP
 For a sonnet it would be about 10,
-.pdfhref W -D #hendecasyllable -A "or occasionally a little more". In the Michaëlis poem quoted above it is 10.4.
+.pdfhref L -D hendecasyllable -A or occasionally a little more
+. In the Michaëlis poem quoted above it is 10.4.
 .SH
 Strophe structure
 .LP
@@ -350,7 +355,8 @@ and
 So while it may fail more often than it succeeds, the successes give results that are reasonable.
 .LP
 The rhyme structure abbaabbacdecde is one is the most common ones found. Also it is one of the socalled Petrarchan rhyme schemes (
-.pdfhref W -D #everysonnet -A "Eberhart, 2018").
+.pdfhref L -D everysonnet -A Eberhart, 2018
+).
 .SH
 What are the sonnets about?
 .LP
@@ -526,7 +532,8 @@ Men more than women, and in particular words implying bravery and male virtues
 Remember that these sonnets are by men.
 \fImandom\fP
 implies a man's existence as a grownup man. Originally, in
-.pdfhref W -D #oldnorse -A "old norse", mand meant, just as in Old English, human. That, however, was when it was doubtful if women were actually human. Baadsmandstrille is a derivative of baadsmand (boatswain) which is another name for a sailor or petty officer. A baadsmandstrille is presumably a song sung by sailors.
+.pdfhref L -D oldnorse -A old norse
+, mand meant, just as in Old English, human. That, however, was when it was doubtful if women were actually human. Baadsmandstrille is a derivative of baadsmand (boatswain) which is another name for a sailor or petty officer. A baadsmandstrille is presumably a song sung by sailors.
 .LP
 Graves occur, for some reason, less than deaths
 .DS L
@@ -548,86 +555,106 @@ indgraves is most likely a kind of
 .SH
 Conclusions
 .LP
-I think I could go on studying this for quite some time. However, I have to conclude this here, before the actual conclusions. There are interesting things to find here, though. Some of them are possible to study using simple methods, such as those described by Kenneth Ward Church in his
-\fIUnix™ for Poets\fP
-.
+I think I could go on studying this for quite some time. However, I have to conclude this here, before the actual conclusions. There are interesting things to find here, though. Some of them are possible to study using simple methods, such as those described by Kenneth Ward Church in his\fI
+.pdfhref L -D kennethchurch -A Unix™ for Poets
+\fP.
 .LP
 The preliminary result from my armchair text processing exercise supports the notion that life was already in early modern Europe about sex, death and rock n'roll. Since rock wasn't there just yet, people had to be content with sonnets for the time being.
 .SH
 References
 .XP
+.pdfhref M -N kennethchurch
 Church, Kenneth Ward,
 [date unknown]. 
 \fIUnix™ for Poets\fP
 .na
 \s-2\f(CR
-.pdfhref W -D https://web.stanford.edu/class/cs124/kwc-unix-for-poets.pdf -A "https://web.stanford.edu/class/cs124/kwc-unix-for-poets.pdf"\fP\s+2
+.pdfhref W -D https://web.stanford.edu/class/cs124/kwc-unix-for-poets.pdf -A "https://web.stanford.edu/class/cs124/kwc-unix-for-poets.pdf"
+\fP\s+2
 .ad
 .XP
+.pdfhref M -N adlcorpus
 Det Kgl. Bibliotek,  and Det Danske Sprog- og Litteraturselskab,
 2000 - 2022. 
 \fIThe ADL text corpus\fP
 .na
 \s-2\f(CR
-.pdfhref W -D https://github.com/kb-dk/public-adl-text-sources -A "https://github.com/kb-dk/public-adl-text-sources""\fP\s+2
+.pdfhref W -D https://github.com/kb-dk/public-adl-text-sources -A "https://github.com/kb-dk/public-adl-text-sources""
+\fP\s+2
 .ad
 .XP
+.pdfhref M -N everysonnet
 Eberhart, Larry,
 2018. Italian or Petrarchan Sonnet
 .
 .na
 \s-2\f(CR
-.pdfhref W -D https://poetscollective.org/everysonnet/tag/abbaabbacdecde/#post-119 -A "https://poetscollective.org/everysonnet/tag/abbaabbacdecde/#post-119"\fP\s+2
+.pdfhref W -D https://poetscollective.org/everysonnet/tag/abbaabbacdecde/#post-119 -A "https://poetscollective.org/everysonnet/tag/abbaabbacdecde/#post-119"
+\fP\s+2
 .ad
 .XP
+.pdfhref M -N hendecasyllable
 Hendecasyllable
 .
 .na
 \s-2\f(CR
-.pdfhref W -D https://en.wikipedia.org/wiki/Hendecasyllable -A "https://en.wikipedia.org/wiki/Hendecasyllable"\fP\s+2
+.pdfhref W -D https://en.wikipedia.org/wiki/Hendecasyllable -A "https://en.wikipedia.org/wiki/Hendecasyllable"
+\fP\s+2
 .ad
 .XP
+.pdfhref M -N pentameter
 Iambic pentameter
 .
 .na
 \s-2\f(CR
-.pdfhref W -D https://en.wikipedia.org/wiki/Iambic_pentameter -A "https://en.wikipedia.org/wiki/Iambic_pentameter"\fP\s+2
+.pdfhref W -D https://en.wikipedia.org/wiki/Iambic_pentameter -A "https://en.wikipedia.org/wiki/Iambic_pentameter"
+\fP\s+2
 .ad
 .XP
+.pdfhref M -N sophus
 Michaëlis, Sophus,
 1883. Jeg elsker —
 .
 .na
 \s-2\f(CR
-.pdfhref W -D https://tekster.kb.dk/text/adl-texts-michs_03-shoot-workid68251 -A "https://tekster.kb.dk/text/adl-texts-michs_03-shoot-workid68251"/>"\fP\s+2
+.pdfhref W -D https://tekster.kb.dk/text/adl-texts-michs_03-shoot-workid68251 -A "https://tekster.kb.dk/text/adl-texts-michs_03-shoot-workid68251"/>"
+\fP\s+2
 .ad
 .XP
+.pdfhref M -N oldnorse
 Old Norse
 .
 .na
 \s-2\f(CR
-.pdfhref W -D https://en.wikipedia.org/wiki/Old_Norse -A "https://en.wikipedia.org/wiki/Old_Norse"\fP\s+2
+.pdfhref W -D https://en.wikipedia.org/wiki/Old_Norse -A "https://en.wikipedia.org/wiki/Old_Norse"
+\fP\s+2
 .ad
 .XP
+.pdfhref M -N sonnets
 Sonnet
 .
 .na
 \s-2\f(CR
-.pdfhref W -D https://en.wikipedia.org/wiki/Sonnet -A "https://en.wikipedia.org/wiki/Sonnet"\fP\s+2
+.pdfhref W -D https://en.wikipedia.org/wiki/Sonnet -A "https://en.wikipedia.org/wiki/Sonnet"
+\fP\s+2
 .ad
 .XP
+.pdfhref M -N teiguidelines
 The TEI Consortium,
 2022. 
 \fITEI P5: Guidelines for Electronic Text Encoding and Interchange\fP
 .na
 \s-2\f(CR
-.pdfhref W -D https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html -A "https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html"\fP\s+2
+.pdfhref W -D https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html -A "https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html"
+\fP\s+2
 .ad
 .XP
+.pdfhref M -N tei-ref-lg
 The TEI Consortium,
 2022. Passages of Verse or Drama
 .
 .na
 \s-2\f(CR
-.pdfhref W -D https://tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CODV -A "https://tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CODV"\fP\s+2
+.pdfhref W -D https://tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CODV -A "https://tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CODV"
+\fP\s+2
 .ad

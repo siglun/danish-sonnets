@@ -66,7 +66,8 @@ Notes
 
 <xsl:template match="t:bibl">
 .XP
-<xsl:for-each select="t:author|t:editor"><xsl:if test="position() > 1 and position()=last()"><xsl:text> and </xsl:text></xsl:if><xsl:apply-templates/><xsl:if test="position() >= 1 and not(position() = last())"><xsl:text>, </xsl:text></xsl:if></xsl:for-each><xsl:if test="t:date"><xsl:text>,
+.pdfhref M -N <xsl:value-of select="@xml:id"/><xsl:text>
+</xsl:text><xsl:for-each select="t:author|t:editor"><xsl:if test="position() > 1 and position()=last()"><xsl:text> and </xsl:text></xsl:if><xsl:apply-templates/><xsl:if test="position() >= 1 and not(position() = last())"><xsl:text>, </xsl:text></xsl:if></xsl:for-each><xsl:if test="t:date"><xsl:text>,
 </xsl:text><xsl:apply-templates select="t:date"/><xsl:text>. </xsl:text></xsl:if><xsl:if test="t:title">
 <xsl:choose>
 <xsl:when test="t:title[@level = 'a']">
@@ -86,9 +87,10 @@ Notes
 <xsl:if test="t:note">
 <xsl:apply-templates select="t:note/node()"/>
 </xsl:if>
-<xsl:if test="t:ref">
+<xsl:if test="t:ref"><xsl:text>
 .na
-\s-2\f(CR<xsl:apply-templates select="t:ref"/>\fP\s+2
+</xsl:text>\s-2\f(CR<xsl:apply-templates select="t:ref"/>
+\fP\s+2
 .ad
 </xsl:if>
 </xsl:template>
@@ -126,11 +128,12 @@ Notes
 <xsl:apply-templates/>
 </xsl:template>
 
+<xsl:template match="t:ref[contains(substring(@target,1,1),'#')]">
+.pdfhref L -D <xsl:value-of select="substring-after(@target,'#')"/> <xsl:if test="."> -A <xsl:apply-templates/> </xsl:if><xsl:text>
+</xsl:text></xsl:template>
+
 <xsl:template match="t:ref">
 .pdfhref W -D <xsl:value-of select="@target"/> <xsl:if test="."> -A "<xsl:apply-templates/>"</xsl:if>
-</xsl:template>
-
-<xsl:template match="t:table">
 </xsl:template>
 
 <xsl:template match="t:list[@type='ordered']">
@@ -180,9 +183,7 @@ Notes
 \fB<xsl:apply-templates  mode="preserve"/>\fP
 </xsl:template>
 
-<xsl:template match="t:emph|t:p/t:title">
-\fI<xsl:apply-templates  mode="preserve"/>\fP
-</xsl:template>
+<xsl:template match="t:p/t:title">\fI<xsl:apply-templates/>\fP</xsl:template>
 
 <xsl:template match="t:hi[@rend='italic']|t:hi[@rend='italics']">
 \fI<xsl:apply-templates  mode="preserve"/>\fP
