@@ -376,13 +376,10 @@ p.version {
 
         <p>So we iterate over all &lt;div&gt;...&lt;/div&gt;s having
         line groups inside and have a `@decls` attribute containing a
-        reference to metadata in the TEI header. The latter is not
-        universal, but we use it in ADL and that attribute is only set
-        on pieces that a cataloger has designated as a <em>work</em>. I have implemented this using the
-        shell script <a href="https://github.com/siglun/danish-sonnets/blob/main/find_sonnet_candidates.sh">
-        find_sonnet_candidates.sh</a> and a transform <a href="https://github.com/siglun/danish-sonnets/blob/main/sonnet_candidate.xsl">sonnet_candidate.xsl</a>. Finally,
-        we don't do anything unless there are 14 lines of
-        poetry.</p>
+        reference to metadata in the TEI header.
+        The latter is not universal, but we use it in ADL and that attribute is only set on pieces that a cataloger has designated as a <em>work</em>.
+        I have implemented this using the shell script <a href="https://github.com/siglun/danish-sonnets/blob/main/find_sonnet_candidates.sh">find_sonnet_candidates.sh</a> and a transform <a href="https://github.com/siglun/danish-sonnets/blob/main/sonnet_candidate.xsl">sonnet_candidate.xsl</a>.
+        Finally, we don't do anything unless there are 14 lines of poetry.</p>
 
         <p>This transformation creates a long, <a href="https://github.com/siglun/danish-sonnets/blob/main/sonnet_candidates.xml">sonnet_candidates.xml</a>, table with data about
         the sonnet candidates it finds.</p>

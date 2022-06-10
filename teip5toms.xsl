@@ -126,10 +126,8 @@ Notes
 <xsl:apply-templates/>
 </xsl:template>
 
-<xsl:template match="t:ref"> <xsl:apply-templates mode="preserve"/></xsl:template>
-
-<xsl:template match="t:bibl/t:ref">
-&lt;URL: <xsl:apply-templates select="@target"/>&gt;
+<xsl:template match="t:ref">
+.pdfhref W -D <xsl:value-of select="@target"/> <xsl:if test="."> -A "<xsl:apply-templates/>"</xsl:if>
 </xsl:template>
 
 <xsl:template match="t:table">
@@ -204,6 +202,27 @@ Notes
 </xsl:template>
 
 
+<xsl:template match="t:table">
+.SH
+<xsl:apply-templates select="t:head"/>
+.LP
+.TS
+tab(;);
+<xsl:for-each select="t:row[@role='label']/t:cell[not(position()=3 or position()=4)]">lb </xsl:for-each>;
+<xsl:for-each select="t:row[@role='label']/t:cell[not(position()=3 or position()=4)]">l </xsl:for-each>.
+<xsl:for-each select="t:row[@role='label']/t:cell[not(position()=3 or position()=4)]"><xsl:text>T{
+</xsl:text>\s-2<xsl:apply-templates/>\s+2<xsl:text>
+T}</xsl:text><xsl:choose><xsl:when test="position() &lt; last()">;</xsl:when><xsl:otherwise><xsl:text>
+</xsl:text></xsl:otherwise></xsl:choose></xsl:for-each>
+_
+<xsl:for-each select="t:row[@role='data']">
+<xsl:for-each select="t:cell[not(position()=3 or position()=4)]"><xsl:text>T{
+</xsl:text>\s-2<xsl:apply-templates/>\s+2<xsl:text>
+T}</xsl:text><xsl:choose><xsl:when test="position() &lt; last()">;</xsl:when><xsl:otherwise><xsl:text>
+</xsl:text></xsl:otherwise></xsl:choose></xsl:for-each>
+</xsl:for-each>
+.TE
+</xsl:template>
 
 <xsl:template mode="preserve"  match="text()">
 <xsl:value-of select="."/>

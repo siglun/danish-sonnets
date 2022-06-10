@@ -157,15 +157,10 @@
 
         <p>So we iterate over all <![CDATA[<div>...</div>]]>s having
         line groups inside and have a `@decls` attribute containing a
-        reference to metadata in the TEI header. The latter is not
-        universal, but we use it in ADL and that attribute is only set
-        on pieces that a cataloger has designated as a <hi
-        rend="italics">work</hi>. I have implemented this using the
-        shell script <ref target="find_sonnet_candidates.sh">
-        find_sonnet_candidates.sh</ref> and a transform <ref
-        target="sonnet_candidate.xsl">sonnet_candidate.xsl</ref>. Finally,
-        we don&apos;t do anything unless there are 14 lines of
-        poetry.</p>
+        reference to metadata in the TEI header.
+        The latter is not universal, but we use it in ADL and that attribute is only set on pieces that a cataloger has designated as a <hi rend="italics">work</hi>.
+        I have implemented this using the shell script <ref target="find_sonnet_candidates.sh">find_sonnet_candidates.sh</ref> and a transform <ref target="sonnet_candidate.xsl">sonnet_candidate.xsl</ref>.
+        Finally, we don&apos;t do anything unless there are 14 lines of poetry.</p>
 
         <p>This transformation creates a long, <ref
         target="sonnet_candidates.xml">sonnet_candidates.xml</ref>, table with data about
@@ -267,7 +262,7 @@
             <cell>4 4 3 3</cell>
             <cell>11.0</cell>
           </row>
-          <row>
+          <row  role="data">
             <cell>
               <ref target="https://github.com/kb-dk/public-adl-text-sources/blob/master/texts/aarestrup07val.xml">./aarestrup07val.xml</ref>
             </cell>
@@ -279,7 +274,7 @@
             <cell>4 4 3 3</cell>
             <cell>11.0714</cell>
           </row>
-          <row>
+          <row  role="data">
             <cell>
           <ref target="https://github.com/kb-dk/public-adl-text-sources/blob/master/texts/aarestrup07val.xml">./aarestrup07val.xml</ref>
             </cell>
@@ -291,14 +286,14 @@
             <cell>4 4 3 3</cell>
             <cell>11.5</cell>
           </row>
-          <row><cell><ref target="https://github.com/kb-dk/public-adl-text-sources/blob/master/texts/./brorson03grval.xml">./brorson03grval.xml</ref></cell>
+          <row  role="data"><cell><ref target="https://github.com/kb-dk/public-adl-text-sources/blob/master/texts/./brorson03grval.xml">./brorson03grval.xml</ref></cell>
           <cell><ref target="https://tekster.kb.dk/text/adl-texts-brorson03grval-shoot-workid76607">1.</ref></cell>
           <cell>workid76607</cell>
           <cell>#biblid76607</cell>
           <cell>14</cell>
           <cell>8.7143</cell>
           </row>
-          <row>
+          <row  role="data">
             <cell>
           <ref target="https://github.com/kb-dk/public-adl-text-sources/blob/master/texts/claussen07val.xml">./claussen07val.xml</ref>
             </cell>
@@ -322,7 +317,7 @@
             <cell>4 4 3 3</cell>
             <cell>13.9286</cell>
           </row>
-          <row>
+          <row  role="data">
             <cell>
               <ref target="https://github.com/kb-dk/public-adl-text-sources/blob/master/texts/claussen07val.xml">./claussen07val.xml</ref>
             </cell>
@@ -334,7 +329,7 @@
             <cell>4 4 3 3</cell>
             <cell>13.8571</cell>
           </row>
-          <row>
+          <row  role="data">
             <cell>
               <ref target="https://github.com/kb-dk/public-adl-text-sources/blob/master/texts/jacobjp08val.xml">./jacobjp08val.xml</ref>
             </cell>

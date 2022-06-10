@@ -1,4 +1,3 @@
-
 .TL
 Sex, death and sonnetsMusings of a software developer
 .AU
@@ -10,36 +9,35 @@ Royal Danish Library
 Post box 2149
 1016 Copenhagen K
 Denmark
-
 .AB
-
 .LP
 This note discusses how software can recognize sonnets, by analysis of text length, strophe structure and number of syllables per line. It also makes a simple content analysis based on word frequency analyses.
 .LP
 The results clearly shows that simple Unix™ for Poets analyses combines seamlessly with TEI markup and XML technologies.
 .AE
-
 .SH
 Introduction
-
 .LP
 If there are any sonnets, do they rhyme and what are they about?
 .LP
-I have since many years been a great fan ofKenneth Ward Church'stutorial
+I have since many years been a great fan of
+.pdfhref W -D #kennethchurch -A "Kenneth Ward Church's"tutorial
 \fIUnix™ for Poets\fP
 . This is an investigation of what can be done with a corpus of literary text with very simple tools similar to the ones described by Church in his tutorial.
 .LP
 I do not claim that there is anything novel or even significant in this text. Being a scientist, I think like a scientist and don't expect any deep literary theory here.
 .SH
 Finding poems
-
 .LP
-The ADL text corpus containsliterary texts. Since the texts are encoded according to theTEI guidelinesit is easy to find poetry in those files. Typically a piece of poetry is encoded aslines within line groups. More often than not the line groups are embedded in <div> ... </div> elements.
+The ADL text corpus contains
+.pdfhref W -D #adlcorpus -A "literary texts". Since the texts are encoded according to the
+.pdfhref W -D #teiguidelines -A "TEI guidelines"it is easy to find poetry in those files. Typically a piece of poetry is encoded as
+.pdfhref W -D #tei-ref-lg -A "lines within line groups". More often than not the line groups are embedded in <div> ... </div> elements.
 .LP
-A poem may look like this in the source. The poem is bySophus Michaëlis (1883).
+A poem may look like this in the source. The poem is by
+.pdfhref W -D sophus -A "Sophus Michaëlis (1883)."
 .DS L
 \f(CR\s-2
-
 <div decls="#biblid68251">
    <head>Jeg elsker —</head>
    <lg>
@@ -68,24 +66,22 @@ A poem may look like this in the source. The poem is bySophus Michaëlis (1883).
       <date>12. Septbr. 1893.</date>
    </p>
 </div>
-
-
         \fP
 .DE
-
 .LP
 The default name space is declared as xmlns="http://www.tei-c.org/ns/1.0", which we in following refer to with the namespace prefix 't'.
 .LP
-The poem comprises four line groups with four, four, three and three lines. That is a very common strophe structure (according to theSonnetsarticle in Wikipedia), at least in Scandinavia. It is not always like that, but they all contain 14 lines.
+The poem comprises four line groups with four, four, three and three lines. That is a very common strophe structure (according to the
+.pdfhref W -D #sonnets -A "Sonnets"article in Wikipedia), at least in Scandinavia. It is not always like that, but they all contain 14 lines.
 .LP
 Shakespeare wrote often his 14 lines typographically in one strophe, whereas Francesco Petrarca wrote them in two strophes with eight and six lines, respectively (again see article
 \fISonnets\fP
 in Wikipedia).
 .LP
-To be more precise, a sonnet has one more characteristics than having 14 lines, the lines should be iniambic pentameter.
+To be more precise, a sonnet has one more characteristics than having 14 lines, the lines should be in
+.pdfhref W -D #pentameter -A "iambic pentameter".
 .SH
 Finding sonnets
-
 .LP
 You can easily find all poems in the corpus based on a XPATH query like:
 .DS L
@@ -93,7 +89,6 @@ You can easily find all poems in the corpus based on a XPATH query like:
         //t:div[t:lg and @decls]
         \fP
 .DE
-
 .LP
 We can use that query in XSLT like this:
 .DS L
@@ -105,17 +100,17 @@ We can use that query in XSLT like this:
         </xsl:for-each>
         \fP
 .DE
-
 .LP
 So we iterate over all <div>...</div>s having line groups inside and have a `@decls` attribute containing a reference to metadata in the TEI header. The latter is not universal, but we use it in ADL and that attribute is only set on pieces that a cataloger has designated as a
 \fIwork\fP
 . I have implemented this using the shell script
-        find_sonnet_candidates.shand a transformsonnet_candidate.xsl. Finally, we don't do anything unless there are 14 lines of poetry.
+.pdfhref W -D find_sonnet_candidates.sh -A "find_sonnet_candidates.sh"and a transform
+.pdfhref W -D sonnet_candidate.xsl -A "sonnet_candidate.xsl". Finally, we don't do anything unless there are 14 lines of poetry.
 .LP
-This transformation creates a long,sonnet_candidates.xml, table with data about the sonnet candidates it finds.
+This transformation creates a long,
+.pdfhref W -D sonnet_candidates.xml -A "sonnet_candidates.xml", table with data about the sonnet candidates it finds.
 .SH
 Approximately pentametric
-
 .LP
 Finding <div>...</div>s having 14 lines of poetry isn't good enough. We are expecting iambic pentameter, don't we? To actually analyse the texts for their rythmical properties is beyond me, but we could make an approximation.
 .LP
@@ -137,16 +132,16 @@ Any way, this script calculates the average number of vowels per line in poems w
         <xsl:value-of select="format-number(sum($vowel_numbers) div 14, '#.####')"/>
         \fP
 .DE
-
 .LP
 We use the replace function and a regular expression to remove everything in each line except the vowels. Then we measure the string length which should equal the number of vowels per line and add them together for all lines in the poem. Finally we divide that sum with 14 and get the average number of vowels per line.
 .LP
-For a sonnet it would be about 10,or occasionally a little more. In the Michaëlis poem quoted above it is 10.4.
+For a sonnet it would be about 10,
+.pdfhref W -D #hendecasyllable -A "or occasionally a little more". In the Michaëlis poem quoted above it is 10.4.
 .SH
 Strophe structure
-
 .LP
-You can write a lot of nice poetry with 14 lines. Like Gustaf Munch-Petersen'sen borgers livshymnewith one strophe with one line, then three strophes with four lines and finally a single line. The number of syllables per line seem to decrease towards the end. Gustaf was a modernist. There are no fixed structures and very few rhymes i his poetry.
+You can write a lot of nice poetry with 14 lines. Like Gustaf Munch-Petersen's
+.pdfhref W -D https://tekster.kb.dk/text/adl-texts-munp1-shoot-workid62017 -A "en borgers livshymne"with one strophe with one line, then three strophes with four lines and finally a single line. The number of syllables per line seem to decrease towards the end. Gustaf was a modernist. There are no fixed structures and very few rhymes i his poetry.
 .LP
 You can easily find out the strophe structure for each poem:
 .DS L
@@ -159,28 +154,122 @@ You can easily find out the strophe structure for each poem:
         <xsl:value-of select="$lines_per_strophe"/>
         \fP
 .DE
-
 .LP
 That is, iterate over the line groups in a poem, and count the lines in each of them.
 .LP
 I have summarized these data about all poems in ADL with 14 lines. There are 243 of them (there are more, but they may have erroneous markup).
 .LP
-You find these sonnet candidates in a table heresonnet_candidates.xml. Please, find an extract from it below.
+You find these sonnet candidates in a table here
+.pdfhref W -D sonnet_candidates.xml -A "sonnet_candidates.xml". Please, find an extract from it below.
+.SH
+.SH
+sonnet candidates
+.LP
+.TS
+tab(;);
+lb lb lb lb ;
+l l l l .
+T{
+\s-2File name (link to source)\s+2
+T};T{
+\s-2Title (link to view)\s+2
+T};T{
+\s-2Strophe structure\s+2
+T};T{
+\s-2average number of vowels per line\s+2
+T}
+_
+T{
+\s-2
+.pdfhref W -D https://github.com/kb-dk/public-adl-text-sources/blob/master/texts/aarestrup07val.xml -A "./aarestrup07val.xml"\s+2
+T};T{
+\s-2
+.pdfhref W -D https://tekster.kb.dk/text/adl-texts-aarestrup07val-shoot-workid73888 -A "Jeg havde faaet Brev fra dig, Nanette"\s+2
+T};T{
+\s-24 4 3 3\s+2
+T};T{
+\s-211.0\s+2
+T}
+T{
+\s-2
+.pdfhref W -D https://github.com/kb-dk/public-adl-text-sources/blob/master/texts/aarestrup07val.xml -A "./aarestrup07val.xml"\s+2
+T};T{
+\s-2
+.pdfhref W -D https://tekster.kb.dk/text/adl-texts-aarestrup07val-shoot-workid75376 -A "Tag dette Kys, og tusind til, du Søde ..."\s+2
+T};T{
+\s-24 4 3 3\s+2
+T};T{
+\s-211.0714\s+2
+T}
+T{
+\s-2
+.pdfhref W -D https://github.com/kb-dk/public-adl-text-sources/blob/master/texts/aarestrup07val.xml -A "./aarestrup07val.xml"\s+2
+T};T{
+\s-2
+.pdfhref W -D https://tekster.kb.dk/text/adl-texts-aarestrup07val-shoot-workid76444 -A "Sonet"\s+2
+T};T{
+\s-24 4 3 3\s+2
+T};T{
+\s-211.5\s+2
+T}
+T{
+\s-2
+.pdfhref W -D https://github.com/kb-dk/public-adl-text-sources/blob/master/texts/./brorson03grval.xml -A "./brorson03grval.xml"\s+2
+T};T{
+\s-2
+.pdfhref W -D https://tekster.kb.dk/text/adl-texts-brorson03grval-shoot-workid76607 -A "1."\s+2
+T};T{
+\s-214\s+2
+T};T{
+\s-28.7143\s+2
+T}
+T{
+\s-2
+.pdfhref W -D https://github.com/kb-dk/public-adl-text-sources/blob/master/texts/claussen07val.xml -A "./claussen07val.xml"\s+2
+T};T{
+\s-2
+.pdfhref W -D https://tekster.kb.dk/text/adl-texts-claussen07val-shoot-workid63580 -A "SKUMRING"\s+2
+T};T{
+\s-214\s+2
+T};T{
+\s-210.8571\s+2
+T}
+T{
+\s-2
+.pdfhref W -D https://github.com/kb-dk/public-adl-text-sources/blob/master/texts/claussen07val.xml -A "./claussen07val.xml"\s+2
+T};T{
+\s-2
+.pdfhref W -D https://tekster.kb.dk/text/adl-texts-claussen07val-shoot-workid66131 -A "MAANENS TUNGSIND"\s+2
+T};T{
+\s-24 4 3 3\s+2
+T};T{
+\s-213.8571\s+2
+T}
+T{
+\s-2
+.pdfhref W -D https://github.com/kb-dk/public-adl-text-sources/blob/master/texts/jacobjp08val.xml -A "./jacobjp08val.xml"\s+2
+T};T{
+\s-2
+.pdfhref W -D https://tekster.kb.dk/text/adl-texts-jacobjp08val-shoot-workid63094 -A "I Seraillets Have"\s+2
+T};T{
+\s-214\s+2
+T};T{
+\s-26.7143\s+2
+T}
+.TE
 .LP
 Sophus Claussen's first poem may or may not be a sonnet, Brorson's poem is not. All of those with strophe structure 4 4 3 3 are definitely sonnets, as implied by strophe structure and the "approximately pentametric" number of vowels per line (and, by the way, Aarestrup often points out that he is actually writing sonnets in text or titles).
 .SH
 Then we have the rhymes
-
 .LP
 Beauty is in the eye of the beholder, says Shakespeare. I believe that he is right. Then, however, I would like to add that the rhymes and meters of poetry (like the pentameter) is in the ear of listener. It is time consuming to read houndreds of poems aloud and figure out the rhyme structure. So an approximate idea of the rhymes could be have comparing the verse line endings.
 .LP
-This is error prone, though. Consider thissonnet by P.M. Møller.
+This is error prone, though. Consider this
+.pdfhref W -D https://tekster.kb.dk/text/adl-texts-moeller01val-shoot-workid62307 -A "sonnet by P.M. Møller".
 .KF
-
 .sp
 .QP
 \s-2SONET\s+2
-
 .IP
 Den Svend, som Tabet af sin elskte frister,
 .br
@@ -190,7 +279,6 @@ Med Haab han efter Kirkeklokken lytter,
 .br
 Som lover ham igen, hvad her han mister.
 .br
-
 .IP
 Men næppe han med en usalig bytter,
 .br
@@ -200,7 +288,6 @@ Som sig uelsket gennem Livet lister,
 .br
 Hans Armod kun mod Tabet ham beskytter.
 .br
-
 .IP
 Til Livets Gaade rent han savner Nøglen,
 .br
@@ -208,7 +295,6 @@ Hver Livets Blomst i Hjærtets Vinter fryser,
 .br
 Han gaar omkring med underlige Fagter.
 .br
-
 .IP
 Ræd, Spøgelser han ser, naar Solen lyser,
 .br
@@ -216,24 +302,25 @@ Modløs og syg, foragtet han foragter
 .br
 Det skønne Liv som tom og ussel Gøglen.
 .br
-
 .KE
 .sp
-
 .LP
 The the last syllable of the eight first lines are the same '-ter'. If you use some script to compare the endings you'll only find single syllable rhymes and miss double syllable ones rhymes. I.e., you can erroneously categorize feminine rhymes (with two syllables) as masculine ones (with one syllable). (Sorry, I don't know a politically correct vocabulary for these concepts.)
 .LP
 In order to understand what we hear when reading, we have to consider '-ister' and '-ytter'. I.e., it starts with rhyme structure 'abbabaab' not 'aaaaaaaa'. Furthermore, it continues 'cdedec'.
 .LP
-I have written a set of scripts that traverse thesonnet_candidates.xmltable. Transform that file usingiterate_the_rhyming.xslselects poems with 14 lines and strophe structure 4 4 3 3. It generates a shell script which when executed pipes the content through other scripts that retrieve content, remove punctuation and finally detags them. The actual text is then piped through a perl script that analyse the endings according to the silly and flawed method described above.
+I have written a set of scripts that traverse the
+.pdfhref W -D sonnet_candidates.xml -A "sonnet_candidates.xml"table. Transform that file using
+.pdfhref W -D iterate_the_rhyming.xsl -A "iterate_the_rhyming.xsl"selects poems with 14 lines and strophe structure 4 4 3 3. It generates a shell script which when executed pipes the content through other scripts that retrieve content, remove punctuation and finally detags them. The actual text is then piped through a perl script that analyse the endings according to the silly and flawed method described above.
 .LP
-It works, sort of, until it doesn't. For poems with 4 4 3 3 strophe structure, you can find the result inrhymes_3chars.textandrhymes_2chars.textfor three and two letter rhymes, respectively. Run
+It works, sort of, until it doesn't. For poems with 4 4 3 3 strophe structure, you can find the result in
+.pdfhref W -D rhymes_3chars.text -A "rhymes_3chars.text"and
+.pdfhref W -D rhymes_2chars.text -A "rhymes_2chars.text"for three and two letter rhymes, respectively. Run
 .DS L
 \f(CR\s-2 
         grep -P '^[a-q]{14}' rhymes_3chars.text   | sort | uniq -c | sort -rn
         \fP
 .DE
-
 .LP
 to get a list of rhyme structure and their frequencies. The rhyme structures that occur more than twice are:
 .DS L
@@ -245,7 +332,6 @@ to get a list of rhyme structure and their frequencies. The rhyme structures tha
         3 abcaadeafghgig
         \fP
 .DE
-
 .LP
 This silly algorithm does actually give two of the most common rhyme structure for sonnets, but misses a lot of order in the remaining chaos:
 .DS L
@@ -253,7 +339,6 @@ This silly algorithm does actually give two of the most common rhyme structure f
         abbaabbacdcdcd
         \fP
 .DE
-
 .LP
 and
 .DS L
@@ -261,14 +346,13 @@ and
         abbaabbacdecde
         \fP
 .DE
-
 .LP
 So while it may fail more often than it succeeds, the successes give results that are reasonable.
 .LP
-The rhyme structure abbaabbacdecde is one is the most common ones found. Also it is one of the socalled Petrarchan rhyme schemes (Eberhart, 2018).
+The rhyme structure abbaabbacdecde is one is the most common ones found. Also it is one of the socalled Petrarchan rhyme schemes (
+.pdfhref W -D #everysonnet -A "Eberhart, 2018").
 .SH
 What are the sonnets about?
-
 .LP
 Any piece of art is meant to be consumed by humans. Poems should ideally be understood when read aloud and listened to. By humans.
 .LP
@@ -284,7 +368,6 @@ I have detagged the poems with 14 lines and strophe structure 4 4 3 3, tokenized
         sort | uniq -c | sort -n
         \fP
 .DE
-
 .LP
 such that I get a list of the 4781 Danish words that are used in our sonnet sample, sorted by their frequencies.
 .LP
@@ -296,7 +379,8 @@ one list of word frequencies in the entire sample and
 .IP \s+1\(bu\s-1
 a second list giving not of the number of occurences of each word, but the number of sonnets the word occurs in.
 .LP
-There are 160 sonnets in the selection, and the most frequent word occurs in all of them. These are the fifteen most commont word measured by thenumber of sonnets they occur in. Number of poems in the left column.
+There are 160 sonnets in the selection, and the most frequent word occurs in all of them. These are the fifteen most commont word measured by the
+.pdfhref W -D poem_frequencies.text -A "number of sonnets they occur in". Number of poems in the left column.
 .DS L
 \f(CR\s-2 
         75 du
@@ -316,9 +400,9 @@ There are 160 sonnets in the selection, and the most frequent word occurs in all
         160 og
         \fP
 .DE
-
 .LP
-and this is the list of the same thing, but measured as the grand totaloccurrence of the words in the corpus. Number of words in corpus in left column.
+and this is the list of the same thing, but measured as the grand total
+.pdfhref W -D frequencies.text -A "occurrence of the words in the corpus". Number of words in corpus in left column.
 .DS L
 \f(CR\s-2 
         109 min
@@ -338,29 +422,26 @@ and this is the list of the same thing, but measured as the grand totaloccurrenc
         588 og
         \fP
 .DE
-
 .LP
 As you can see this corroborates the established observation that the most frequent words in a corpus hardly ever describes the subject matter of texts (the words are conjunctions, pronouns, prepositions and the like). The distribution of the number of sonnets the words appear in:
 .KF
-
 .PSPIC distro.eps 
-
 .KE
 .sp
-
 .LP
 The distribution shows number of words graphed against number of sonnets. There are 3304 words occurring in just one sonnet. The leftmost, and highest, point on the graph has the coordinate (1,3304).
 .LP
 There is just one word appearing in all 160 sonnets. It is 'og' meaning 'and' correspoding to the rightmost point on the graph which has the coordinate (160,1). As a rule of thumb the most common words are all conjunctions, next to them comes prepositions and after those come pronomina.
 .LP
-Thedistribution.textis generated frompoem_frequencies.textusing (the line has been folded)
+The
+.pdfhref W -D distribution.text -A "distribution.text"is generated from
+.pdfhref W -D poem_frequencies.text -A "poem_frequencies.text"using (the line has been folded)
 .DS L
 \f(CR\s-2 
         sed 's/\ [a-z]*$//' poem_frequencies.text | sort | uniq -c | 
         sort -n -k 2 > distribution.text
         \fP
 .DE
-
 .LP
 See above. Column 1 is plotted against column 2.
 .LP
@@ -370,7 +451,8 @@ start at words occuring in about 25% of the sonnets, or less. I.e., words occuri
 .LP
 In what follows, I have simply used the utility
 \f(CRgrep\fP
-find words and derivates in the filepoem_frequencies.textmentioned above.
+find words and derivates in the file
+.pdfhref W -D poem_frequencies.text -A "poem_frequencies.text"mentioned above.
 .LP
 As example we have death, dead and lethal etc (basically words containing
 \fIdød\fP
@@ -392,7 +474,6 @@ As example we have death, dead and lethal etc (basically words containing
         11 døde
         \fP
 .DE
-
 .LP
 There are interesting derivatives and compound words on the list. Like
 \fIdødsberedthed\fP
@@ -411,9 +492,7 @@ Love (elskov) is not as popular as death (about 5% of the sonnets).
         7 elskov
         \fP
 .DE
-
 .LP
-
 \fIelskovsild\fP
 means the fire of love.
 \fIelskovsbrev\fP
@@ -428,7 +507,6 @@ are not as popular as love
         4 kvinder
         \fP
 .DE
-
 .LP
 Men more than women, and in particular words implying bravery and male virtues
 .DS L
@@ -444,11 +522,11 @@ Men more than women, and in particular words implying bravery and male virtues
         5 mandens
         \fP
 .DE
-
 .LP
 Remember that these sonnets are by men.
 \fImandom\fP
-implies a man's existence as a grownup man. Originally, inold norse, mand meant, just as in Old English, human. That, however, was when it was doubtful if women were actually human. Baadsmandstrille is a derivative of baadsmand (boatswain) which is another name for a sailor or petty officer. A baadsmandstrille is presumably a song sung by sailors.
+implies a man's existence as a grownup man. Originally, in
+.pdfhref W -D #oldnorse -A "old norse", mand meant, just as in Old English, human. That, however, was when it was doubtful if women were actually human. Baadsmandstrille is a derivative of baadsmand (boatswain) which is another name for a sailor or petty officer. A baadsmandstrille is presumably a song sung by sailors.
 .LP
 Graves occur, for some reason, less than deaths
 .DS L
@@ -463,14 +541,12 @@ Graves occur, for some reason, less than deaths
         4 gravens
         \fP
 .DE
-
 .LP
 indgraves is most likely a kind of
 \fIhomonym\fP
 , if you look up that sonnet it is clear that it means engrave. There both the verb in past tense begravet (buried) from begrave (as in bury) and grav (as in grave) and gravhøi (tumulus).
 .SH
 Conclusions
-
 .LP
 I think I could go on studying this for quite some time. However, I have to conclude this here, before the actual conclusions. There are interesting things to find here, though. Some of them are possible to study using simple methods, such as those described by Kenneth Ward Church in his
 \fIUnix™ for Poets\fP
@@ -479,109 +555,79 @@ I think I could go on studying this for quite some time. However, I have to conc
 The preliminary result from my armchair text processing exercise supports the notion that life was already in early modern Europe about sex, death and rock n'roll. Since rock wasn't there just yet, people had to be content with sonnets for the time being.
 .SH
 References
-
 .XP
 Church, Kenneth Ward,
 [date unknown]. 
 \fIUnix™ for Poets\fP
-
 .na
 \s-2\f(CR
-<URL: https://web.stanford.edu/class/cs124/kwc-unix-for-poets.pdf>
-\fP\s+2
+.pdfhref W -D https://web.stanford.edu/class/cs124/kwc-unix-for-poets.pdf -A "https://web.stanford.edu/class/cs124/kwc-unix-for-poets.pdf"\fP\s+2
 .ad
-
 .XP
 Det Kgl. Bibliotek,  and Det Danske Sprog- og Litteraturselskab,
 2000 - 2022. 
 \fIThe ADL text corpus\fP
-
 .na
 \s-2\f(CR
-<URL: https://github.com/kb-dk/public-adl-text-sources>
-\fP\s+2
+.pdfhref W -D https://github.com/kb-dk/public-adl-text-sources -A "https://github.com/kb-dk/public-adl-text-sources""\fP\s+2
 .ad
-
 .XP
 Eberhart, Larry,
 2018. Italian or Petrarchan Sonnet
 .
-
 .na
 \s-2\f(CR
-<URL: https://poetscollective.org/everysonnet/tag/abbaabbacdecde/#post-119>
-\fP\s+2
+.pdfhref W -D https://poetscollective.org/everysonnet/tag/abbaabbacdecde/#post-119 -A "https://poetscollective.org/everysonnet/tag/abbaabbacdecde/#post-119"\fP\s+2
 .ad
-
 .XP
 Hendecasyllable
 .
-
 .na
 \s-2\f(CR
-<URL: https://en.wikipedia.org/wiki/Hendecasyllable>
-\fP\s+2
+.pdfhref W -D https://en.wikipedia.org/wiki/Hendecasyllable -A "https://en.wikipedia.org/wiki/Hendecasyllable"\fP\s+2
 .ad
-
 .XP
 Iambic pentameter
 .
-
 .na
 \s-2\f(CR
-<URL: https://en.wikipedia.org/wiki/Iambic_pentameter>
-\fP\s+2
+.pdfhref W -D https://en.wikipedia.org/wiki/Iambic_pentameter -A "https://en.wikipedia.org/wiki/Iambic_pentameter"\fP\s+2
 .ad
-
 .XP
 Michaëlis, Sophus,
 1883. Jeg elsker —
 .
-
 .na
 \s-2\f(CR
-<URL: https://tekster.kb.dk/text/adl-texts-michs_03-shoot-workid68251>
-\fP\s+2
+.pdfhref W -D https://tekster.kb.dk/text/adl-texts-michs_03-shoot-workid68251 -A "https://tekster.kb.dk/text/adl-texts-michs_03-shoot-workid68251"/>"\fP\s+2
 .ad
-
 .XP
 Old Norse
 .
-
 .na
 \s-2\f(CR
-<URL: https://en.wikipedia.org/wiki/Old_Norse>
-\fP\s+2
+.pdfhref W -D https://en.wikipedia.org/wiki/Old_Norse -A "https://en.wikipedia.org/wiki/Old_Norse"\fP\s+2
 .ad
-
 .XP
 Sonnet
 .
-
 .na
 \s-2\f(CR
-<URL: https://en.wikipedia.org/wiki/Sonnet>
-\fP\s+2
+.pdfhref W -D https://en.wikipedia.org/wiki/Sonnet -A "https://en.wikipedia.org/wiki/Sonnet"\fP\s+2
 .ad
-
 .XP
 The TEI Consortium,
 2022. 
 \fITEI P5: Guidelines for Electronic Text Encoding and Interchange\fP
-
 .na
 \s-2\f(CR
-<URL: https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html>
-\fP\s+2
+.pdfhref W -D https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html -A "https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html"\fP\s+2
 .ad
-
 .XP
 The TEI Consortium,
 2022. Passages of Verse or Drama
 .
-
 .na
 \s-2\f(CR
-<URL: https://tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CODV>
-\fP\s+2
+.pdfhref W -D https://tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CODV -A "https://tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CODV"\fP\s+2
 .ad
