@@ -20,24 +20,24 @@ Introduction
 .LP
 If there are any sonnets, do they rhyme and what are they about?
 .LP
-I have since many years been a great fan of the tutorial by
-.pdfhref L -D kennethchurch -A Kenneth Ward Church
-\fIUnix™ for Poets\fP. This is an investigation of what can be done with a corpus of literary text with very simple tools similar to the ones described by Church in his tutorial.
+I have since many years been a great fan of the tutorial \fIUnix™ for Poets\fPby
+.pdfhref L -D kennethchurch Kenneth Ward Church.
+This is an investigation of what can be done with a corpus of literary text with very simple tools similar to the ones described by Church in his tutorial.
 .LP
 I do not claim that there is anything novel or even significant in this text. Being a scientist, I think like a scientist and don't expect any deep literary theory here.
 .SH
 Finding poems
 .LP
 The ADL text corpus contains
-.pdfhref L -D adlcorpus -A literary texts
-. Since the texts are encoded according to the
-.pdfhref L -D teiguidelines -A TEI guidelines
+.pdfhref L -D adlcorpus literary texts.
+Since the texts are encoded according to the
+.pdfhref L -D teiguidelines TEI guidelines
 it is easy to find poetry in those files. Typically a piece of poetry is encoded as
-.pdfhref L -D tei-ref-lg -A lines within line groups
+.pdfhref L -D tei-ref-lg lines within line groups
 . More often than not the line groups are embedded in <div> ... </div> elements.
 .LP
-A poem may look like this in the source. The poem is by  
-.pdfhref W -D https://github.com/siglun/danish-sonnets/blob/main//sophus Sophus Michaëlis (1883).
+A poem may look like this in the source. The poem is by
+.pdfhref L -D sophus Sophus Michaëlis (1883).
 .DS L
 \f(CR\s-2
 <div decls="#biblid68251">
@@ -74,16 +74,15 @@ A poem may look like this in the source. The poem is by
 The default name space is declared as xmlns="http://www.tei-c.org/ns/1.0", which we in following refer to with the namespace prefix 't'.
 .LP
 The poem comprises four line groups with four, four, three and three lines. That is a very common strophe structure (according to the
-.pdfhref L -D sonnets -A Sonnets
+.pdfhref L -D sonnets Sonnets
 article in Wikipedia), at least in Scandinavia. It is not always like that, but they all contain 14 lines.
 .LP
-Shakespeare wrote often his 14 lines typographically in one strophe, whereas Francesco Petrarca wrote them in two strophes with eight and six lines, respectively (again see article\fI
-.pdfhref L -D sonnets -A Sonnets
+Shakespeare wrote often his 14 lines typographically in one strophe, whereas Francesco Petrarca wrote them in two strophes with eight and six lines, respectively (again see article \fI
+.pdfhref L -D sonnets Sonnets
 \fPin Wikipedia).
 .LP
 To be more precise, a sonnet has one more characteristics than having 14 lines, the lines should be in
-.pdfhref L -D pentameter -A iambic pentameter
-.
+.pdfhref L -D pentameter iambic pentameter.
 .SH
 Finding sonnets
 .LP
@@ -108,13 +107,13 @@ We can use that query in XSLT like this:
 So we iterate over all <div>...</div>s having line groups inside and have a `@decls` attribute containing a reference to metadata in the TEI header. The latter is not universal, but we use it in ADL and that attribute is only set on pieces that a cataloger has designated as a
 \fIwork\fP
 . I have implemented this using the shell script  
-.pdfhref W -D https://github.com/siglun/danish-sonnets/blob/main//find_sonnet_candidates.sh find_sonnet_candidates.sh
+.pdfhref W -D https://github.com/siglun/danish-sonnets/blob/main/find_sonnet_candidates.sh find_sonnet_candidates.sh
 and a transform  
-.pdfhref W -D https://github.com/siglun/danish-sonnets/blob/main//sonnet_candidate.xsl sonnet_candidate.xsl
+.pdfhref W -D https://github.com/siglun/danish-sonnets/blob/main/sonnet_candidate.xsl sonnet_candidate.xsl
 . Finally, we don't do anything unless there are 14 lines of poetry.
 .LP
 This transformation creates a long,  
-.pdfhref W -D https://github.com/siglun/danish-sonnets/blob/main//sonnet_candidates.xml sonnet_candidates.xml
+.pdfhref W -D https://github.com/siglun/danish-sonnets/blob/main/sonnet_candidates.xml sonnet_candidates.xml
 , table with data about the sonnet candidates it finds.
 .SH
 Approximately pentametric
@@ -143,8 +142,8 @@ Any way, this script calculates the average number of vowels per line in poems w
 We use the replace function and a regular expression to remove everything in each line except the vowels. Then we measure the string length which should equal the number of vowels per line and add them together for all lines in the poem. Finally we divide that sum with 14 and get the average number of vowels per line.
 .LP
 For a sonnet it would be about 10,
-.pdfhref L -D hendecasyllable -A or occasionally a little more
-. In the Michaëlis poem quoted above it is 10.4.
+.pdfhref L -D hendecasyllable or occasionally a little more.
+Danish is a language rich in diftons, which could be another reason for lines deviating from the expected 10 vowels. In the Michaëlis poem quoted above it is 10.4.
 .SH
 Strophe structure
 .LP
@@ -169,7 +168,7 @@ That is, iterate over the line groups in a poem, and count the lines in each of 
 I have summarized these data about all poems in ADL with 14 lines. There are 243 of them (there are more, but they may have erroneous markup).
 .LP
 You find these sonnet candidates in a table here  
-.pdfhref W -D https://github.com/siglun/danish-sonnets/blob/main//sonnet_candidates.xml sonnet_candidates.xml
+.pdfhref W -D https://github.com/siglun/danish-sonnets/blob/main/sonnet_candidates.xml sonnet_candidates.xml
 . Please, find an extract from it below.
 .SH
 .SH
@@ -335,15 +334,15 @@ The the last syllable of the eight first lines are the same '-ter'. If you use s
 In order to understand what we hear when reading, we have to consider '-ister' and '-ytter'. I.e., it starts with rhyme structure 'abbabaab' not 'aaaaaaaa'. Furthermore, it continues 'cdedec'.
 .LP
 I have written a set of scripts that traverse the  
-.pdfhref W -D https://github.com/siglun/danish-sonnets/blob/main//sonnet_candidates.xml sonnet_candidates.xml
+.pdfhref W -D https://github.com/siglun/danish-sonnets/blob/main/sonnet_candidates.xml sonnet_candidates.xml
 table. Transform that file using  
-.pdfhref W -D https://github.com/siglun/danish-sonnets/blob/main//iterate_the_rhyming.xsl iterate_the_rhyming.xsl
+.pdfhref W -D https://github.com/siglun/danish-sonnets/blob/main/iterate_the_rhyming.xsl iterate_the_rhyming.xsl
 selects poems with 14 lines and strophe structure 4 4 3 3. It generates a shell script which when executed pipes the content through other scripts that retrieve content, remove punctuation and finally detags them. The actual text is then piped through a perl script that analyse the endings according to the silly and flawed method described above.
 .LP
 It works, sort of, until it doesn't. For poems with 4 4 3 3 strophe structure, you can find the result in  
-.pdfhref W -D https://github.com/siglun/danish-sonnets/blob/main//rhymes_3chars.text rhymes_3chars.text
+.pdfhref W -D https://github.com/siglun/danish-sonnets/blob/main/rhymes_3chars.text rhymes_3chars.text
 and  
-.pdfhref W -D https://github.com/siglun/danish-sonnets/blob/main//rhymes_2chars.text rhymes_2chars.text
+.pdfhref W -D https://github.com/siglun/danish-sonnets/blob/main/rhymes_2chars.text rhymes_2chars.text
 for three and two letter rhymes, respectively. Run
 .DS L
 \f(CR\s-2 
@@ -379,7 +378,7 @@ and
 So while it may fail more often than it succeeds, the successes give results that are reasonable.
 .LP
 The rhyme structure abbaabbacdecde is one is the most common ones found. Also it is one of the socalled Petrarchan rhyme schemes (
-.pdfhref L -D everysonnet -A Eberhart, 2018
+.pdfhref L -D everysonnet Eberhart, 2018
 ).
 .SH
 What are the sonnets about?
@@ -410,7 +409,7 @@ one list of word frequencies in the entire sample and
 a second list giving not of the number of occurences of each word, but the number of sonnets the word occurs in.
 .LP
 There are 160 sonnets in the selection, and the most frequent word occurs in all of them. These are the fifteen most commont word measured by the  
-.pdfhref W -D https://github.com/siglun/danish-sonnets/blob/main//poem_frequencies.text number of sonnets they occur in
+.pdfhref W -D https://github.com/siglun/danish-sonnets/blob/main/poem_frequencies.text number of sonnets they occur in
 . Number of poems in the left column.
 .DS L
 \f(CR\s-2 
@@ -433,7 +432,7 @@ There are 160 sonnets in the selection, and the most frequent word occurs in all
 .DE
 .LP
 and this is the list of the same thing, but measured as the grand total  
-.pdfhref W -D https://github.com/siglun/danish-sonnets/blob/main//frequencies.text occurrence of the words in the corpus
+.pdfhref W -D https://github.com/siglun/danish-sonnets/blob/main/frequencies.text occurrence of the words in the corpus
 . Number of words in corpus in left column.
 .DS L
 \f(CR\s-2 
@@ -466,9 +465,9 @@ The distribution shows number of words graphed against number of sonnets. There 
 There is just one word appearing in all 160 sonnets. It is 'og' meaning 'and' correspoding to the rightmost point on the graph which has the coordinate (160,1). As a rule of thumb the most common words are all conjunctions, next to them comes prepositions and after those come pronomina.
 .LP
 The  
-.pdfhref W -D https://github.com/siglun/danish-sonnets/blob/main//distribution.text distribution.text
+.pdfhref W -D https://github.com/siglun/danish-sonnets/blob/main/distribution.text distribution.text
 is generated from  
-.pdfhref W -D https://github.com/siglun/danish-sonnets/blob/main//poem_frequencies.text poem_frequencies.text
+.pdfhref W -D https://github.com/siglun/danish-sonnets/blob/main/poem_frequencies.text poem_frequencies.text
 using (the line has been folded)
 .DS L
 \f(CR\s-2 
@@ -486,7 +485,7 @@ start at words occuring in about 25% of the sonnets, or less. I.e., words occuri
 In what follows, I have simply used the utility
 \f(CRgrep\fP
 find words and derivates in the file  
-.pdfhref W -D https://github.com/siglun/danish-sonnets/blob/main//poem_frequencies.text poem_frequencies.text
+.pdfhref W -D https://github.com/siglun/danish-sonnets/blob/main/poem_frequencies.text poem_frequencies.text
 mentioned above.
 .LP
 As example we have death, dead and lethal etc (basically words containing
@@ -561,7 +560,7 @@ Men more than women, and in particular words implying bravery and male virtues
 Remember that these sonnets are by men.
 \fImandom\fP
 implies a man's existence as a grownup man. Originally, in
-.pdfhref L -D oldnorse -A old norse
+.pdfhref L -D oldnorse old norse
 , mand meant, just as in Old English, human. That, however, was when it was doubtful if women were actually human. Baadsmandstrille is a derivative of baadsmand (boatswain) which is another name for a sailor or petty officer. A baadsmandstrille is presumably a song sung by sailors.
 .LP
 Graves occur, for some reason, less than deaths
@@ -584,9 +583,9 @@ indgraves is most likely a kind of
 .SH
 Conclusions
 .LP
-I think I could go on studying this for quite some time. However, I have to conclude this here, before the actual conclusions. There are interesting things to find here, though. Some of them are possible to study using simple methods, such as those described by Kenneth Ward Church in his\fI
-.pdfhref L -D kennethchurch -A Unix™ for Poets
-\fP.
+I think I could go on studying this for quite some time. However, I have to conclude this here, before the actual conclusions. There are interesting things to find here, though. Some of them are possible to study using simple methods, such as those described by
+.pdfhref L -D kennethchurch Kenneth Ward Church
+in his \fIUnix™ for Poets\fP.
 .LP
 The preliminary result from my armchair text processing exercise supports the notion that life was already in early modern Europe about sex, death and rock n'roll. Since rock wasn't there just yet, people had to be content with sonnets for the time being.
 .SH

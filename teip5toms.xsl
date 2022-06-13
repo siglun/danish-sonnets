@@ -129,14 +129,14 @@ Notes
 </xsl:template>
 
 <xsl:template match="t:ref[contains(substring(@target,1,1),'#')]">
-.pdfhref L -D <xsl:value-of select="substring-after(@target,'#')"/> <xsl:if test="."> -A <xsl:apply-templates/> </xsl:if><xsl:text>
+.pdfhref L -D <xsl:value-of select="substring-after(@target,'#')"/> <xsl:text> </xsl:text> <xsl:apply-templates/> <xsl:text>
 </xsl:text></xsl:template>
 
 <xsl:template match="t:ref">
 <xsl:variable name="href">  
 <xsl:choose>
 <xsl:when test="contains(@target,'http')"><xsl:value-of select="@target"/></xsl:when>
-<xsl:otherwise><xsl:value-of select="concat($base_href,'/',@target)"/></xsl:otherwise>
+<xsl:otherwise><xsl:value-of select="concat($base_href,@target)"/></xsl:otherwise>
 </xsl:choose>
 </xsl:variable>
 <xsl:choose>
@@ -196,7 +196,7 @@ Notes
 \fB<xsl:apply-templates  mode="preserve"/>\fP
 </xsl:template>
 
-<xsl:template match="t:p/t:title">\fI<xsl:apply-templates/>\fP</xsl:template>
+<xsl:template match="t:p/t:title"> \fI<xsl:apply-templates/>\fP</xsl:template>
 
 <xsl:template match="t:hi[@rend='italic']|t:hi[@rend='italics']">
 \fI<xsl:apply-templates  mode="preserve"/>\fP

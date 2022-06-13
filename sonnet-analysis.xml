@@ -57,8 +57,8 @@
 
         <p>If there are any sonnets, do they rhyme and what are they about?</p>
 
-        <p>I have since many years been a great fan of the tutorial by <ref
-        target="#kennethchurch">Kenneth Ward Church</ref> <title>Unix™ for Poets</title>.
+        <p>I have since many years been a great fan of the tutorial <title>Unix™ for Poets</title> by <ref
+        target="#kennethchurch">Kenneth Ward Church.</ref>
         This is an investigation of what can be done with a corpus of literary text with very simple tools similar to the ones described by Church in his tutorial.</p>
 
         <p>I do not claim that there is anything novel or even significant in
@@ -69,13 +69,13 @@
       <div>
         <head>Finding poems</head>
 
-        <p>The ADL text corpus contains <ref target="#adlcorpus">literary texts</ref>.
+        <p>The ADL text corpus contains <ref target="#adlcorpus">literary texts.</ref>
         Since the texts are encoded according to the <ref target="#teiguidelines">TEI guidelines</ref> it is easy to find poetry in those files.
         Typically a piece of poetry is encoded as <ref target="#tei-ref-lg">lines within line groups</ref>.
         More often than not the line groups are embedded in &lt;div> ... &lt;/div> elements.</p>
 
         <p>A poem may look like this in the source.
-        The poem is by <ref target="sophus">Sophus Michaëlis (<date>1883</date>).</ref></p>
+        The poem is by <ref target="#sophus">Sophus Michaëlis (<date>1883</date>).</ref></p>
 
         <eg xml:space="preserve">
 <![CDATA[
@@ -127,7 +127,7 @@
         <title><ref target="#sonnets">Sonnets</ref></title> in Wikipedia).</p>
 
         <p>To be more precise, a sonnet has one more characteristics
-        than having 14 lines, the lines should be in <ref target="#pentameter">iambic pentameter</ref>.</p>
+        than having 14 lines, the lines should be in <ref target="#pentameter">iambic pentameter.</ref></p>
       </div>
 
       
@@ -201,7 +201,10 @@
         poem. Finally we divide that sum with 14 and get the average
         number of vowels per line.</p>
 
-        <p>For a sonnet it would be about 10, <ref target="#hendecasyllable">or occasionally a little more</ref>.
+        <p>For a sonnet it would be about 10,
+        <ref target="#hendecasyllable">or occasionally a little more.</ref>
+        Danish is a language rich in diftons,
+        which could be another reason for lines deviating from the expected 10 vowels.
         In the Michaëlis poem quoted above it is 10.4.</p>
 
       </div>
@@ -689,7 +692,9 @@
         conclusions. There are interesting things to find here,
         though.
         Some of them are possible to study using simple methods,
-        such as those described by Kenneth Ward Church in his <title><ref target="#kennethchurch">Unix™ for Poets</ref></title>.</p>
+        such as those described by <ref target="#kennethchurch">Kenneth Ward Church</ref>
+        in his
+        <title>Unix™ for Poets</title>.</p>
 
         <p>The preliminary result from my armchair text processing exercise supports the
         notion that life was already in early modern Europe about sex, death
