@@ -275,9 +275,8 @@ p.version {
         <p>If there are any sonnets, do they rhyme and what are they about?</p>
 
         <p>I have since many years been a great fan of the tutorial <em>Unix™ for Poets</em> by <a href="#kennethchurch">Kenneth Ward Church.</a>
-        This is an investigation of what can be done with a corpus of literary text with very simple tools similar to the ones described by Church in his tutorial.</p>
-
-        <p>I do not claim that there is anything novel or even significant in
+        This note is an investigation of what can be done with a corpus of literary text with very simple tools similar to the ones described by Church in his tutorial.
+        I do not claim that there is anything novel or even significant in
         this text. Being a scientist, I think like a scientist and don't
         expect any deep literary theory here.</p>
       
@@ -341,9 +340,7 @@ p.version {
         <p>Shakespeare wrote often his 14 lines typographically in one
         strophe, whereas Francesco Petrarca wrote them in two strophes
         with eight and six lines, respectively (again see article
-        <em>
-            <a href="#sonnets">Sonnets</a>
-         </em> in Wikipedia).</p>
+        <a href="#sonnets">Sonnets</a> in Wikipedia).</p>
 
         <p>To be more precise, a sonnet has one more characteristics
         than having 14 lines, the lines should be in <a href="#pentameter">iambic pentameter.</a>
@@ -367,7 +364,7 @@ p.version {
         <pre> 
         &lt;xsl:for-each select="//t:div[t:lg and @decls]"&gt;
            &lt;xsl:if test="count(.//t:lg/t:l)=14"&gt;
-              &lt;!--  man's got to do what a man's got to do --&gt;
+              &lt;!-- script's got to do what a script's got to do --&gt;
            &lt;/xsl:if&gt;
         &lt;/xsl:for-each&gt;
         </pre>
@@ -375,7 +372,8 @@ p.version {
         <p>So we iterate over all &lt;div&gt;...&lt;/div&gt;s having
         line groups inside and have a `@decls` attribute containing a
         reference to metadata in the TEI header.
-        The latter is not universal, but we use it in ADL and that attribute is only set on pieces that a cataloger has designated as a <em>work</em>.
+        The latter is not universal, but we use it in ADL and that attribute is only set on pieces that a cataloger has designated as a <em>work.</em>
+        The decisions as to what is a work was based on the experience of what library patrons ask for at the information desk.
         I have implemented this using the shell script <a href="https://github.com/siglun/danish-sonnets/blob/main/find_sonnet_candidates.sh">find_sonnet_candidates.sh</a> and a transform <a href="https://github.com/siglun/danish-sonnets/blob/main/sonnet_candidate.xsl">sonnet_candidate.xsl</a>.
         Finally, we don't do anything unless there are 14 lines of poetry.</p>
 
@@ -396,7 +394,8 @@ p.version {
         vowels per line. It is an approximation since a iamb should have the
         stress on the second syllable (due to ignorance I ignore the musical
         aspect of this; we will include false positives since lines of poetry
-        with five feet must not be <strong>iambic</strong>.</p>
+        with five feet must not be <strong>iambic.</strong>
+      </p>
 
         <p>Any way, this script calculates the average number of
         vowels per line in poems with 14 lines:</p>
@@ -451,11 +450,10 @@ p.version {
         <p>That is, iterate over the line groups in a poem, and count the lines
         in each of them.</p>
 
-        <p>I have summarized these data about all poems in ADL with 14
-        lines. There are 243 of them (there are more, but they may have erroneous
-        markup).</p>
+        <p>I have summarized these data about all poems in ADL with 14lines.
+        There are 243 of them (there might be more, but then they have erroneous markup).</p>
 
-        <p>You find these sonnet candidates in a table here <a href="https://github.com/siglun/danish-sonnets/blob/main/sonnet_candidates.xml">sonnet_candidates.xml</a>.
+        <p>You find these sonnet candidates in a table here <a href="https://github.com/siglun/danish-sonnets/blob/main/sonnet_candidates.xml">sonnet_candidates.xml.</a>
         Please, find an extract from it below.</p>
 
         <table>
@@ -665,15 +663,11 @@ p.version {
         <p>This silly algorithm does actually give two of the most common rhyme structure
         for sonnets, but misses a lot of order in the remaining chaos:</p>
 
-        <pre>
-        abbaabbacdcdcd
-        </pre>
+        <pre>abbaabbacdcdcd</pre>
 
         <p>and</p>
 
-        <pre>
-        abbaabbacdecde
-        </pre>
+        <pre>abbaabbacdecde</pre>
 
         <p>So while it may fail more often than it succeeds, the successes give
         results that are reasonable.</p>

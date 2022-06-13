@@ -20,11 +20,9 @@ Introduction
 .LP
 If there are any sonnets, do they rhyme and what are they about?
 .LP
-I have since many years been a great fan of the tutorial \fIUnix™ for Poets\fPby
+I have since many years been a great fan of the tutorial \fIUnix™ for Poets\fP by
 .pdfhref L -D kennethchurch Kenneth Ward Church.
-This is an investigation of what can be done with a corpus of literary text with very simple tools similar to the ones described by Church in his tutorial.
-.LP
-I do not claim that there is anything novel or even significant in this text. Being a scientist, I think like a scientist and don't expect any deep literary theory here.
+This note is an investigation of what can be done with a corpus of literary text with very simple tools similar to the ones described by Church in his tutorial. I do not claim that there is anything novel or even significant in this text. Being a scientist, I think like a scientist and don't expect any deep literary theory here.
 .SH
 Finding poems
 .LP
@@ -77,9 +75,9 @@ The poem comprises four line groups with four, four, three and three lines. That
 .pdfhref L -D sonnets Sonnets
 article in Wikipedia), at least in Scandinavia. It is not always like that, but they all contain 14 lines.
 .LP
-Shakespeare wrote often his 14 lines typographically in one strophe, whereas Francesco Petrarca wrote them in two strophes with eight and six lines, respectively (again see article \fI
+Shakespeare wrote often his 14 lines typographically in one strophe, whereas Francesco Petrarca wrote them in two strophes with eight and six lines, respectively (again see article
 .pdfhref L -D sonnets Sonnets
-\fPin Wikipedia).
+in Wikipedia).
 .LP
 To be more precise, a sonnet has one more characteristics than having 14 lines, the lines should be in
 .pdfhref L -D pentameter iambic pentameter.
@@ -98,15 +96,15 @@ We can use that query in XSLT like this:
 \f(CR\s-2 
         <xsl:for-each select="//t:div[t:lg and @decls]">
            <xsl:if test="count(.//t:lg/t:l)=14">
-              <!--  man's got to do what a man's got to do -->
+              <!-- script's got to do what a script's got to do -->
            </xsl:if>
         </xsl:for-each>
         \fP
 .DE
 .LP
 So we iterate over all <div>...</div>s having line groups inside and have a `@decls` attribute containing a reference to metadata in the TEI header. The latter is not universal, but we use it in ADL and that attribute is only set on pieces that a cataloger has designated as a
-\fIwork\fP
-. I have implemented this using the shell script  
+\fIwork.\fP
+The decisions as to what is a work was based on the experience of what library patrons ask for at the information desk. I have implemented this using the shell script  
 .pdfhref W -D https://github.com/siglun/danish-sonnets/blob/main/find_sonnet_candidates.sh find_sonnet_candidates.sh
 and a transform  
 .pdfhref W -D https://github.com/siglun/danish-sonnets/blob/main/sonnet_candidate.xsl sonnet_candidate.xsl
@@ -121,8 +119,7 @@ Approximately pentametric
 Finding <div>...</div>s having 14 lines of poetry isn't good enough. We are expecting iambic pentameter, don't we? To actually analyse the texts for their rythmical properties is beyond me, but we could make an approximation.
 .LP
 Iambic verse consists of feet with two syllables, i.e. if there are five feet per line we could say that iambic verse has approximately 10 vowels per line. It is an approximation since a iamb should have the stress on the second syllable (due to ignorance I ignore the musical aspect of this; we will include false positives since lines of poetry with five feet must not be
-\fBiambic\fP
-.
+\fBiambic.\fP
 .LP
 Any way, this script calculates the average number of vowels per line in poems with 14 lines:
 .DS L
@@ -165,11 +162,11 @@ You can easily find out the strophe structure for each poem:
 .LP
 That is, iterate over the line groups in a poem, and count the lines in each of them.
 .LP
-I have summarized these data about all poems in ADL with 14 lines. There are 243 of them (there are more, but they may have erroneous markup).
+I have summarized these data about all poems in ADL with 14lines. There are 243 of them (there might be more, but then they have erroneous markup).
 .LP
 You find these sonnet candidates in a table here  
-.pdfhref W -D https://github.com/siglun/danish-sonnets/blob/main/sonnet_candidates.xml sonnet_candidates.xml
-. Please, find an extract from it below.
+.pdfhref W -D https://github.com/siglun/danish-sonnets/blob/main/sonnet_candidates.xml sonnet_candidates.xml.
+Please, find an extract from it below.
 .SH
 .SH
 sonnet candidates
@@ -363,16 +360,12 @@ to get a list of rhyme structure and their frequencies. The rhyme structures tha
 .LP
 This silly algorithm does actually give two of the most common rhyme structure for sonnets, but misses a lot of order in the remaining chaos:
 .DS L
-\f(CR\s-2
-        abbaabbacdcdcd
-        \fP
+\f(CR\s-2abbaabbacdcdcd\fP
 .DE
 .LP
 and
 .DS L
-\f(CR\s-2
-        abbaabbacdecde
-        \fP
+\f(CR\s-2abbaabbacdecde\fP
 .DE
 .LP
 So while it may fail more often than it succeeds, the successes give results that are reasonable.
@@ -585,7 +578,7 @@ Conclusions
 .LP
 I think I could go on studying this for quite some time. However, I have to conclude this here, before the actual conclusions. There are interesting things to find here, though. Some of them are possible to study using simple methods, such as those described by
 .pdfhref L -D kennethchurch Kenneth Ward Church
-in his \fIUnix™ for Poets\fP.
+in his \fIUnix™ for Poets\fP .
 .LP
 The preliminary result from my armchair text processing exercise supports the notion that life was already in early modern Europe about sex, death and rock n'roll. Since rock wasn't there just yet, people had to be content with sonnets for the time being.
 .SH
@@ -593,8 +586,7 @@ References
 .XP
 .pdfhref M -N kennethchurch
 Church, Kenneth Ward,
-[date unknown]. 
-\fIUnix™ for Poets\fP
+[date unknown]. \fIUnix™ for Poets\fP 
 .br  
 \s-2\f(CR
 .pdfhref W -D https://web.stanford.edu/class/cs124/kwc-unix-for-poets.pdf https://web.stanford.edu/class/cs124/kwc-unix-for-poets.pdf
@@ -602,8 +594,7 @@ Church, Kenneth Ward,
 .XP
 .pdfhref M -N adlcorpus
 Det Kgl. Bibliotek,  and Det Danske Sprog- og Litteraturselskab,
-2000 - 2022. 
-\fIThe ADL text corpus\fP
+2000 - 2022. \fIThe ADL text corpus\fP 
 .br  
 \s-2\f(CR
 .pdfhref W -D https://github.com/kb-dk/public-adl-text-sources https://github.com/kb-dk/public-adl-text-sources
@@ -611,21 +602,24 @@ Det Kgl. Bibliotek,  and Det Danske Sprog- og Litteraturselskab,
 .XP
 .pdfhref M -N everysonnet
 Eberhart, Larry,
-2018. Italian or Petrarchan Sonnet
+2018. Italian or Petrarchan Sonnet.  In:
+\fIEvery Sonnet: The sonnet forms database\fP 
 .br  
 \s-2\f(CR
 .pdfhref W -D https://poetscollective.org/everysonnet/tag/abbaabbacdecde/#post-119 https://poetscollective.org/everysonnet/tag/abbaabbacdecde/#post-119
 \fP\s+2
 .XP
 .pdfhref M -N hendecasyllable
-Hendecasyllable
+Hendecasyllable.  In:
+\fIWikipedia\fP 
 .br  
 \s-2\f(CR
 .pdfhref W -D https://en.wikipedia.org/wiki/Hendecasyllable https://en.wikipedia.org/wiki/Hendecasyllable
 \fP\s+2
 .XP
 .pdfhref M -N pentameter
-Iambic pentameter
+Iambic pentameter.  In:
+\fIWikipedia\fP 
 .br  
 \s-2\f(CR
 .pdfhref W -D https://en.wikipedia.org/wiki/Iambic_pentameter https://en.wikipedia.org/wiki/Iambic_pentameter
@@ -633,21 +627,24 @@ Iambic pentameter
 .XP
 .pdfhref M -N sophus
 Michaëlis, Sophus,
-1883. Jeg elsker —
+1883. Jeg elsker —.  In:
+\fISolblomster\fP 
 .br  
 \s-2\f(CR
 .pdfhref W -D https://tekster.kb.dk/text/adl-texts-michs_03-shoot-workid68251 https://tekster.kb.dk/text/adl-texts-michs_03-shoot-workid68251
 \fP\s+2
 .XP
 .pdfhref M -N oldnorse
-Old Norse
+Old Norse.  In:
+\fIWikipedia\fP 
 .br  
 \s-2\f(CR
 .pdfhref W -D https://en.wikipedia.org/wiki/Old_Norse https://en.wikipedia.org/wiki/Old_Norse
 \fP\s+2
 .XP
 .pdfhref M -N sonnets
-Sonnet
+Sonnet.  In:
+\fIWikipedia\fP 
 .br  
 \s-2\f(CR
 .pdfhref W -D https://en.wikipedia.org/wiki/Sonnet https://en.wikipedia.org/wiki/Sonnet
@@ -655,8 +652,7 @@ Sonnet
 .XP
 .pdfhref M -N teiguidelines
 The TEI Consortium,
-2022. 
-\fITEI P5: Guidelines for Electronic Text Encoding and Interchange\fP
+2022. \fITEI P5: Guidelines for Electronic Text Encoding and Interchange\fP 
 .br  
 \s-2\f(CR
 .pdfhref W -D https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html
@@ -664,7 +660,8 @@ The TEI Consortium,
 .XP
 .pdfhref M -N tei-ref-lg
 The TEI Consortium,
-2022. Passages of Verse or Drama
+2022. Passages of Verse or Drama.  In:
+\fITEI P5: Guidelines for Electronic Text Encoding and Interchange\fP 
 .br  
 \s-2\f(CR
 .pdfhref W -D https://tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CODV https://tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CODV

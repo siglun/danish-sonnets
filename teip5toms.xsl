@@ -71,18 +71,12 @@ Notes
 .pdfhref M -N <xsl:value-of select="@xml:id"/><xsl:text>
 </xsl:text><xsl:for-each select="t:author|t:editor"><xsl:if test="position() > 1 and position()=last()"><xsl:text> and </xsl:text></xsl:if><xsl:apply-templates/><xsl:if test="position() >= 1 and not(position() = last())"><xsl:text>, </xsl:text></xsl:if></xsl:for-each><xsl:if test="t:date"><xsl:text>,
 </xsl:text><xsl:apply-templates select="t:date"/><xsl:text>. </xsl:text></xsl:if><xsl:if test="t:title">
-<xsl:choose>
-<xsl:when test="t:title[@level = 'a']">
-<xsl:apply-templates select="t:title[@level = 'a']"/><xsl:text>
-</xsl:text>
-<xsl:if test="t:title[@level = 'j']">\fI<xsl:apply-templates select="t:title[@level = 'j']"/>\fP</xsl:if><xsl:text>
-</xsl:text>
-</xsl:when>
-<xsl:when test="t:title[@level = 'm']">
-\fI<xsl:apply-templates select="t:title[@level = 'm']"/>\fP<xsl:text>
-</xsl:text>
-</xsl:when>
-</xsl:choose>
+<xsl:if test="t:title[@level = 'a']">
+<xsl:apply-templates select="t:title[@level = 'a']"/><xsl:text>. </xsl:text><xsl:if test="t:title[@level = 'j']|t:title[@level = 'm']"><xsl:text> In:
+</xsl:text></xsl:if>
+</xsl:if>
+<xsl:if test="t:title[@level = 'j']|t:title[@level = 'm']">\fI<xsl:apply-templates select="t:title[@level = 'j']|t:title[@level = 'm']"/>\fP<xsl:text> </xsl:text>
+</xsl:if>
 </xsl:if>
 <xsl:if test="t:biblScope[@type='volume']">
 <xsl:text>Vol. </xsl:text><xsl:apply-templates select="t:biblScope[@type='volume']"/><xsl:if test="t:biblScope[@type='number']">(<xsl:apply-templates select="t:biblScope[@type='number']"/>)<xsl:choose><xsl:when test="t:biblScope[@type='pp']"><xsl:text>, </xsl:text></xsl:when><xsl:otherwise><xsl:text>. </xsl:text></xsl:otherwise></xsl:choose></xsl:if></xsl:if> <xsl:if test="t:biblScope[@type='pp']"> <xsl:text>pp. </xsl:text><xsl:apply-templates select="t:biblScope[@type='pp']"/><xsl:text>. </xsl:text></xsl:if>
@@ -93,6 +87,7 @@ Notes
 .br  
 \s-2\f(CR</xsl:text><xsl:apply-templates select="t:ref"/>\fP\s+2
 </xsl:if>
+
 </xsl:template>
 
 <xsl:template match="t:note"><xsl:text>\**
@@ -196,7 +191,7 @@ Notes
 \fB<xsl:apply-templates  mode="preserve"/>\fP
 </xsl:template>
 
-<xsl:template match="t:p/t:title"> \fI<xsl:apply-templates/>\fP</xsl:template>
+<xsl:template match="t:p/t:title"><xsl:text> \fI</xsl:text><xsl:apply-templates/><xsl:text>\fP </xsl:text></xsl:template>
 
 <xsl:template match="t:hi[@rend='italic']|t:hi[@rend='italics']">
 \fI<xsl:apply-templates  mode="preserve"/>\fP
