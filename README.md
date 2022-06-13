@@ -13,6 +13,9 @@ The results clearly shows that simple Unix™ for Poets
 analyses combines seamlessly with TEI markup and XML technologies.
 
 
-sonnet-analysis.html
-sonnet-analysis.pdf
-sonnet-analysis.xml
+* [sonnet-analysis.html](sonnet-analysis.html)
+* [sonnet-analysis.pdf](sonnet-analysis.pdf)
+* [sonnet-analysis.xml](sonnet-analysis.xml)
+
+You get best [reading comfort by downloading the PDF](https://raw.githubusercontent.com/siglun/danish-sonnets/main/sonnet-analysis.pdf)
+
