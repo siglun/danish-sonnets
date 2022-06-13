@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# ps2pdf  -dEPSCrop  distro.eps
+
 java -jar ~/saxon/saxon9he.jar sonnet-analysis.xml  render.xsl  > shit.html
 xmllint  --xinclude shit.html > sonnet-analysis.html
 rm shit.html
