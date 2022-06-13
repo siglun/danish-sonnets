@@ -89,8 +89,9 @@ Notes
 <xsl:if test="t:note">
 <xsl:apply-templates select="t:note/node()"/>
 </xsl:if>
-<xsl:if test="t:ref">
-\s-2\f(CR<xsl:apply-templates select="t:ref"/>\fP\s+2
+<xsl:if test="t:ref"><xsl:text>
+.br  
+\s-2\f(CR</xsl:text><xsl:apply-templates select="t:ref"/>\fP\s+2
 </xsl:if>
 </xsl:template>
 
@@ -132,12 +133,18 @@ Notes
 </xsl:text></xsl:template>
 
 <xsl:template match="t:ref">
+<xsl:variable name="href">  
 <xsl:choose>
-<xsl:when test="contains(@target,'http')">    
-.pdfhref W -D <xsl:value-of select="@target"/> <xsl:text> </xsl:text> <xsl:apply-templates/>
+<xsl:when test="contains(@target,'http')"><xsl:value-of select="@target"/></xsl:when>
+<xsl:otherwise><xsl:value-of select="concat($base_href,'/',@target)"/></xsl:otherwise>
+</xsl:choose>
+</xsl:variable>
+<xsl:choose>
+<xsl:when test="string-length(.) &gt; 0"><xsl:text>  
+</xsl:text>.pdfhref W -D <xsl:value-of select="$href"/> <xsl:text> </xsl:text> <xsl:apply-templates/>
 </xsl:when>
-<xsl:otherwise>
-.pdfhref W -D <xsl:value-of select="concat($base_href,'/',@target)"/> <xsl:text> </xsl:text> <xsl:apply-templates/>
+<xsl:otherwise><xsl:text>
+</xsl:text>.pdfhref W -D <xsl:value-of select="$href"/> <xsl:text> </xsl:text> <xsl:value-of select="@target"/>
 </xsl:otherwise>
 </xsl:choose><xsl:text>
 </xsl:text></xsl:template>

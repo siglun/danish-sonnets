@@ -36,7 +36,7 @@ it is easy to find poetry in those files. Typically a piece of poetry is encoded
 .pdfhref L -D tei-ref-lg -A lines within line groups
 . More often than not the line groups are embedded in <div> ... </div> elements.
 .LP
-A poem may look like this in the source. The poem is by
+A poem may look like this in the source. The poem is by  
 .pdfhref W -D https://github.com/siglun/danish-sonnets/blob/main//sophus Sophus Michaëlis (1883).
 .DS L
 \f(CR\s-2
@@ -107,13 +107,13 @@ We can use that query in XSLT like this:
 .LP
 So we iterate over all <div>...</div>s having line groups inside and have a `@decls` attribute containing a reference to metadata in the TEI header. The latter is not universal, but we use it in ADL and that attribute is only set on pieces that a cataloger has designated as a
 \fIwork\fP
-. I have implemented this using the shell script
+. I have implemented this using the shell script  
 .pdfhref W -D https://github.com/siglun/danish-sonnets/blob/main//find_sonnet_candidates.sh find_sonnet_candidates.sh
-and a transform
+and a transform  
 .pdfhref W -D https://github.com/siglun/danish-sonnets/blob/main//sonnet_candidate.xsl sonnet_candidate.xsl
 . Finally, we don't do anything unless there are 14 lines of poetry.
 .LP
-This transformation creates a long,
+This transformation creates a long,  
 .pdfhref W -D https://github.com/siglun/danish-sonnets/blob/main//sonnet_candidates.xml sonnet_candidates.xml
 , table with data about the sonnet candidates it finds.
 .SH
@@ -148,7 +148,7 @@ For a sonnet it would be about 10,
 .SH
 Strophe structure
 .LP
-You can write a lot of nice poetry with 14 lines. Like Gustaf Munch-Petersen's    
+You can write a lot of nice poetry with 14 lines. Like Gustaf Munch-Petersen's  
 .pdfhref W -D https://tekster.kb.dk/text/adl-texts-munp1-shoot-workid62017 en borgers livshymne
 with one strophe with one line, then three strophes with four lines and finally a single line. The number of syllables per line seem to decrease towards the end. Gustaf was a modernist. There are no fixed structures and very few rhymes i his poetry.
 .LP
@@ -168,7 +168,7 @@ That is, iterate over the line groups in a poem, and count the lines in each of 
 .LP
 I have summarized these data about all poems in ADL with 14 lines. There are 243 of them (there are more, but they may have erroneous markup).
 .LP
-You find these sonnet candidates in a table here
+You find these sonnet candidates in a table here  
 .pdfhref W -D https://github.com/siglun/danish-sonnets/blob/main//sonnet_candidates.xml sonnet_candidates.xml
 . Please, find an extract from it below.
 .SH
@@ -190,11 +190,11 @@ T};T{
 T}
 _
 T{
-\s-2    
+\s-2  
 .pdfhref W -D https://github.com/kb-dk/public-adl-text-sources/blob/master/texts/aarestrup07val.xml ./aarestrup07val.xml
 \s+2
 T};T{
-\s-2    
+\s-2  
 .pdfhref W -D https://tekster.kb.dk/text/adl-texts-aarestrup07val-shoot-workid73888 Jeg havde faaet Brev fra dig, Nanette
 \s+2
 T};T{
@@ -203,11 +203,11 @@ T};T{
 \s-211.0\s+2
 T}
 T{
-\s-2    
+\s-2  
 .pdfhref W -D https://github.com/kb-dk/public-adl-text-sources/blob/master/texts/aarestrup07val.xml ./aarestrup07val.xml
 \s+2
 T};T{
-\s-2    
+\s-2  
 .pdfhref W -D https://tekster.kb.dk/text/adl-texts-aarestrup07val-shoot-workid75376 Tag dette Kys, og tusind til, du Søde ...
 \s+2
 T};T{
@@ -216,11 +216,11 @@ T};T{
 \s-211.0714\s+2
 T}
 T{
-\s-2    
+\s-2  
 .pdfhref W -D https://github.com/kb-dk/public-adl-text-sources/blob/master/texts/aarestrup07val.xml ./aarestrup07val.xml
 \s+2
 T};T{
-\s-2    
+\s-2  
 .pdfhref W -D https://tekster.kb.dk/text/adl-texts-aarestrup07val-shoot-workid76444 Sonet
 \s+2
 T};T{
@@ -229,11 +229,11 @@ T};T{
 \s-211.5\s+2
 T}
 T{
-\s-2    
+\s-2  
 .pdfhref W -D https://github.com/kb-dk/public-adl-text-sources/blob/master/texts/./brorson03grval.xml ./brorson03grval.xml
 \s+2
 T};T{
-\s-2    
+\s-2  
 .pdfhref W -D https://tekster.kb.dk/text/adl-texts-brorson03grval-shoot-workid76607 1.
 \s+2
 T};T{
@@ -242,11 +242,11 @@ T};T{
 \s-28.7143\s+2
 T}
 T{
-\s-2    
+\s-2  
 .pdfhref W -D https://github.com/kb-dk/public-adl-text-sources/blob/master/texts/claussen07val.xml ./claussen07val.xml
 \s+2
 T};T{
-\s-2    
+\s-2  
 .pdfhref W -D https://tekster.kb.dk/text/adl-texts-claussen07val-shoot-workid63580 SKUMRING
 \s+2
 T};T{
@@ -255,11 +255,11 @@ T};T{
 \s-210.8571\s+2
 T}
 T{
-\s-2    
+\s-2  
 .pdfhref W -D https://github.com/kb-dk/public-adl-text-sources/blob/master/texts/claussen07val.xml ./claussen07val.xml
 \s+2
 T};T{
-\s-2    
+\s-2  
 .pdfhref W -D https://tekster.kb.dk/text/adl-texts-claussen07val-shoot-workid66131 MAANENS TUNGSIND
 \s+2
 T};T{
@@ -268,11 +268,11 @@ T};T{
 \s-213.8571\s+2
 T}
 T{
-\s-2    
+\s-2  
 .pdfhref W -D https://github.com/kb-dk/public-adl-text-sources/blob/master/texts/jacobjp08val.xml ./jacobjp08val.xml
 \s+2
 T};T{
-\s-2    
+\s-2  
 .pdfhref W -D https://tekster.kb.dk/text/adl-texts-jacobjp08val-shoot-workid63094 I Seraillets Have
 \s+2
 T};T{
@@ -288,7 +288,7 @@ Then we have the rhymes
 .LP
 Beauty is in the eye of the beholder, says Shakespeare. I believe that he is right. Then, however, I would like to add that the rhymes and meters of poetry (like the pentameter) is in the ear of listener. It is time consuming to read houndreds of poems aloud and figure out the rhyme structure. So an approximate idea of the rhymes could be have comparing the verse line endings.
 .LP
-This is error prone, though. Consider this    
+This is error prone, though. Consider this  
 .pdfhref W -D https://tekster.kb.dk/text/adl-texts-moeller01val-shoot-workid62307 sonnet by P.M. Møller
 .
 .KF
@@ -334,15 +334,15 @@ The the last syllable of the eight first lines are the same '-ter'. If you use s
 .LP
 In order to understand what we hear when reading, we have to consider '-ister' and '-ytter'. I.e., it starts with rhyme structure 'abbabaab' not 'aaaaaaaa'. Furthermore, it continues 'cdedec'.
 .LP
-I have written a set of scripts that traverse the
+I have written a set of scripts that traverse the  
 .pdfhref W -D https://github.com/siglun/danish-sonnets/blob/main//sonnet_candidates.xml sonnet_candidates.xml
-table. Transform that file using
+table. Transform that file using  
 .pdfhref W -D https://github.com/siglun/danish-sonnets/blob/main//iterate_the_rhyming.xsl iterate_the_rhyming.xsl
 selects poems with 14 lines and strophe structure 4 4 3 3. It generates a shell script which when executed pipes the content through other scripts that retrieve content, remove punctuation and finally detags them. The actual text is then piped through a perl script that analyse the endings according to the silly and flawed method described above.
 .LP
-It works, sort of, until it doesn't. For poems with 4 4 3 3 strophe structure, you can find the result in
+It works, sort of, until it doesn't. For poems with 4 4 3 3 strophe structure, you can find the result in  
 .pdfhref W -D https://github.com/siglun/danish-sonnets/blob/main//rhymes_3chars.text rhymes_3chars.text
-and
+and  
 .pdfhref W -D https://github.com/siglun/danish-sonnets/blob/main//rhymes_2chars.text rhymes_2chars.text
 for three and two letter rhymes, respectively. Run
 .DS L
@@ -409,7 +409,7 @@ one list of word frequencies in the entire sample and
 .IP \s+1\(bu\s-1
 a second list giving not of the number of occurences of each word, but the number of sonnets the word occurs in.
 .LP
-There are 160 sonnets in the selection, and the most frequent word occurs in all of them. These are the fifteen most commont word measured by the
+There are 160 sonnets in the selection, and the most frequent word occurs in all of them. These are the fifteen most commont word measured by the  
 .pdfhref W -D https://github.com/siglun/danish-sonnets/blob/main//poem_frequencies.text number of sonnets they occur in
 . Number of poems in the left column.
 .DS L
@@ -432,7 +432,7 @@ There are 160 sonnets in the selection, and the most frequent word occurs in all
         \fP
 .DE
 .LP
-and this is the list of the same thing, but measured as the grand total
+and this is the list of the same thing, but measured as the grand total  
 .pdfhref W -D https://github.com/siglun/danish-sonnets/blob/main//frequencies.text occurrence of the words in the corpus
 . Number of words in corpus in left column.
 .DS L
@@ -465,9 +465,9 @@ The distribution shows number of words graphed against number of sonnets. There 
 .LP
 There is just one word appearing in all 160 sonnets. It is 'og' meaning 'and' correspoding to the rightmost point on the graph which has the coordinate (160,1). As a rule of thumb the most common words are all conjunctions, next to them comes prepositions and after those come pronomina.
 .LP
-The
+The  
 .pdfhref W -D https://github.com/siglun/danish-sonnets/blob/main//distribution.text distribution.text
-is generated from
+is generated from  
 .pdfhref W -D https://github.com/siglun/danish-sonnets/blob/main//poem_frequencies.text poem_frequencies.text
 using (the line has been folded)
 .DS L
@@ -485,7 +485,7 @@ start at words occuring in about 25% of the sonnets, or less. I.e., words occuri
 .LP
 In what follows, I have simply used the utility
 \f(CRgrep\fP
-find words and derivates in the file
+find words and derivates in the file  
 .pdfhref W -D https://github.com/siglun/danish-sonnets/blob/main//poem_frequencies.text poem_frequencies.text
 mentioned above.
 .LP
@@ -596,67 +596,77 @@ References
 Church, Kenneth Ward,
 [date unknown]. 
 \fIUnix™ for Poets\fP
-\s-2\f(CR    
-.pdfhref W -D https://web.stanford.edu/class/cs124/kwc-unix-for-poets.pdf 
+.br  
+\s-2\f(CR
+.pdfhref W -D https://web.stanford.edu/class/cs124/kwc-unix-for-poets.pdf https://web.stanford.edu/class/cs124/kwc-unix-for-poets.pdf
 \fP\s+2
 .XP
 .pdfhref M -N adlcorpus
 Det Kgl. Bibliotek,  and Det Danske Sprog- og Litteraturselskab,
 2000 - 2022. 
 \fIThe ADL text corpus\fP
-\s-2\f(CR    
-.pdfhref W -D https://github.com/kb-dk/public-adl-text-sources 
+.br  
+\s-2\f(CR
+.pdfhref W -D https://github.com/kb-dk/public-adl-text-sources https://github.com/kb-dk/public-adl-text-sources
 \fP\s+2
 .XP
 .pdfhref M -N everysonnet
 Eberhart, Larry,
 2018. Italian or Petrarchan Sonnet
-\s-2\f(CR    
-.pdfhref W -D https://poetscollective.org/everysonnet/tag/abbaabbacdecde/#post-119 
+.br  
+\s-2\f(CR
+.pdfhref W -D https://poetscollective.org/everysonnet/tag/abbaabbacdecde/#post-119 https://poetscollective.org/everysonnet/tag/abbaabbacdecde/#post-119
 \fP\s+2
 .XP
 .pdfhref M -N hendecasyllable
 Hendecasyllable
-\s-2\f(CR    
-.pdfhref W -D https://en.wikipedia.org/wiki/Hendecasyllable 
+.br  
+\s-2\f(CR
+.pdfhref W -D https://en.wikipedia.org/wiki/Hendecasyllable https://en.wikipedia.org/wiki/Hendecasyllable
 \fP\s+2
 .XP
 .pdfhref M -N pentameter
 Iambic pentameter
-\s-2\f(CR    
-.pdfhref W -D https://en.wikipedia.org/wiki/Iambic_pentameter 
+.br  
+\s-2\f(CR
+.pdfhref W -D https://en.wikipedia.org/wiki/Iambic_pentameter https://en.wikipedia.org/wiki/Iambic_pentameter
 \fP\s+2
 .XP
 .pdfhref M -N sophus
 Michaëlis, Sophus,
 1883. Jeg elsker —
-\s-2\f(CR    
-.pdfhref W -D https://tekster.kb.dk/text/adl-texts-michs_03-shoot-workid68251 
+.br  
+\s-2\f(CR
+.pdfhref W -D https://tekster.kb.dk/text/adl-texts-michs_03-shoot-workid68251 https://tekster.kb.dk/text/adl-texts-michs_03-shoot-workid68251
 \fP\s+2
 .XP
 .pdfhref M -N oldnorse
 Old Norse
-\s-2\f(CR    
-.pdfhref W -D https://en.wikipedia.org/wiki/Old_Norse 
+.br  
+\s-2\f(CR
+.pdfhref W -D https://en.wikipedia.org/wiki/Old_Norse https://en.wikipedia.org/wiki/Old_Norse
 \fP\s+2
 .XP
 .pdfhref M -N sonnets
 Sonnet
-\s-2\f(CR    
-.pdfhref W -D https://en.wikipedia.org/wiki/Sonnet 
+.br  
+\s-2\f(CR
+.pdfhref W -D https://en.wikipedia.org/wiki/Sonnet https://en.wikipedia.org/wiki/Sonnet
 \fP\s+2
 .XP
 .pdfhref M -N teiguidelines
 The TEI Consortium,
 2022. 
 \fITEI P5: Guidelines for Electronic Text Encoding and Interchange\fP
-\s-2\f(CR    
-.pdfhref W -D https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html 
+.br  
+\s-2\f(CR
+.pdfhref W -D https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html
 \fP\s+2
 .XP
 .pdfhref M -N tei-ref-lg
 The TEI Consortium,
 2022. Passages of Verse or Drama
-\s-2\f(CR    
-.pdfhref W -D https://tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CODV 
+.br  
+\s-2\f(CR
+.pdfhref W -D https://tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CODV https://tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CODV
 \fP\s+2

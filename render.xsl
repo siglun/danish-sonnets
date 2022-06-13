@@ -237,17 +237,6 @@
     </xsl:element>
   </xsl:template>
 
-  <!-- xsl:template match="t:bibl/t:ref">
-    &lt;URL:<xsl:element name="a">
-      <xsl:if test="@target">
-	<xsl:attribute name="href">
-	  <xsl:apply-templates select="@target"/>
-	</xsl:attribute>
-      </xsl:if>
-      <xsl:apply-templates/>
-    </xsl:element>&gt;
-  </xsl:template -->
-
   <xsl:template match="t:list[@type='ordered']">
     <ol><xsl:apply-templates/></ol>
   </xsl:template>
