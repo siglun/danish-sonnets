@@ -6,6 +6,8 @@
     exclude-result-prefixes="t"
     version="1.0">
 
+  <xsl:param name="base_href">https://github.com/siglun/danish-sonnets/blob/main/</xsl:param>
+  
 <xsl:output method="text"
 	    encoding="UTF-8"
 	    indent="no"/>
@@ -89,8 +91,7 @@ Notes
 </xsl:if>
 <xsl:if test="t:ref"><xsl:text>
 .na
-</xsl:text>\s-2\f(CR<xsl:apply-templates select="t:ref"/>
-\fP\s+2
+</xsl:text>\s-2\f(CR<xsl:apply-templates select="t:ref"/>\fP\s+2
 .ad
 </xsl:if>
 </xsl:template>
@@ -133,8 +134,15 @@ Notes
 </xsl:text></xsl:template>
 
 <xsl:template match="t:ref">
-.pdfhref W -D <xsl:value-of select="@target"/> <xsl:if test="."> -A "<xsl:apply-templates/>"</xsl:if>
-</xsl:template>
+<xsl:choose>
+<xsl:when test="contains(@target,'http')">    
+.pdfhref W -D <xsl:value-of select="@target"/> <xsl:text> </xsl:text> <xsl:apply-templates/>
+</xsl:when>
+<xsl:otherwise>
+.pdfhref W -D <xsl:value-of select="concat($base_href,'/',@target)"/> <xsl:text> </xsl:text> <xsl:apply-templates/>
+</xsl:otherwise>
+</xsl:choose><xsl:text>
+</xsl:text></xsl:template>
 
 <xsl:template match="t:list[@type='ordered']">
 <xsl:for-each select="t:item">
@@ -175,7 +183,7 @@ Notes
 </xsl:text></xsl:template>
 
 <xsl:template match="t:graphic"><xsl:text>
-.PSPIC </xsl:text><xsl:value-of select="concat(substring-before(substring-after(@url,'main/'),'.'),'.eps')"/><xsl:text> </xsl:text><xsl:value-of select="substring-before(@width,'m')"/><xsl:text>
+.PDFPIC </xsl:text><xsl:value-of select="concat(substring-before(substring-after(@url,'main/'),'.'),'.pdf')"/><xsl:text> 12.0c 7.2c</xsl:text> <!-- xsl:value-of select="substring-before(@width,'m')"/ --><xsl:text>
 </xsl:text></xsl:template>
   
 

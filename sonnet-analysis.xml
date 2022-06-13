@@ -234,8 +234,8 @@
         markup).</p>
 
         <p>You find these sonnet candidates in a table here <ref
-        target="sonnet_candidates.xml">sonnet_candidates.xml</ref>. Please,
-        find an extract from it below.</p>
+        target="sonnet_candidates.xml">sonnet_candidates.xml</ref>.
+        Please, find an extract from it below.</p>
 
         <table>
           <head>sonnet candidates</head>
@@ -403,12 +403,13 @@
         not 'aaaaaaaa'. Furthermore, it continues 'cdedec'.</p>
 
         <p>I have written a set of scripts that traverse the
-        <ref target="sonnet_candidates.xml">sonnet_candidates.xml</ref> table. Transform that
-        file using <ref target="iterate_the_rhyming.xsl">iterate_the_rhyming.xsl</ref> selects
-        poems with 14 lines and strophe structure 4 4 3 3. It generates a
-        shell script which when executed pipes the content through other
-        scripts that retrieve content, remove punctuation and finally detags
-        them. The actual text is then piped through a perl script that
+        <ref target="sonnet_candidates.xml">sonnet_candidates.xml</ref>
+        table.
+        Transform that file using <ref target="iterate_the_rhyming.xsl">iterate_the_rhyming.xsl</ref>
+        selects poems with 14 lines and strophe structure 4 4 3 3.
+        It generates a shell script which when executed pipes the content through other scripts that retrieve content,
+        remove punctuation and finally detags them.
+        The actual text is then piped through a perl script that
         analyse the endings according to the silly and flawed method described
         above.</p>
 
