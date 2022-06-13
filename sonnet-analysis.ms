@@ -596,94 +596,67 @@ References
 Church, Kenneth Ward,
 [date unknown]. 
 \fIUnix™ for Poets\fP
-.na
 \s-2\f(CR    
-.pdfhref W -D https://web.stanford.edu/class/cs124/kwc-unix-for-poets.pdf https://web.stanford.edu/class/cs124/kwc-unix-for-poets.pdf
+.pdfhref W -D https://web.stanford.edu/class/cs124/kwc-unix-for-poets.pdf 
 \fP\s+2
-.ad
 .XP
 .pdfhref M -N adlcorpus
 Det Kgl. Bibliotek,  and Det Danske Sprog- og Litteraturselskab,
 2000 - 2022. 
 \fIThe ADL text corpus\fP
-.na
 \s-2\f(CR    
-.pdfhref W -D https://github.com/kb-dk/public-adl-text-sources https://github.com/kb-dk/public-adl-text-sources"
+.pdfhref W -D https://github.com/kb-dk/public-adl-text-sources 
 \fP\s+2
-.ad
 .XP
 .pdfhref M -N everysonnet
 Eberhart, Larry,
 2018. Italian or Petrarchan Sonnet
-.
-.na
 \s-2\f(CR    
-.pdfhref W -D https://poetscollective.org/everysonnet/tag/abbaabbacdecde/#post-119 https://poetscollective.org/everysonnet/tag/abbaabbacdecde/#post-119
+.pdfhref W -D https://poetscollective.org/everysonnet/tag/abbaabbacdecde/#post-119 
 \fP\s+2
-.ad
 .XP
 .pdfhref M -N hendecasyllable
 Hendecasyllable
-.
-.na
 \s-2\f(CR    
-.pdfhref W -D https://en.wikipedia.org/wiki/Hendecasyllable https://en.wikipedia.org/wiki/Hendecasyllable
+.pdfhref W -D https://en.wikipedia.org/wiki/Hendecasyllable 
 \fP\s+2
-.ad
 .XP
 .pdfhref M -N pentameter
 Iambic pentameter
-.
-.na
 \s-2\f(CR    
-.pdfhref W -D https://en.wikipedia.org/wiki/Iambic_pentameter https://en.wikipedia.org/wiki/Iambic_pentameter
+.pdfhref W -D https://en.wikipedia.org/wiki/Iambic_pentameter 
 \fP\s+2
-.ad
 .XP
 .pdfhref M -N sophus
 Michaëlis, Sophus,
 1883. Jeg elsker —
-.
-.na
 \s-2\f(CR    
-.pdfhref W -D https://tekster.kb.dk/text/adl-texts-michs_03-shoot-workid68251 https://tekster.kb.dk/text/adl-texts-michs_03-shoot-workid68251"/>
+.pdfhref W -D https://tekster.kb.dk/text/adl-texts-michs_03-shoot-workid68251 
 \fP\s+2
-.ad
 .XP
 .pdfhref M -N oldnorse
 Old Norse
-.
-.na
 \s-2\f(CR    
-.pdfhref W -D https://en.wikipedia.org/wiki/Old_Norse https://en.wikipedia.org/wiki/Old_Norse
+.pdfhref W -D https://en.wikipedia.org/wiki/Old_Norse 
 \fP\s+2
-.ad
 .XP
 .pdfhref M -N sonnets
 Sonnet
-.
-.na
 \s-2\f(CR    
-.pdfhref W -D https://en.wikipedia.org/wiki/Sonnet https://en.wikipedia.org/wiki/Sonnet
+.pdfhref W -D https://en.wikipedia.org/wiki/Sonnet 
 \fP\s+2
-.ad
 .XP
 .pdfhref M -N teiguidelines
 The TEI Consortium,
 2022. 
 \fITEI P5: Guidelines for Electronic Text Encoding and Interchange\fP
-.na
 \s-2\f(CR    
-.pdfhref W -D https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html
+.pdfhref W -D https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html 
 \fP\s+2
-.ad
 .XP
 .pdfhref M -N tei-ref-lg
 The TEI Consortium,
 2022. Passages of Verse or Drama
-.
-.na
 \s-2\f(CR    
-.pdfhref W -D https://tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CODV https://tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CODV
+.pdfhref W -D https://tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CODV 
 \fP\s+2
-.ad

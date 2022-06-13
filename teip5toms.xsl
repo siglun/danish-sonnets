@@ -75,7 +75,7 @@ Notes
 <xsl:when test="t:title[@level = 'a']">
 <xsl:apply-templates select="t:title[@level = 'a']"/><xsl:text>
 </xsl:text>
-<xsl:if test="t:title[@level = 'j']">\fI<xsl:apply-templates select="t:title[@level = 'j']"/>\fP</xsl:if><xsl:text>.
+<xsl:if test="t:title[@level = 'j']">\fI<xsl:apply-templates select="t:title[@level = 'j']"/>\fP</xsl:if><xsl:text>
 </xsl:text>
 </xsl:when>
 <xsl:when test="t:title[@level = 'm']">
@@ -89,10 +89,8 @@ Notes
 <xsl:if test="t:note">
 <xsl:apply-templates select="t:note/node()"/>
 </xsl:if>
-<xsl:if test="t:ref"><xsl:text>
-.na
-</xsl:text>\s-2\f(CR<xsl:apply-templates select="t:ref"/>\fP\s+2
-.ad
+<xsl:if test="t:ref">
+\s-2\f(CR<xsl:apply-templates select="t:ref"/>\fP\s+2
 </xsl:if>
 </xsl:template>
 

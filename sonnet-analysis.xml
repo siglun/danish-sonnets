@@ -703,7 +703,7 @@
           <bibl xml:id="kennethchurch">
             <author>Church, Kenneth Ward</author>,
             <date>[date unknown]</date><title level="m">Unix™ for Poets</title>
-            <ref target="https://web.stanford.edu/class/cs124/kwc-unix-for-poets.pdf">https://web.stanford.edu/class/cs124/kwc-unix-for-poets.pdf</ref>
+            <ref target="https://web.stanford.edu/class/cs124/kwc-unix-for-poets.pdf"/>
           </bibl>
           <bibl xml:id="adlcorpus">
             <author>Det Kgl. Bibliotek</author>
@@ -711,51 +711,51 @@
             <date>2000 - 2022</date>
             <title level="m">The ADL text corpus</title>
             <ref
-            target="https://github.com/kb-dk/public-adl-text-sources">https://github.com/kb-dk/public-adl-text-sources"</ref>
+            target="https://github.com/kb-dk/public-adl-text-sources"/>
           </bibl>
           <bibl xml:id="teiguidelines">
             <author>The TEI Consortium</author>
             <date>2022</date>
             <title level="m">TEI P5: Guidelines for Electronic Text Encoding and Interchange</title>
-            <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html">https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html</ref>
+            <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html"/>
           </bibl>
           <bibl xml:id="tei-ref-lg">
             <author>The TEI Consortium</author>
             <date>2022</date>
             <title level="a">Passages of Verse or Drama</title>
             <title level="m">TEI P5: Guidelines for Electronic Text Encoding and Interchange</title>
-            <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CODV">https://tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CODV</ref>
+            <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CODV"/>
           </bibl>
           <bibl xml:id="sophus">
             <author>Michaëlis, Sophus</author>
             <date>1883</date>
             <title level="a">Jeg elsker —</title>
             <title level="m">Solblomster</title>
-            <ref target="https://tekster.kb.dk/text/adl-texts-michs_03-shoot-workid68251">https://tekster.kb.dk/text/adl-texts-michs_03-shoot-workid68251"/></ref>
+            <ref target="https://tekster.kb.dk/text/adl-texts-michs_03-shoot-workid68251"/>
           </bibl>
 
           <bibl xml:id="sonnets">
             <title level="a">Sonnet</title>
             <title level="m">Wikipedia</title>
-            <ref target="https://en.wikipedia.org/wiki/Sonnet">https://en.wikipedia.org/wiki/Sonnet</ref>
+            <ref target="https://en.wikipedia.org/wiki/Sonnet"/>
           </bibl>
 
           <bibl xml:id="pentameter">
             <title level="a">Iambic pentameter</title>
             <title level="m">Wikipedia</title>
-            <ref target="https://en.wikipedia.org/wiki/Iambic_pentameter">https://en.wikipedia.org/wiki/Iambic_pentameter</ref>
+            <ref target="https://en.wikipedia.org/wiki/Iambic_pentameter"/>
           </bibl>
 
           <bibl xml:id="hendecasyllable">
             <title level="a">Hendecasyllable</title>
             <title level="m">Wikipedia</title>
-            <ref target="https://en.wikipedia.org/wiki/Hendecasyllable">https://en.wikipedia.org/wiki/Hendecasyllable</ref>
+            <ref target="https://en.wikipedia.org/wiki/Hendecasyllable"/>
           </bibl>
 
           <bibl xml:id="oldnorse">
             <title level="a">Old Norse</title>
             <title level="m">Wikipedia</title>
-            <ref target="https://en.wikipedia.org/wiki/Old_Norse">https://en.wikipedia.org/wiki/Old_Norse</ref>
+            <ref target="https://en.wikipedia.org/wiki/Old_Norse"/>
           </bibl>
           
           <bibl xml:id="everysonnet">
@@ -763,7 +763,7 @@
             <date>2018</date>
             <title level="a">Italian or Petrarchan Sonnet</title>
             <title level="m">Every Sonnet: The sonnet forms database</title>
-            <ref target="https://poetscollective.org/everysonnet/tag/abbaabbacdecde/#post-119">https://poetscollective.org/everysonnet/tag/abbaabbacdecde/#post-119</ref>
+            <ref target="https://poetscollective.org/everysonnet/tag/abbaabbacdecde/#post-119"/>
           </bibl>
         </listBibl>
       </div>

@@ -222,11 +222,22 @@
           </xsl:choose>
 	</xsl:attribute>
       </xsl:if>
+      <xsl:variable name="anchor_text">
+        <xsl:value-of select="."/>
+      </xsl:variable>
+      <xsl:choose>
+        <xsl:when test="string-length($anchor_text) &gt; 0">
+          <xsl:value-of select="$anchor_text"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="@target"/>
+        </xsl:otherwise>
+      </xsl:choose>
       <xsl:apply-templates/>
     </xsl:element>
   </xsl:template>
 
-  <xsl:template match="t:bibl/t:ref">
+  <!-- xsl:template match="t:bibl/t:ref">
     &lt;URL:<xsl:element name="a">
       <xsl:if test="@target">
 	<xsl:attribute name="href">
@@ -235,7 +246,7 @@
       </xsl:if>
       <xsl:apply-templates/>
     </xsl:element>&gt;
-  </xsl:template>
+  </xsl:template -->
 
   <xsl:template match="t:list[@type='ordered']">
     <ol><xsl:apply-templates/></ol>
