@@ -1,9 +1,12 @@
 #!/bin/bash
 
-SAXON="java -jar  /home/slu/saxon/saxon9he.jar"
+SAXON_JAR="/usr/share/maven-repo/net/sf/saxon/Saxon-HE/9.9.1.5/Saxon-HE-9.9.1.5.jar"
+SAXON="java -jar $SAXON_JAR"
 
-HERE="/home/slu/projects/solr-and-snippets/corpus_analysis"
-THERE="/home/slu/projects/public-adl-text-sources/texts"
+PROJECTS="$HOME/projects"
+
+HERE="$PROJECTS/danish-sonnets"
+THERE="$PROJECTS/public-adl-text-sources/texts"
 
 XSL="$HERE/sonnet_candidate.xsl"
 
