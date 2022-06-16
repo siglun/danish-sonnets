@@ -6,6 +6,19 @@
 # ./find_rhyme_structure.sh -f file_name \ 
 #                   -x xmlid for work
 #
+# You run it by transforming
+#
+# xsltproc iterate_the_rhyming.xsl sonnet_candidates.xml
+#
+# which generates a shell script which runs this script for each sonnet_candidate
+# that is, pipe the result of the transform to shell
+#
+# xsltproc iterate_the_rhyming.xsl sonnet_candidates.xml  | bash
+#
+# The results are in the rhymes_2chars.text and rhymes_3chars.text
+#
+# See the main text for discussion
+#
 
 while getopts "f:x:" flag
 do
@@ -20,7 +33,7 @@ source "parameters.sh"
 HERE="$PROJECTS/danish-sonnets"
 THERE="$PROJECTS/public-adl-text-sources/texts"
 
-FILE="$THERE/texts/$FILE_NAME"
+FILE="$THERE/$FILE_NAME"
 XSL="./rhyme_structure.xsl"
 
 echo "$FILE_NAME $XMLID "

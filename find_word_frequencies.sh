@@ -3,8 +3,7 @@
 # The script should be run from the directory where it lives and
 # accepts two options -f and -x with arguements. For example:
 # 
-# ./find_rhyme_structure.sh -f file_name \ 
-#                   -x xmlid for work
+# find_word_frequencies.sh -f file_name -x xmlid for work
 #
 
 while getopts "f:x:" flag
