@@ -15,11 +15,7 @@ do
   esac
 done
 
-
-SAXON_JAR="/usr/share/maven-repo/net/sf/saxon/Saxon-HE/9.9.1.5/Saxon-HE-9.9.1.5.jar"
-SAXON="java -jar $SAXON_JAR"
-
-PROJECTS="$HOME/projects"
+source "parameters.sh"
 
 HERE="$PROJECTS/danish-sonnets"
 THERE="$PROJECTS/public-adl-text-sources/texts"
@@ -28,4 +24,5 @@ FILE="$THERE/texts/$FILE_NAME"
 XSL="./rhyme_structure.xsl"
 
 echo "$FILE_NAME $XMLID "
+
 $SAXON -xsl:"$XSL" -s:"$FILE" file_name="$FILE" print_position=1 work_id="$XMLID" | ./find_the_rhyme.pl

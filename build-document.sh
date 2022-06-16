@@ -6,7 +6,7 @@
 
 # where saxon is on my Ubuntu installations as of June 14 2022
 
-SAXON="/usr/share/maven-repo/net/sf/saxon/Saxon-HE/9.9.1.5/Saxon-HE-9.9.1.5.jar"
+source "parameters.sh"
 
 java -jar $SAXON  sonnet-analysis.xml  render.xsl  > shit.html
 xmllint  --xinclude shit.html > sonnet-analysis.html
