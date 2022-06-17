@@ -1,5 +1,6 @@
 .TL
-Sex, death and sonnetsMusings of a software developer
+Sex, death and sonnets    
+Musings of a software developer    
 .AU
 Sigfrid Lundberg
 .AI

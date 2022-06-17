@@ -37,7 +37,11 @@ Notes
 
 <xsl:template match="t:front">
 .TL
-<xsl:apply-templates select="t:docTitle/t:titlePart" />
+<xsl:for-each select="t:docTitle/t:titlePart" >
+<xsl:for-each select="t:title">
+<xsl:apply-templates/><xsl:text>    
+</xsl:text></xsl:for-each>
+</xsl:for-each>
 .AU
 <xsl:apply-templates select="t:docAuthor/t:name" />
 .AI

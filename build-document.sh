@@ -8,7 +8,7 @@
 
 source "parameters.sh"
 
-java -jar $SAXON  sonnet-analysis.xml  render.xsl  > shit.html
+$SAXON  sonnet-analysis.xml  render.xsl  > shit.html
 xmllint  --xinclude shit.html > sonnet-analysis.html
 rm shit.html
 
