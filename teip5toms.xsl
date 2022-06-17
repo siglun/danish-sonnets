@@ -39,8 +39,9 @@ Notes
 .TL
 <xsl:for-each select="t:docTitle/t:titlePart" >
 <xsl:for-each select="t:title">
-<xsl:apply-templates/><xsl:text>    
-</xsl:text></xsl:for-each>
+<xsl:apply-templates/><xsl:if test="position() &lt; last()"><xsl:text>
+.br  
+</xsl:text></xsl:if></xsl:for-each>
 </xsl:for-each>
 .AU
 <xsl:apply-templates select="t:docAuthor/t:name" />
