@@ -297,19 +297,5 @@ of this software, even if advised of the possibility of such damage.
       </xsl:choose>
   </xsl:template>
 
-  <!-- xsl:template match="text()">
-    <xsl:choose>
-      <xsl:when test="(parent::tei:div or parent::tei:p)">
-        <xsl:for-each select="tokenize(.,'&#10;&#10;')">
-          <xsl:if test="position()&gt;1"><lb rend="paragraph"/></xsl:if>
-          <xsl:value-of select="translate(.,' ',' ')"/>
-        </xsl:for-each>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:value-of select="translate(.,' ',' ')"/>
-      </xsl:otherwise>
-    </xsl:choose>
-  </xsl:template -->
-
   
 </xsl:stylesheet>
