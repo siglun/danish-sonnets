@@ -137,6 +137,8 @@ of this software, even if advised of the possibility of such damage.
  <xsl:template match="speaker"/>
  <xsl:template match="facsimile"/>
 
+ 
+
 <xsl:template name="appReading">
      <xsl:param name="lemma"/>
      <xsl:param name="lemmawitness"/>
@@ -201,10 +203,32 @@ of this software, even if advised of the possibility of such damage.
   <xsl:apply-templates/>
 </xsl:template>
 
-<xsl:template match="p|bibl">
+<xsl:template match="p|front">
   <xsl:call-template name="newline"/>
   <xsl:apply-templates/>
   <xsl:call-template name="newline"/>
+</xsl:template>
+
+<xsl:template match="docTitle">
+<xsl:call-template name="newline"/>
+<xsl:for-each select=".//title">
+# <xsl:apply-templates select="."/>  
+</xsl:for-each>
+<xsl:call-template name="newline"/>
+</xsl:template>
+
+<xsl:template match="docAuthor">
+<xsl:for-each select=".//name|.//addrLine">
+_ <xsl:apply-templates select="."/>
+</xsl:for-each>
+</xsl:template>
+
+<xsl:template match="div[@type='abstract']">
+<xsl:call-template name="newline"/>
+## Abstract  
+<xsl:call-template name="newline"/>
+<xsl:apply-templates/>
+<xsl:call-template name="newline"/>
 </xsl:template>
 
 <xsl:template match="head">
@@ -222,12 +246,12 @@ of this software, even if advised of the possibility of such damage.
       </xsl:variable>
       <xsl:call-template name="newline"/>
       <xsl:choose>
-	<xsl:when test="$depth=0">#</xsl:when>
-	<xsl:when test="$depth=1">##</xsl:when>
-	<xsl:when test="$depth=2">###</xsl:when>
-	<xsl:when test="$depth=3">####</xsl:when>
-	<xsl:when test="$depth=4">#####</xsl:when>
-	<xsl:otherwise>#</xsl:otherwise>
+	<xsl:when test="$depth=0">##</xsl:when>
+	<xsl:when test="$depth=1">###</xsl:when>
+	<xsl:when test="$depth=2">####</xsl:when>
+	<xsl:when test="$depth=3">#####</xsl:when>
+	<xsl:when test="$depth=4">######</xsl:when>
+	<xsl:otherwise>##</xsl:otherwise>
       </xsl:choose>
       <xsl:text> </xsl:text>
       <xsl:apply-templates/>

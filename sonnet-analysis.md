@@ -1,15 +1,33 @@
- Sex, death and sonnets Musings of a software developerSigfrid Lundberg slu@kb.dkDigital TransformationRoyal Danish LibraryPost box 21491016 Copenhagen KDenmark
+ 
+
+
+# Sex, death and sonnets
+# Musings of a software developer
+
+_ Sigfrid Lundberg
+_ slu@kb.dk
+_ Digital Transformation
+_ Royal Danish Library
+_ Post box 2149
+_ 1016 Copenhagen K
+_ Denmark
+
+## Abstract  
+
+
 This note discusses how software can recognize sonnets, by analysis of text length, strophe structure and number of syllables per line. It also makes a simple content analysis based on word frequency analyses.
 
 The results clearly shows that simple Unix™ for Poets analyses combines seamlessly with TEI markup and XML technologies.
 
-# Introduction
+
+
+## Introduction
 
 If there are any sonnets, do they rhyme and what are they about?
 
 I have since many years been a great fan of the tutorial Unix™ for Poets by Kenneth Ward Church. This note is an investigation of what can be done with a corpus of literary text with very simple tools similar to the ones described by Church in his tutorial. I do not claim that there is anything novel or even significant in this text. Being a scientist, I think like a scientist and don't expect any deep literary theory here.
 
-# Finding poems
+## Finding poems
 
 The ADL text corpus contains literary texts. Since the texts are encoded according to the TEI guidelines it is easy to find poetry in those files. Typically a piece of poetry is encoded as lines within line groups. More often than not the line groups are embedded in `<div> ... </div>` elements.
 
@@ -54,7 +72,7 @@ Shakespeare wrote often his 14 lines typographically in one strophe, whereas Fra
 
 To be more precise, a sonnet has one more characteristics than having 14 lines, the lines should be in iambic pentameter.
 
-# Finding sonnets
+## Finding sonnets
 
 You can easily find all poems in the corpus based on a XPATH query like:
 ```
@@ -76,7 +94,7 @@ So we iterate over all <div>...</div>s having line groups inside and have a `@de
 
 This transformation creates a long, sonnet_candidates.xml, table with data about the sonnet candidates it finds.
 
-# Approximately pentametric
+## Approximately pentametric
 
 Finding <div>...</div>s having 14 lines of poetry isn't good enough. We are expecting iambic pentameter, don't we? To actually analyse the texts for their rythmical properties is beyond me, but we could make an approximation.
 
@@ -100,7 +118,7 @@ We use the replace function and a regular expression to remove everything in eac
 
 For a sonnet it would be about 10, or occasionally a little more. Danish is a language rich in diftons, which could be another reason for lines deviating from the expected 10 vowels. In the Michaëlis poem quoted above it is 10.4.
 
-# Strophe structure
+## Strophe structure
 
 You can write a lot of nice poetry with 14 lines. Like Gustaf Munch-Petersen's en borgers livshymne with one strophe with one line, then three strophes with four lines and finally a single line. The number of syllables per line seem to decrease towards the end. Gustaf was a modernist. There are no fixed structures and very few rhymes i his poetry.
 
@@ -123,7 +141,7 @@ You find these sonnet candidates in a table here sonnet_candidates.xml. Please, 
 File name (link to source)Title (link to view)xml:idmetadata referenceStrophe structureaverage number of vowels per line./aarestrup07val.xmlJeg havde faaet Brev fra dig, Nanetteworkid73888#biblid738884 4 3 311.0./aarestrup07val.xmlTag dette Kys, og tusind til, du Søde ...workid75376#biblid753764 4 3 311.0714./aarestrup07val.xmlSonetworkid76444#biblid764444 4 3 311.5./brorson03grval.xml1.workid76607#biblid76607148.7143./claussen07val.xmlSKUMRINGworkid63580#biblid635801410.8571./claussen07val.xmlTAAGE OG REGNDAGEworkid66036#biblid660364 4 3 313.9286./claussen07val.xmlMAANENS TUNGSINDworkid66131#biblid661314 4 3 313.8571./jacobjp08val.xmlI Seraillets Haveworkid63094#biblid63094146.7143
 Sophus Claussen's first poem may or may not be a sonnet, Brorson's poem is not. All of those with strophe structure 4 4 3 3 are definitely sonnets, as implied by strophe structure and the "approximately pentametric" number of vowels per line (and, by the way, Aarestrup often points out that he is actually writing sonnets in text or titles).
 
-# Then we have the rhymes
+## Then we have the rhymes
 
 Beauty is in the eye of the beholder, says Shakespeare. I believe that he is right. Then, however, I would like to add that the rhymes and meters of poetry (like the pentameter) is in the ear of listener. It is time consuming to read houndreds of poems aloud and figure out the rhyme structure. So an approximate idea of the rhymes could be have comparing the verse line endings.
 
@@ -163,7 +181,7 @@ So while it may fail more often than it succeeds, the successes give results tha
 
 The rhyme structure abbaabbacdecde is one is the most common ones found. Also it is one of the socalled Petrarchan rhyme schemes (Eberhart, 2018).
 
-# What are the sonnets about?
+## What are the sonnets about?
 
 Any piece of art is meant to be consumed by humans. Poems should ideally be understood when read aloud and listened to. By humans.
 
@@ -319,30 +337,11 @@ Graves occur, for some reason, less than deaths
 ```
 indgraves is most likely a kind of homonym, if you look up that sonnet it is clear that it means engrave. There both the verb in past tense begravet (buried) from begrave (as in bury) and grav (as in grave) and gravhøi (tumulus).
 
-# Conclusions
+## Conclusions
 
 I think I could go on studying this for quite some time. However, I have to conclude this here, before the actual conclusions. There are interesting things to find here, though. Some of them are possible to study using simple methods, such as those described by Kenneth Ward Church in his Unix™ for Poets.
 
 The preliminary result from my armchair text processing exercise supports the notion that life was already in early modern Europe about sex, death and rock n'roll. Since rock wasn't there just yet, people had to be content with sonnets for the time being.
 
-# References
-
-Church, Kenneth Ward, [date unknown]Unix™ for Poets
-
-Det Kgl. BibliotekDet Danske Sprog- og Litteraturselskab2000 - 2022The ADL text corpus
-
-The TEI Consortium2022TEI P5: Guidelines for Electronic Text Encoding and Interchange
-
-The TEI Consortium2022Passages of Verse or DramaTEI P5: Guidelines for Electronic Text Encoding and Interchange
-
-Michaëlis, Sophus1883Jeg elsker —Solblomster
-
-SonnetWikipedia
-
-Iambic pentameterWikipedia
-
-HendecasyllableWikipedia
-
-Old NorseWikipedia
-
-Eberhart, Larry2018Italian or Petrarchan SonnetEvery Sonnet: The sonnet forms database
+## References
+Church, Kenneth Ward, [date unknown]Unix™ for PoetsDet Kgl. BibliotekDet Danske Sprog- og Litteraturselskab2000 - 2022The ADL text corpusThe TEI Consortium2022TEI P5: Guidelines for Electronic Text Encoding and InterchangeThe TEI Consortium2022Passages of Verse or DramaTEI P5: Guidelines for Electronic Text Encoding and InterchangeMichaëlis, Sophus1883Jeg elsker —SolblomsterSonnetWikipediaIambic pentameterWikipediaHendecasyllableWikipediaOld NorseWikipediaEberhart, Larry2018Italian or Petrarchan SonnetEvery Sonnet: The sonnet forms database
