@@ -17,7 +17,7 @@
 			    binding bindingDesc body
 			    broadcast cRefPattern calendar
 			    calendarDesc castGroup
-			    castList category certainty
+			    castList category cell certainty
 			    char charDecl charProp
 			    choice cit classDecl
 			    classSpec classes climate
@@ -303,30 +303,17 @@ of this software, even if advised of the possibility of such damage.
   <xsl:call-template name="newline"/>
 </xsl:template>
 
- <xsl:template match="table">
-    <table>
-      <xsl:apply-templates/>
-    </table>
-  </xsl:template>
-
-  <xsl:template match="row">
-    <tr><xsl:apply-templates/></tr>
-  </xsl:template>
-
-  <xsl:template match="cell[@role='label']">
-    <th><xsl:apply-templates/></th>
-  </xsl:template>
-
-  <xsl:template match="cell[@role='data']">
-    <td><xsl:apply-templates/></td>
-  </xsl:template>
+<xsl:template match="table">
   
-  <xsl:template match="cell">
-    <td><xsl:apply-templates/></td>
+   <xsl:for-each select="row[@role='label']"><xsl:for-each select="cell[@role='label']"><xsl:if test="position() = 1">| </xsl:if> <xsl:apply-templates/> | <xsl:if test="position() = last()"><xsl:call-template name="newline"/></xsl:if></xsl:for-each></xsl:for-each>
+
+   <xsl:for-each select="row[@role='label']"><xsl:for-each select="cell[@role='label']"><xsl:if test="position() = 1">| </xsl:if> :-------- | <xsl:if test="position() = last()"><xsl:call-template name="newline"/></xsl:if></xsl:for-each>
+</xsl:for-each>
+
+   <xsl:for-each select="row[@role='data']"><xsl:for-each select="cell"><xsl:if test="position() = 1">| </xsl:if> <xsl:apply-templates/> | <xsl:if test="position() = last()"><xsl:call-template name="newline"/></xsl:if></xsl:for-each>
+</xsl:for-each>
+   
   </xsl:template>
-  
-
-
 
 <xsl:template match="*"><xsl:apply-templates/></xsl:template>
 

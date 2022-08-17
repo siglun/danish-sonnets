@@ -136,7 +136,16 @@ That is, iterate over the line groups in a poem, and count the lines in each of 
 I have summarized these data about all poems in ADL with 14lines. There are 243 of them (there might be more, but then they have erroneous markup).
 
 You find these sonnet candidates in a table here sonnet_candidates.xml. Please, find an extract from it below.
-File name (link to source)Title (link to view)xml:idmetadata referenceStrophe structureaverage number of vowels per line./aarestrup07val.xmlJeg havde faaet Brev fra dig, Nanetteworkid73888#biblid738884 4 3 311.0./aarestrup07val.xmlTag dette Kys, og tusind til, du Søde ...workid75376#biblid753764 4 3 311.0714./aarestrup07val.xmlSonetworkid76444#biblid764444 4 3 311.5./brorson03grval.xml1.workid76607#biblid76607148.7143./claussen07val.xmlSKUMRINGworkid63580#biblid635801410.8571./claussen07val.xmlTAAGE OG REGNDAGEworkid66036#biblid660364 4 3 313.9286./claussen07val.xmlMAANENS TUNGSINDworkid66131#biblid661314 4 3 313.8571./jacobjp08val.xmlI Seraillets Haveworkid63094#biblid63094146.7143
+| File name (link to source) | Title (link to view) | xml:id | metadata reference | Strophe structure | average number of vowels per line | 
+|  :-------- |  :-------- |  :-------- |  :-------- |  :-------- |  :-------- | 
+| ./aarestrup07val.xml | Jeg havde faaet Brev fra dig, Nanette | workid73888 | #biblid73888 | 4 4 3 3 | 11.0 | 
+| ./aarestrup07val.xml | Tag dette Kys, og tusind til, du Søde ... | workid75376 | #biblid75376 | 4 4 3 3 | 11.0714 | 
+| ./aarestrup07val.xml | Sonet | workid76444 | #biblid76444 | 4 4 3 3 | 11.5 | 
+| ./brorson03grval.xml | 1. | workid76607 | #biblid76607 | 14 | 8.7143 | 
+| ./claussen07val.xml | SKUMRING | workid63580 | #biblid63580 | 14 | 10.8571 | 
+| ./claussen07val.xml | MAANENS TUNGSIND | workid66131 | #biblid66131 | 4 4 3 3 | 13.8571 | 
+| ./jacobjp08val.xml | I Seraillets Have | workid63094 | #biblid63094 | 14 | 6.7143 | 
+
 Sophus Claussen's first poem may or may not be a sonnet, Brorson's poem is not. All of those with strophe structure 4 4 3 3 are definitely sonnets, as implied by strophe structure and the "approximately pentametric" number of vowels per line (and, by the way, Aarestrup often points out that he is actually writing sonnets in text or titles).
 
 ## Then we have the rhymes
