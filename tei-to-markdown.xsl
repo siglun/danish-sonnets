@@ -211,9 +211,7 @@ of this software, even if advised of the possibility of such damage.
 
 <xsl:template match="docTitle">
 <xsl:call-template name="newline"/>
-<xsl:for-each select=".//title">
-# <xsl:apply-templates select="."/>  
-</xsl:for-each>
+<xsl:for-each select=".//title[@type='main']"># <xsl:apply-templates select="."/>  </xsl:for-each> <xsl:for-each select=".//title[@type='sub']"> &lt;br> <xsl:apply-templates select="."/>  </xsl:for-each>
 <xsl:call-template name="newline"/>
 </xsl:template>
 

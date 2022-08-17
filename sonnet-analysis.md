@@ -1,8 +1,6 @@
  
 
-
-# Sex, death and sonnets
-# Musings of a software developer
+# Sex, death and sonnets <br> Musings of a software developer
 
 > Sigfrid Lundberg<br>
 > slu@kb.dk<br>
