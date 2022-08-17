@@ -27,7 +27,7 @@ I have since many years been a great fan of the tutorial Unix™ for Poets by Ke
 
 ## Finding poems
 
-The ADL text corpus contains literary texts. Since the texts are encoded according to the TEI guidelines it is easy to find poetry in those files. Typically a piece of poetry is encoded as lines within line groups. More often than not the line groups are embedded in `<div> ... </div>` elements.
+The ADL text corpus contains literary texts. Since the texts are encoded according to the TEI guidelines it is easy to find poetry in those files. Typically a piece of poetry is encoded as lines within line groups. More often than not the line groups are embedded in <div> ... </div> elements.
 
 A poem may look like this in the source. The poem is by Sophus Michaëlis (1883).
 ```
@@ -94,7 +94,7 @@ This transformation creates a long, sonnet_candidates.xml, table with data about
 
 ## Approximately pentametric
 
-Finding <div>...</div>s having 14 lines of poetry isn't good enough. We are expecting iambic pentameter, don't we? To actually analyse the texts for their rythmical properties is beyond me, but we could make an approximation.
+Finding &lt;div>...&lt;/div>s having 14 lines of poetry isn't good enough. We are expecting iambic pentameter, don't we? To actually analyse the texts for their rythmical properties is beyond me, but we could make an approximation.
 
 Iambic verse consists of feet with two syllables, i.e. if there are five feet per line we could say that iambic verse has approximately 10 vowels per line. It is an approximation since a iamb should have the stress on the second syllable (due to ignorance I ignore the musical aspect of this; we will include false positives since lines of poetry with five feet must not be iambic.
 
