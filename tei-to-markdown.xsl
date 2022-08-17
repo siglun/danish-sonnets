@@ -291,7 +291,6 @@ of this software, even if advised of the possibility of such damage.
 <xsl:apply-templates select="note/node()"/>
 </xsl:if>
 <xsl:if test="ref"><xsl:text>
-&lt;br>  
 &lt;kbd></xsl:text>[<xsl:apply-templates select="ref/@target"/>](<xsl:apply-templates select="ref/@target"/>)&lt;/kbd>
 </xsl:if>
   <xsl:call-template name="newline"/>
