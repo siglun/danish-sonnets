@@ -130,7 +130,7 @@ Notes
 
 <xsl:template match="t:ref[contains(substring(@target,1,1),'#')]">
 .pdfhref L -D <xsl:value-of select="substring-after(@target,'#')"/> <xsl:text> </xsl:text> <xsl:apply-templates/> <xsl:text>
-</xsl:text></xsl:template>
+\&amp;</xsl:text></xsl:template>
 
 <xsl:template match="t:ref">
 <xsl:variable name="href">  
@@ -209,12 +209,13 @@ Notes
 </xsl:template>
 
 
-<xsl:template match="t:eg">
+<xsl:template match="t:eg[@xml:space='preserve']">
 .DS L
 \f(CR\s-2<xsl:value-of   select="."/>\fP
 .DE
 </xsl:template>
 
+<xsl:template match="t:eg"><xsl:text>\&amp; </xsl:text><xsl:value-of disable-output-escaping="yes"  select="concat('\f(CR',normalize-space(.),'\fP')"/><xsl:text> </xsl:text></xsl:template>
 
 <xsl:template match="t:table">
 .SH

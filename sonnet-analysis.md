@@ -27,7 +27,7 @@ I have since many years been a great fan of the tutorial Unix™ for Poets by Ke
 
 ## Finding poems
 
-The ADL text corpus contains literary texts. Since the texts are encoded according to the TEI guidelines it is easy to find poetry in those files. Typically a piece of poetry is encoded as lines within line groups. More often than not the line groups are embedded in <div> ... </div> elements.
+The ADL text corpus contains literary texts. Since the texts are encoded according to the TEI guidelines it is easy to find poetry in those files. Typically a piece of poetry is encoded as lines within line groups. More often than not the line groups are embedded in `<div> ... </div>` elements.
 
 A poem may look like this in the source. The poem is by Sophus Michaëlis (1883).
 ```
@@ -88,13 +88,13 @@ We can use that query in XSLT like this:
         </xsl:for-each>
         
 ```
-So we iterate over all <div>...</div>s having line groups inside and have a `@decls` attribute containing a reference to metadata in the TEI header. The latter is not universal, but we use it in ADL and that attribute is only set on pieces that a cataloger has designated as a work. The decisions as to what is a work was based on the experience of what library patrons ask for at the information desk. I have implemented this using the shell script find_sonnet_candidates.sh and a transform sonnet_candidate.xsl. Finally, we don't do anything unless there are 14 lines of poetry.
+So we iterate over all `<div>...</div>`s having line groups inside and have a `@decls` attribute containing a reference to metadata in the TEI header. The latter is not universal, but we use it in ADL and that attribute is only set on pieces that a cataloger has designated as a work. The decisions as to what is a work was based on the experience of what library patrons ask for at the information desk. I have implemented this using the shell script find_sonnet_candidates.sh and a transform sonnet_candidate.xsl. Finally, we don't do anything unless there are 14 lines of poetry.
 
 This transformation creates a long, sonnet_candidates.xml, table with data about the sonnet candidates it finds.
 
 ## Approximately pentametric
 
-Finding &lt;div>...&lt;/div>s having 14 lines of poetry isn't good enough. We are expecting iambic pentameter, don't we? To actually analyse the texts for their rythmical properties is beyond me, but we could make an approximation.
+Finding `<div>...</div>`s having 14 lines of poetry isn't good enough. We are expecting iambic pentameter, don't we? To actually analyse the texts for their rythmical properties is beyond me, but we could make an approximation.
 
 Iambic verse consists of feet with two syllables, i.e. if there are five feet per line we could say that iambic verse has approximately 10 vowels per line. It is an approximation since a iamb should have the stress on the second syllable (due to ignorance I ignore the musical aspect of this; we will include false positives since lines of poetry with five feet must not be iambic.
 

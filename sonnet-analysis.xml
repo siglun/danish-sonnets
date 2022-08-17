@@ -70,7 +70,7 @@
         <p>The ADL text corpus contains <ref target="#adlcorpus">literary texts.</ref>
         Since the texts are encoded according to the <ref target="#teiguidelines">TEI guidelines</ref> it is easy to find poetry in those files.
         Typically a piece of poetry is encoded as <ref target="#tei-ref-lg">lines within line groups</ref>.
-        More often than not the line groups are embedded in <![CDATA[<div> ... </div>]]> elements.</p>
+        More often than not the line groups are embedded in <eg><![CDATA[<div> ... </div>]]></eg> elements.</p>
 
         <p>A poem may look like this in the source.
         The poem is by <ref target="#sophus">Sophus Michaëlis (<date>1883</date>).</ref></p>
@@ -147,7 +147,7 @@
         </xsl:for-each>
         ]]></eg>
 
-        <p>So we iterate over all <![CDATA[<div>...</div>]]>s having
+        <p>So we iterate over all <eg><![CDATA[<div>...</div>]]></eg>s having
         line groups inside and have a `@decls` attribute containing a
         reference to metadata in the TEI header.
         The latter is not universal, but we use it in ADL and that attribute is only set on pieces that a cataloger has designated as a <hi rend="italics">work.</hi>
@@ -163,7 +163,7 @@
       <div>
         <head>Approximately pentametric</head>
 
-        <p>Finding <![CDATA[ &lt;div>...&lt;/div>]]>s having 14 lines of poetry isn&apos;t good
+        <p>Finding <eg><![CDATA[ <div>...</div>]]></eg>s having 14 lines of poetry isn&apos;t good
         enough. We are expecting iambic pentameter, don&apos;t we? To actually analyse
         the texts for their rythmical properties is beyond me, but we could
         make an approximation.</p>
