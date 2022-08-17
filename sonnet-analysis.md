@@ -355,15 +355,20 @@ Det Kgl. Bibliotek,  and Det Danske Sprog- og Litteraturselskab,
 <kbd>[https://github.com/kb-dk/public-adl-text-sources](https://github.com/kb-dk/public-adl-text-sources)</kbd>
 
 
-The TEI Consortium,
-2022. _TEI P5: Guidelines for Electronic Text Encoding and Interchange_ 
-<kbd>[https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html](https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html)</kbd>
+Eberhart, Larry,
+2018. Italian or Petrarchan Sonnet.  In:
+_Every Sonnet: The sonnet forms database_ 
+<kbd>[https://poetscollective.org/everysonnet/tag/abbaabbacdecde/#post-119](https://poetscollective.org/everysonnet/tag/abbaabbacdecde/#post-119)</kbd>
 
 
-The TEI Consortium,
-2022. Passages of Verse or Drama.  In:
-_TEI P5: Guidelines for Electronic Text Encoding and Interchange_ 
-<kbd>[https://tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CODV](https://tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CODV)</kbd>
+Hendecasyllable.  In:
+_Wikipedia_ 
+<kbd>[https://en.wikipedia.org/wiki/Hendecasyllable](https://en.wikipedia.org/wiki/Hendecasyllable)</kbd>
+
+
+Iambic pentameter.  In:
+_Wikipedia_ 
+<kbd>[https://en.wikipedia.org/wiki/Iambic_pentameter](https://en.wikipedia.org/wiki/Iambic_pentameter)</kbd>
 
 
 Michaëlis, Sophus,
@@ -372,28 +377,23 @@ _Solblomster_
 <kbd>[https://tekster.kb.dk/text/adl-texts-michs_03-shoot-workid68251](https://tekster.kb.dk/text/adl-texts-michs_03-shoot-workid68251)</kbd>
 
 
-Sonnet.  In:
-_Wikipedia_ 
-<kbd>[https://en.wikipedia.org/wiki/Sonnet](https://en.wikipedia.org/wiki/Sonnet)</kbd>
-
-
-Iambic pentameter.  In:
-_Wikipedia_ 
-<kbd>[https://en.wikipedia.org/wiki/Iambic_pentameter](https://en.wikipedia.org/wiki/Iambic_pentameter)</kbd>
-
-
-Hendecasyllable.  In:
-_Wikipedia_ 
-<kbd>[https://en.wikipedia.org/wiki/Hendecasyllable](https://en.wikipedia.org/wiki/Hendecasyllable)</kbd>
-
-
 Old Norse.  In:
 _Wikipedia_ 
 <kbd>[https://en.wikipedia.org/wiki/Old_Norse](https://en.wikipedia.org/wiki/Old_Norse)</kbd>
 
 
-Eberhart, Larry,
-2018. Italian or Petrarchan Sonnet.  In:
-_Every Sonnet: The sonnet forms database_ 
-<kbd>[https://poetscollective.org/everysonnet/tag/abbaabbacdecde/#post-119](https://poetscollective.org/everysonnet/tag/abbaabbacdecde/#post-119)</kbd>
+Sonnet.  In:
+_Wikipedia_ 
+<kbd>[https://en.wikipedia.org/wiki/Sonnet](https://en.wikipedia.org/wiki/Sonnet)</kbd>
+
+
+The TEI Consortium,
+2022. Passages of Verse or Drama.  In:
+_TEI P5: Guidelines for Electronic Text Encoding and Interchange_ 
+<kbd>[https://tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CODV](https://tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CODV)</kbd>
+
+
+The TEI Consortium,
+2022. _TEI P5: Guidelines for Electronic Text Encoding and Interchange_ 
+<kbd>[https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html](https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html)</kbd>
 

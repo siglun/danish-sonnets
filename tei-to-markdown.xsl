@@ -274,6 +274,13 @@ of this software, even if advised of the possibility of such damage.
   <xsl:text>&#10;</xsl:text>
 </xsl:template>
 
+<xsl:template match="listBibl">
+<xsl:apply-templates select="head"/>
+<xsl:apply-templates select="bibl">
+<xsl:sort select="concat(author[1],title[1])" data-type="text"/>
+</xsl:apply-templates>
+</xsl:template>
+
 <xsl:template match="bibl">
   <xsl:call-template name="newline"/>  
 <xsl:for-each select="author|editor"><xsl:if test="position() > 1 and position()=last()"><xsl:text> and </xsl:text></xsl:if><xsl:apply-templates/><xsl:if test="position() >= 1 and not(position() = last())"><xsl:text>, </xsl:text></xsl:if></xsl:for-each><xsl:if test="date"><xsl:text>,
