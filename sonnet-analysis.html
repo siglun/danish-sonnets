@@ -280,12 +280,17 @@ p.version {
       <p>The ADL text corpus contains <a href="#adlcorpus">literary texts.</a>
         Since the texts are encoded according to the <a href="#teiguidelines">TEI guidelines</a> it is easy to find poetry in those files.
         Typically a piece of poetry is encoded as <a href="#tei-ref-lg">lines within line groups</a>.
-        More often than not the line groups are embedded in &lt;div&gt; ... &lt;/div&gt; elements.</p>
+        More often than not the line groups are embedded in
+        <pre>
+
+   &lt;div&gt; ... &lt;/div&gt;
+
+        </pre>
+        elements.</p>
       <p>A poem may look like this in the source.
         The poem is by <a href="#sophus">Sophus Michaëlis (1883).</a>
       </p>
       <pre>
-
 &lt;div decls="#biblid68251"&gt;
    &lt;head&gt;Jeg elsker —&lt;/head&gt;
    &lt;lg&gt;
@@ -314,9 +319,7 @@ p.version {
       &lt;date&gt;12. Septbr. 1893.&lt;/date&gt;
    &lt;/p&gt;
 &lt;/div&gt;
-
-
-        </pre>
+</pre>
       <p>The default name space is declared as
         xmlns="http://www.tei-c.org/ns/1.0", which we in following refer to
         with the namespace prefix 't'.</p>

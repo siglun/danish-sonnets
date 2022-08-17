@@ -34,7 +34,13 @@ Since the texts are encoded according to the
 .pdfhref L -D teiguidelines TEI guidelines
 it is easy to find poetry in those files. Typically a piece of poetry is encoded as
 .pdfhref L -D tei-ref-lg lines within line groups
-. More often than not the line groups are embedded in <div> ... </div> elements.
+. More often than not the line groups are embedded in
+.DS L
+\f(CR\s-2
+   <div> ... </div>
+        \fP
+.DE
+elements.
 .LP
 A poem may look like this in the source. The poem is by
 .pdfhref L -D sophus Sophus Michaëlis (1883).
@@ -68,7 +74,7 @@ A poem may look like this in the source. The poem is by
       <date>12. Septbr. 1893.</date>
    </p>
 </div>
-        \fP
+\fP
 .DE
 .LP
 The default name space is declared as xmlns="http://www.tei-c.org/ns/1.0", which we in following refer to with the namespace prefix 't'.

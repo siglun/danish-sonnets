@@ -81,8 +81,7 @@
         <p>A poem may look like this in the source.
         The poem is by <ref target="#sophus">Sophus Michaëlis (<date>1883</date>).</ref></p>
 
-        <eg xml:space="preserve">
-<![CDATA[
+        <eg xml:space="preserve"><![CDATA[
 <div decls="#biblid68251">
    <head>Jeg elsker —</head>
    <lg>
@@ -110,10 +109,8 @@
    <p>
       <date>12. Septbr. 1893.</date>
    </p>
-</div>
-
-]]>
-        </eg>
+</div>]]>
+</eg>
         
         <p>The default name space is declared as
         xmlns="http://www.tei-c.org/ns/1.0", which we in following refer to

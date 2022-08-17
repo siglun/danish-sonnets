@@ -16,7 +16,6 @@ The ADL text corpus contains literary texts. Since the texts are encoded accordi
 A poem may look like this in the source. The poem is by Sophus Michaëlis (1883).
 ```
 
-
 <div decls="#biblid68251">
    <head>Jeg elsker —</head>
    <lg>
@@ -46,8 +45,6 @@ A poem may look like this in the source. The poem is by Sophus Michaëlis (1883)
    </p>
 </div>
 
-
-        
 ```
 The default name space is declared as xmlns="http://www.tei-c.org/ns/1.0", which we in following refer to with the namespace prefix 't'.
 
