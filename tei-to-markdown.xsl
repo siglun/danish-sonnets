@@ -203,7 +203,7 @@ of this software, even if advised of the possibility of such damage.
   <xsl:apply-templates/>
 </xsl:template>
 
-<xsl:template match="p|front">
+<xsl:template match="p|front|bibl">
   <xsl:call-template name="newline"/>
   <xsl:apply-templates/>
   <xsl:call-template name="newline"/>
@@ -299,6 +299,7 @@ of this software, even if advised of the possibility of such damage.
   <xsl:template match="tei:text" mode="depth">
     <xsl:value-of select="count(ancestor::tei:text)-1"/>
   </xsl:template>
+  
   <xsl:template match="tei:div|tei:div1|tei:div2|tei:div3|tei:div4|tei:div5|tei:div6"
                  mode="depth">
       <xsl:choose>

@@ -344,4 +344,23 @@ I think I could go on studying this for quite some time. However, I have to conc
 The preliminary result from my armchair text processing exercise supports the notion that life was already in early modern Europe about sex, death and rock n'roll. Since rock wasn't there just yet, people had to be content with sonnets for the time being.
 
 ## References
-Church, Kenneth Ward, [date unknown]Unix™ for PoetsDet Kgl. BibliotekDet Danske Sprog- og Litteraturselskab2000 - 2022The ADL text corpusThe TEI Consortium2022TEI P5: Guidelines for Electronic Text Encoding and InterchangeThe TEI Consortium2022Passages of Verse or DramaTEI P5: Guidelines for Electronic Text Encoding and InterchangeMichaëlis, Sophus1883Jeg elsker —SolblomsterSonnetWikipediaIambic pentameterWikipediaHendecasyllableWikipediaOld NorseWikipediaEberhart, Larry2018Italian or Petrarchan SonnetEvery Sonnet: The sonnet forms database
+
+Church, Kenneth Ward, [date unknown]Unix™ for Poets
+
+Det Kgl. BibliotekDet Danske Sprog- og Litteraturselskab2000 - 2022The ADL text corpus
+
+The TEI Consortium2022TEI P5: Guidelines for Electronic Text Encoding and Interchange
+
+The TEI Consortium2022Passages of Verse or DramaTEI P5: Guidelines for Electronic Text Encoding and Interchange
+
+Michaëlis, Sophus1883Jeg elsker —Solblomster
+
+SonnetWikipedia
+
+Iambic pentameterWikipedia
+
+HendecasyllableWikipedia
+
+Old NorseWikipedia
+
+Eberhart, Larry2018Italian or Petrarchan SonnetEvery Sonnet: The sonnet forms database
