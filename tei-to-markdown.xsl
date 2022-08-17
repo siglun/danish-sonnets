@@ -6,7 +6,7 @@
     xpath-default-namespace="http://www.tei-c.org/ns/1.0">
 
   <!-- xsl:import href="../common/common.xsl"/ -->
-  <!-- xsl:import href="../Stylesheets/common/common.xsl"/ -->
+  <xsl:import href="../Stylesheets/common/common.xsl"/>
   
  <xsl:strip-space elements="additional address adminInfo
 			    altGrp altIdentifier analytic
@@ -294,7 +294,7 @@ of this software, even if advised of the possibility of such damage.
       </xsl:choose>
   </xsl:template>
 
-  <xsl:template match="text()">
+  <!-- xsl:template match="text()">
     <xsl:choose>
       <xsl:when test="(parent::tei:div or parent::tei:p)">
         <xsl:for-each select="tokenize(.,'&#10;&#10;')">
@@ -306,7 +306,7 @@ of this software, even if advised of the possibility of such damage.
         <xsl:value-of select="translate(.,' ',' ')"/>
       </xsl:otherwise>
     </xsl:choose>
-  </xsl:template>
+  </xsl:template -->
 
   
 </xsl:stylesheet>
