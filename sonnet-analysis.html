@@ -280,7 +280,7 @@ p.version {
       <p>The ADL text corpus contains <a href="#adlcorpus">literary texts.</a>
         Since the texts are encoded according to the <a href="#teiguidelines">TEI guidelines</a> it is easy to find poetry in those files.
         Typically a piece of poetry is encoded as <a href="#tei-ref-lg">lines within line groups</a>.
-        More often than not the line groups are embedded in <pre>&lt;div&gt; ... &lt;/div&gt;</pre> elements.</p>
+        More often than not the line groups are embedded in <kbd>&lt;div&gt; ... &lt;/div&gt;</kbd> elements.</p>
       <p>A poem may look like this in the source.
         The poem is by <a href="#sophus">Sophus Michaëlis (1883).</a>
       </p>
@@ -343,7 +343,7 @@ p.version {
            &lt;/xsl:if&gt;
         &lt;/xsl:for-each&gt;
         </pre>
-      <p>So we iterate over all <pre>&lt;div&gt;...&lt;/div&gt;</pre>s having
+      <p>So we iterate over all <kbd>&lt;div&gt;...&lt;/div&gt;</kbd>s having
         line groups inside and have a `@decls` attribute containing a
         reference to metadata in the TEI header.
         The latter is not universal, but we use it in ADL and that attribute is only set on pieces that a cataloger has designated as a <em>work.</em>
@@ -353,7 +353,7 @@ p.version {
       <p>This transformation creates a long, <a href="https://github.com/siglun/danish-sonnets/blob/main/sonnet_candidates.xml">sonnet_candidates.xml</a>, table with data about
         the sonnet candidates it finds.</p>
       <h2>Approximately pentametric</h2>
-      <p>Finding <pre> &lt;div&gt;...&lt;/div&gt;</pre>s having 14 lines of poetry isn't good
+      <p>Finding <kbd> &lt;div&gt;...&lt;/div&gt;</kbd>s having 14 lines of poetry isn't good
         enough. We are expecting iambic pentameter, don't we? To actually analyse
         the texts for their rythmical properties is beyond me, but we could
         make an approximation.</p>

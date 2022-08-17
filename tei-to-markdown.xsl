@@ -303,6 +303,30 @@ of this software, even if advised of the possibility of such damage.
   <xsl:call-template name="newline"/>
 </xsl:template>
 
+ <xsl:template match="table">
+    <table>
+      <xsl:apply-templates/>
+    </table>
+  </xsl:template>
+
+  <xsl:template match="row">
+    <tr><xsl:apply-templates/></tr>
+  </xsl:template>
+
+  <xsl:template match="cell[@role='label']">
+    <th><xsl:apply-templates/></th>
+  </xsl:template>
+
+  <xsl:template match="cell[@role='data']">
+    <td><xsl:apply-templates/></td>
+  </xsl:template>
+  
+  <xsl:template match="cell">
+    <td><xsl:apply-templates/></td>
+  </xsl:template>
+  
+
+
 
 <xsl:template match="*"><xsl:apply-templates/></xsl:template>
 

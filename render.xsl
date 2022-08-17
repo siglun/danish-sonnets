@@ -110,10 +110,14 @@
     <td><xsl:apply-templates/></td>
   </xsl:template>
   
-  <xsl:template match="t:eg">
+  <xsl:template match="t:eg[@xml:space='preserve']"> 
     <pre>
       <xsl:value-of   select="."/>
     </pre>
+  </xsl:template>
+
+  <xsl:template match="t:eg">
+    <kbd><xsl:value-of   select="."/></kbd>
   </xsl:template>
   
   <xsl:template match="t:listBibl">
