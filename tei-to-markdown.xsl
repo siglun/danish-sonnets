@@ -219,7 +219,7 @@ of this software, even if advised of the possibility of such damage.
 
 <xsl:template match="docAuthor">
 <xsl:for-each select=".//name|.//addrLine">
-_ <xsl:apply-templates select="."/> <xsl:value-of select="'&lt;br&gt;'"/>
+> <xsl:apply-templates select="."/> <xsl:value-of select="'&lt;br&gt;'"/>
 </xsl:for-each>
 </xsl:template>
 

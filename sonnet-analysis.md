@@ -4,13 +4,13 @@
 # Sex, death and sonnets
 # Musings of a software developer
 
-_ Sigfrid Lundberg<br>
-_ slu@kb.dk<br>
-_ Digital Transformation<br>
-_ Royal Danish Library<br>
-_ Post box 2149<br>
-_ 1016 Copenhagen K<br>
-_ Denmark<br>
+> Sigfrid Lundberg<br>
+> slu@kb.dk<br>
+> Digital Transformation<br>
+> Royal Danish Library<br>
+> Post box 2149<br>
+> 1016 Copenhagen K<br>
+> Denmark<br>
 
 ## Abstract  
 
