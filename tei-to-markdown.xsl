@@ -27,7 +27,7 @@
 			    div3 div4 div5 div6
 			    div7 divGen docTitle eLeaf
 			    eTree editionStmt
-			    editorialDecl elementSpec
+			    editorialDecl eg elementSpec
 			    encodingDesc entry epigraph
 			    epilogue equipment event
 			    exemplum fDecl fLib
@@ -194,9 +194,7 @@ of this software, even if advised of the possibility of such damage.
 <xsl:text>```</xsl:text>
 </xsl:template>
 
-<xsl:template match="eg">
-<xsl:text>`</xsl:text><xsl:value-of select="."/><xsl:text>`</xsl:text>
-</xsl:template>
+<xsl:template match="eg"><xsl:value-of select="concat('`',normalize-space(.),'`')"/></xsl:template>
 
 
 <xsl:template name="makeSpan">

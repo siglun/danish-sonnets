@@ -11,11 +11,7 @@ I have since many years been a great fan of the tutorial Unix™ for Poets by Ke
 
 # Finding poems
 
-The ADL text corpus contains literary texts. Since the texts are encoded according to the TEI guidelines it is easy to find poetry in those files. Typically a piece of poetry is encoded as lines within line groups. More often than not the line groups are embedded in `
-
-   <div> ... </div>
-
-        ` elements.
+The ADL text corpus contains literary texts. Since the texts are encoded according to the TEI guidelines it is easy to find poetry in those files. Typically a piece of poetry is encoded as lines within line groups. More often than not the line groups are embedded in `<div> ... </div>` elements.
 
 A poem may look like this in the source. The poem is by Sophus Michaëlis (1883).
 ```
