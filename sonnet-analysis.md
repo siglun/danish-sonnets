@@ -16,6 +16,7 @@ The ADL text corpus contains literary texts. Since the texts are encoded accordi
 A poem may look like this in the source. The poem is by Sophus Michaëlis (1883).
 ```
 
+
 <div decls="#biblid68251">
    <head>Jeg elsker —</head>
    <lg>
@@ -46,7 +47,8 @@ A poem may look like this in the source. The poem is by Sophus Michaëlis (1883)
 </div>
 
 
-        ```
+        
+```
 The default name space is declared as xmlns="http://www.tei-c.org/ns/1.0", which we in following refer to with the namespace prefix 't'.
 
 The poem comprises four line groups with four, four, three and three lines. That is a very common strophe structure (according to the Sonnets article in Wikipedia), at least in Scandinavia. It is not always like that, but they all contain 14 lines.
@@ -58,17 +60,21 @@ To be more precise, a sonnet has one more characteristics than having 14 lines, 
 # Finding sonnets
 
 You can easily find all poems in the corpus based on a XPATH query like:
-``` 
+```
+ 
         //t:div[t:lg and @decls]
-        ```
+        
+```
 We can use that query in XSLT like this:
-``` 
+```
+ 
         <xsl:for-each select="//t:div[t:lg and @decls]">
            <xsl:if test="count(.//t:lg/t:l)=14">
               <!-- script's got to do what a script's got to do -->
            </xsl:if>
         </xsl:for-each>
-        ```
+        
+```
 So we iterate over all <div>...</div>s having line groups inside and have a `@decls` attribute containing a reference to metadata in the TEI header. The latter is not universal, but we use it in ADL and that attribute is only set on pieces that a cataloger has designated as a work. The decisions as to what is a work was based on the experience of what library patrons ask for at the information desk. I have implemented this using the shell script find_sonnet_candidates.sh and a transform sonnet_candidate.xsl. Finally, we don't do anything unless there are 14 lines of poetry.
 
 This transformation creates a long, sonnet_candidates.xml, table with data about the sonnet candidates it finds.
@@ -80,7 +86,8 @@ Finding <div>...</div>s having 14 lines of poetry isn't good enough. We are expe
 Iambic verse consists of feet with two syllables, i.e. if there are five feet per line we could say that iambic verse has approximately 10 vowels per line. It is an approximation since a iamb should have the stress on the second syllable (due to ignorance I ignore the musical aspect of this; we will include false positives since lines of poetry with five feet must not be iambic.
 
 Any way, this script calculates the average number of vowels per line in poems with 14 lines:
-``` 
+```
+ 
         <xsl:variable name="vowel_numbers" as="xs:integer *">
            <xsl:for-each select=".//t:lg/t:l">
               <xsl:variable name="vowels">
@@ -90,7 +97,8 @@ Any way, this script calculates the average number of vowels per line in poems w
            </xsl:for-each>
         </xsl:variable>
         <xsl:value-of select="format-number(sum($vowel_numbers) div 14, '#.####')"/>
-        ```
+        
+```
 We use the replace function and a regular expression to remove everything in each line except the vowels. Then we measure the string length which should equal the number of vowels per line and add them together for all lines in the poem. Finally we divide that sum with 14 and get the average number of vowels per line.
 
 For a sonnet it would be about 10, or occasionally a little more. Danish is a language rich in diftons, which could be another reason for lines deviating from the expected 10 vowels. In the Michaëlis poem quoted above it is 10.4.
@@ -100,14 +108,16 @@ For a sonnet it would be about 10, or occasionally a little more. Danish is a la
 You can write a lot of nice poetry with 14 lines. Like Gustaf Munch-Petersen's en borgers livshymne with one strophe with one line, then three strophes with four lines and finally a single line. The number of syllables per line seem to decrease towards the end. Gustaf was a modernist. There are no fixed structures and very few rhymes i his poetry.
 
 You can easily find out the strophe structure for each poem:
-``` 
+```
+ 
         <xsl:variable name="lines_per_strophe" as="xs:integer *">
            <xsl:for-each select=".//t:lg[t:l]">
               <xsl:value-of select="count(t:l)"/>
            </xsl:for-each>
         </xsl:variable>
         <xsl:value-of select="$lines_per_strophe"/>
-        ```
+        
+```
 That is, iterate over the line groups in a poem, and count the lines in each of them.
 
 I have summarized these data about all poems in ADL with 14lines. There are 243 of them (there might be more, but then they have erroneous markup).
@@ -129,21 +139,29 @@ In order to understand what we hear when reading, we have to consider '-ister' a
 I have written a set of scripts that traverse the sonnet_candidates.xml table. Transform that file using iterate_the_rhyming.xsl selects poems with 14 lines and strophe structure 4 4 3 3. It generates a shell script which when executed pipes the content through other scripts that retrieve content, remove punctuation and finally detags them. The actual text is then piped through a perl script that analyse the endings according to the silly and flawed method described above.
 
 It works, sort of, until it doesn't. For poems with 4 4 3 3 strophe structure, you can find the result in rhymes_3chars.text and rhymes_2chars.text for three and two letter rhymes, respectively. Run
-``` 
+```
+ 
         grep -P '^[a-q]{14}' rhymes_3chars.text   | sort | uniq -c | sort -rn
-        ```
+        
+```
 to get a list of rhyme structure and their frequencies. The rhyme structures that occur more than twice are:
 ```
+
         6 abbaabbacdecde
         5 abbaabbacdcdcd
         4 abcaadeafgghii
         4 abbaabbacdcede
         3 abcaadeafghgig
-        ```
+        
+```
 This silly algorithm does actually give two of the most common rhyme structure for sonnets, but misses a lot of order in the remaining chaos:
-```abbaabbacdcdcd```
+```
+abbaabbacdcdcd
+```
 and
-```abbaabbacdecde```
+```
+abbaabbacdecde
+```
 So while it may fail more often than it succeeds, the successes give results that are reasonable.
 
 The rhyme structure abbaabbacdecde is one is the most common ones found. Also it is one of the socalled Petrarchan rhyme schemes (Eberhart, 2018).
@@ -159,9 +177,11 @@ Assume that, at least as a first approximation, the words chosen by poets mirror
 I have detagged the poems with 14 lines and strophe structure 4 4 3 3, tokenized their texts and calculated the word frequencies. As a matter of fact, I've done that in two ways:
 
 (i) The first being doing a classical tokenization followed by piping the stuff through
-``` 
+```
+ 
         sort | uniq -c | sort -n
-        ```
+        
+```
 such that I get a list of the 4781 Danish words that are used in our sonnet sample, sorted by their frequencies.
 
 (ii) The second way is the same, but I do it twice, once for each sonnet such that I get a list of words for each sonnet. Then I repeat that for the concatenated lists for all sonnets.
@@ -173,7 +193,8 @@ This means that I get
 * a second list giving not of the number of occurences of each word, but the number of sonnets the word occurs in.
 
 There are 160 sonnets in the selection, and the most frequent word occurs in all of them. These are the fifteen most commont word measured by the number of sonnets they occur in. Number of poems in the left column.
-``` 
+```
+ 
         75 du
         76 sig
         82 er
@@ -189,9 +210,11 @@ There are 160 sonnets in the selection, and the most frequent word occurs in all
         122 med
         150 i
         160 og
-        ```
+        
+```
 and this is the list of the same thing, but measured as the grand total occurrence of the words in the corpus. Number of words in corpus in left column.
-``` 
+```
+ 
         109 min
         130 for
         144 du
@@ -207,7 +230,8 @@ and this is the list of the same thing, but measured as the grand total occurren
         246 jeg
         382 i
         588 og
-        ```
+        
+```
 As you can see this corroborates the established observation that the most frequent words in a corpus hardly ever describes the subject matter of texts (the words are conjunctions, pronouns, prepositions and the like). The distribution of the number of sonnets the words appear in:
 
 The distribution shows number of words graphed against number of sonnets. There are 3304 words occurring in just one sonnet. The leftmost, and highest, point on the graph has the coordinate (1,3304).
@@ -215,10 +239,12 @@ The distribution shows number of words graphed against number of sonnets. There 
 There is just one word appearing in all 160 sonnets. It is 'og' meaning 'and' correspoding to the rightmost point on the graph which has the coordinate (160,1). As a rule of thumb the most common words are all conjunctions, next to them comes prepositions and after those come pronomina.
 
 The distribution.text is generated from poem_frequencies.text using (the line has been folded)
-``` 
+```
+ 
         sed 's/\ [a-z]*$//' poem_frequencies.text | sort | uniq -c | 
         sort -n -k 2 > distribution.text
-        ```
+        
+```
 See above. Column 1 is plotted against column 2.
 
 In this particular corpus, it seems that aboutishness start at words occuring in about 25% of the sonnets, or less. I.e., words occuring in 40 sonnets, or fewer.
@@ -226,7 +252,8 @@ In this particular corpus, it seems that aboutishness start at words occuring in
 In what follows, I have simply used the utility grep find words and derivates in the file poem_frequencies.text mentioned above.
 
 As example we have death, dead and lethal etc (basically words containing død) in a number of sonnets. In the left column the number of sonnets containing the word. These appear in about 7% of the sonnets.
-``` 
+```
+ 
         1 dødehavet
         1 dødeklokker
         1 dødelige
@@ -240,27 +267,33 @@ As example we have death, dead and lethal etc (basically words containing død) 
         9 død
         9 døden
         11 døde
-        ```
+        
+```
 There are interesting derivatives and compound words on the list. Like dødsberedthed meaning preparedness for death. Glemselsdøden refers, I believe, to the death or disappearance due to the disappearance of traces or memories of someone who belonged to generations.
 
 Love (elskov) is not as popular as death (about 5% of the sonnets).
-``` 
+```
+ 
         1 elskoven
         1 elskovsbrev
         1 elskovsbrevet
         2 elskovsild
         6 elskovs
         7 elskov
-        ```
+        
+```
 elskovsild means the fire of love. elskovsbrev has to be love letter. women (kvinde) are not as popular as love
-``` 
+```
+ 
         1 dobbeltkvinde
         1 kvindens
         1 kvindetække
         4 kvinder
-        ```
+        
+```
 Men more than women, and in particular words implying bravery and male virtues
-``` 
+```
+ 
         1 baadsmandstrille
         1 dobbeltmand
         1 ejermand
@@ -270,11 +303,13 @@ Men more than women, and in particular words implying bravery and male virtues
         2 mand
         2 manddoms
         5 mandens
-        ```
+        
+```
 Remember that these sonnets are by men. mandom implies a man's existence as a grownup man. Originally, in old norse, mand meant, just as in Old English, human. That, however, was when it was doubtful if women were actually human. Baadsmandstrille is a derivative of baadsmand (boatswain) which is another name for a sailor or petty officer. A baadsmandstrille is presumably a song sung by sailors.
 
 Graves occur, for some reason, less than deaths
-``` 
+```
+ 
         1 begravet
         1 graven
         1 gravene
@@ -283,7 +318,8 @@ Graves occur, for some reason, less than deaths
         3 grav
         3 grave
         4 gravens
-        ```
+        
+```
 indgraves is most likely a kind of homonym, if you look up that sonnet it is clear that it means engrave. There both the verb in past tense begravet (buried) from begrave (as in bury) and grav (as in grave) and gravhøi (tumulus).
 
 # Conclusions

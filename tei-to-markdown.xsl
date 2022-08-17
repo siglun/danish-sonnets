@@ -189,9 +189,9 @@ of this software, even if advised of the possibility of such damage.
 </xsl:template>
 
 <xsl:template match="eg[@xml:space='preserve']">
-<xsl:text>```</xsl:text>
-<xsl:value-of select="."/>
-<xsl:text>```</xsl:text>
+<xsl:text>```
+</xsl:text><xsl:value-of select="."/><xsl:text>
+```</xsl:text>
 </xsl:template>
 
 <xsl:template match="eg"><xsl:value-of select="concat('`',normalize-space(.),'`')"/></xsl:template>
