@@ -203,7 +203,7 @@ of this software, even if advised of the possibility of such damage.
   <xsl:apply-templates/>
 </xsl:template>
 
-<xsl:template match="p|front|bibl">
+<xsl:template match="p|front">
   <xsl:call-template name="newline"/>
   <xsl:apply-templates/>
   <xsl:call-template name="newline"/>
@@ -273,6 +273,30 @@ of this software, even if advised of the possibility of such damage.
 <xsl:template name="newline">
   <xsl:text>&#10;</xsl:text>
 </xsl:template>
+
+<xsl:template match="bibl">
+  <xsl:call-template name="newline"/>  
+<xsl:for-each select="author|editor"><xsl:if test="position() > 1 and position()=last()"><xsl:text> and </xsl:text></xsl:if><xsl:apply-templates/><xsl:if test="position() >= 1 and not(position() = last())"><xsl:text>, </xsl:text></xsl:if></xsl:for-each><xsl:if test="date"><xsl:text>,
+</xsl:text><xsl:apply-templates select="date"/><xsl:text>. </xsl:text></xsl:if><xsl:if test="title">
+<xsl:if test="title[@level = 'a']">
+<xsl:apply-templates select="title[@level = 'a']"/><xsl:text>. </xsl:text><xsl:if test="title[@level = 'j']|title[@level = 'm']"><xsl:text> In:
+</xsl:text></xsl:if>
+</xsl:if>
+<xsl:if test="title[@level = 'j']|title[@level = 'm']">_<xsl:apply-templates select="title[@level = 'j']|title[@level = 'm']"/>_<xsl:text> </xsl:text>
+</xsl:if>
+</xsl:if>
+<xsl:if test="biblScope[@type='volume']">
+<xsl:text>Vol. </xsl:text><xsl:apply-templates select="biblScope[@type='volume']"/><xsl:if test="biblScope[@type='number']">(<xsl:apply-templates select="biblScope[@type='number']"/>)<xsl:choose><xsl:when test="biblScope[@type='pp']"><xsl:text>, </xsl:text></xsl:when><xsl:otherwise><xsl:text>. </xsl:text></xsl:otherwise></xsl:choose></xsl:if></xsl:if> <xsl:if test="biblScope[@type='pp']"> <xsl:text>pp. </xsl:text><xsl:apply-templates select="biblScope[@type='pp']"/><xsl:text>. </xsl:text></xsl:if>
+<xsl:if test="note">
+<xsl:apply-templates select="note/node()"/>
+</xsl:if>
+<xsl:if test="ref"><xsl:text>
+&lt;br>  
+&lt;kbd></xsl:text><xsl:apply-templates select="ref/@target"/>&lt;/kbd>
+</xsl:if>
+  <xsl:call-template name="newline"/>
+</xsl:template>
+
 
 <xsl:template match="*"><xsl:apply-templates/></xsl:template>
 

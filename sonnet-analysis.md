@@ -345,22 +345,65 @@ The preliminary result from my armchair text processing exercise supports the no
 
 ## References
 
-Church, Kenneth Ward, [date unknown]Unix™ for Poets
+Church, Kenneth Ward,
+[date unknown]. _Unix™ for Poets_ 
+<br>  
+<kbd>https://web.stanford.edu/class/cs124/kwc-unix-for-poets.pdf</kbd>
 
-Det Kgl. BibliotekDet Danske Sprog- og Litteraturselskab2000 - 2022The ADL text corpus
 
-The TEI Consortium2022TEI P5: Guidelines for Electronic Text Encoding and Interchange
+Det Kgl. Bibliotek,  and Det Danske Sprog- og Litteraturselskab,
+2000 - 2022. _The ADL text corpus_ 
+<br>  
+<kbd>https://github.com/kb-dk/public-adl-text-sources</kbd>
 
-The TEI Consortium2022Passages of Verse or DramaTEI P5: Guidelines for Electronic Text Encoding and Interchange
 
-Michaëlis, Sophus1883Jeg elsker —Solblomster
+The TEI Consortium,
+2022. _TEI P5: Guidelines for Electronic Text Encoding and Interchange_ 
+<br>  
+<kbd>https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html</kbd>
 
-SonnetWikipedia
 
-Iambic pentameterWikipedia
+The TEI Consortium,
+2022. Passages of Verse or Drama.  In:
+_TEI P5: Guidelines for Electronic Text Encoding and Interchange_ 
+<br>  
+<kbd>https://tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CODV</kbd>
 
-HendecasyllableWikipedia
 
-Old NorseWikipedia
+Michaëlis, Sophus,
+1883. Jeg elsker —.  In:
+_Solblomster_ 
+<br>  
+<kbd>https://tekster.kb.dk/text/adl-texts-michs_03-shoot-workid68251</kbd>
 
-Eberhart, Larry2018Italian or Petrarchan SonnetEvery Sonnet: The sonnet forms database
+
+Sonnet.  In:
+_Wikipedia_ 
+<br>  
+<kbd>https://en.wikipedia.org/wiki/Sonnet</kbd>
+
+
+Iambic pentameter.  In:
+_Wikipedia_ 
+<br>  
+<kbd>https://en.wikipedia.org/wiki/Iambic_pentameter</kbd>
+
+
+Hendecasyllable.  In:
+_Wikipedia_ 
+<br>  
+<kbd>https://en.wikipedia.org/wiki/Hendecasyllable</kbd>
+
+
+Old Norse.  In:
+_Wikipedia_ 
+<br>  
+<kbd>https://en.wikipedia.org/wiki/Old_Norse</kbd>
+
+
+Eberhart, Larry,
+2018. Italian or Petrarchan Sonnet.  In:
+_Every Sonnet: The sonnet forms database_ 
+<br>  
+<kbd>https://poetscollective.org/everysonnet/tag/abbaabbacdecde/#post-119</kbd>
+
