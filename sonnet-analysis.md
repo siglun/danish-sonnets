@@ -348,62 +348,62 @@ The preliminary result from my armchair text processing exercise supports the no
 Church, Kenneth Ward,
 [date unknown]. _Unix™ for Poets_ 
 <br>  
-<kbd>https://web.stanford.edu/class/cs124/kwc-unix-for-poets.pdf</kbd>
+<kbd>[https://web.stanford.edu/class/cs124/kwc-unix-for-poets.pdf](https://web.stanford.edu/class/cs124/kwc-unix-for-poets.pdf)</kbd>
 
 
 Det Kgl. Bibliotek,  and Det Danske Sprog- og Litteraturselskab,
 2000 - 2022. _The ADL text corpus_ 
 <br>  
-<kbd>https://github.com/kb-dk/public-adl-text-sources</kbd>
+<kbd>[https://github.com/kb-dk/public-adl-text-sources](https://github.com/kb-dk/public-adl-text-sources)</kbd>
 
 
 The TEI Consortium,
 2022. _TEI P5: Guidelines for Electronic Text Encoding and Interchange_ 
 <br>  
-<kbd>https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html</kbd>
+<kbd>[https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html](https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html)</kbd>
 
 
 The TEI Consortium,
 2022. Passages of Verse or Drama.  In:
 _TEI P5: Guidelines for Electronic Text Encoding and Interchange_ 
 <br>  
-<kbd>https://tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CODV</kbd>
+<kbd>[https://tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CODV](https://tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CODV)</kbd>
 
 
 Michaëlis, Sophus,
 1883. Jeg elsker —.  In:
 _Solblomster_ 
 <br>  
-<kbd>https://tekster.kb.dk/text/adl-texts-michs_03-shoot-workid68251</kbd>
+<kbd>[https://tekster.kb.dk/text/adl-texts-michs_03-shoot-workid68251](https://tekster.kb.dk/text/adl-texts-michs_03-shoot-workid68251)</kbd>
 
 
 Sonnet.  In:
 _Wikipedia_ 
 <br>  
-<kbd>https://en.wikipedia.org/wiki/Sonnet</kbd>
+<kbd>[https://en.wikipedia.org/wiki/Sonnet](https://en.wikipedia.org/wiki/Sonnet)</kbd>
 
 
 Iambic pentameter.  In:
 _Wikipedia_ 
 <br>  
-<kbd>https://en.wikipedia.org/wiki/Iambic_pentameter</kbd>
+<kbd>[https://en.wikipedia.org/wiki/Iambic_pentameter](https://en.wikipedia.org/wiki/Iambic_pentameter)</kbd>
 
 
 Hendecasyllable.  In:
 _Wikipedia_ 
 <br>  
-<kbd>https://en.wikipedia.org/wiki/Hendecasyllable</kbd>
+<kbd>[https://en.wikipedia.org/wiki/Hendecasyllable](https://en.wikipedia.org/wiki/Hendecasyllable)</kbd>
 
 
 Old Norse.  In:
 _Wikipedia_ 
 <br>  
-<kbd>https://en.wikipedia.org/wiki/Old_Norse</kbd>
+<kbd>[https://en.wikipedia.org/wiki/Old_Norse](https://en.wikipedia.org/wiki/Old_Norse)</kbd>
 
 
 Eberhart, Larry,
 2018. Italian or Petrarchan Sonnet.  In:
 _Every Sonnet: The sonnet forms database_ 
 <br>  
-<kbd>https://poetscollective.org/everysonnet/tag/abbaabbacdecde/#post-119</kbd>
+<kbd>[https://poetscollective.org/everysonnet/tag/abbaabbacdecde/#post-119](https://poetscollective.org/everysonnet/tag/abbaabbacdecde/#post-119)</kbd>
 
