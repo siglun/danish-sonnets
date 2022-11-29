@@ -12,7 +12,7 @@ word frequency analyses.
 The results clearly shows that simple Unix™ for Poets
 analyses combines seamlessly with TEI markup and XML technologies.
 
-
+* [sonnet-analysis.md](sonnet-analysis.md)
 * [sonnet-analysis.html](sonnet-analysis.html)
 * [sonnet-analysis.pdf](sonnet-analysis.pdf)
 * [sonnet-analysis.xml](sonnet-analysis.xml)
