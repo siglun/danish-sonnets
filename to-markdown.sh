@@ -3,6 +3,6 @@
 
 source "parameters.sh"
 
-$SAXON  article.xml  tei-to-markdown.xsl > article.md
+$SAXON  sonnet-analysis.xml  tei-to-markdown.xsl > sonnet-analysis.md
 
 
