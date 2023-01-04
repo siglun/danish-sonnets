@@ -459,7 +459,7 @@ As you can see this corroborates the established observation that the most frequ
 .LP
 The distribution shows number of words graphed against number of sonnets. There are 3304 words occurring in just one sonnet. The leftmost, and highest, point on the graph has the coordinate (1,3304).
 .LP
-There is just one word appearing in all 160 sonnets. It is 'og' meaning 'and' correspoding to the rightmost point on the graph which has the coordinate (160,1). As a rule of thumb the most common words are all conjunctions, next to them comes prepositions and after those come pronomina.
+There is just one word appearing in all 160 sonnets. It is 'og' meaning 'and' corresponding to the rightmost point on the graph which has the coordinate (160,1). As a rule of thumb the most common words are all conjunctions, next to them comes prepositions and after those come pronomina.
 .LP
 The  
 .pdfhref W -D https://github.com/siglun/danish-sonnets/blob/main/distribution.text distribution.text
