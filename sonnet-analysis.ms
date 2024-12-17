@@ -5,8 +5,6 @@ Musings of a software developer
 .AU
 Sigfrid Lundberg
 .AI
-slu@kb.dk
-Digital Transformation
 Royal Danish Library
 Post box 2149
 1016 Copenhagen K
@@ -22,22 +20,22 @@ Introduction
 .LP
 If there are any sonnets, do they rhyme and what are they about?
 .LP
-I have since many years been a great fan of the tutorial \fIUnix™ for Poets\fP by
-.pdfhref L -D kennethchurch Kenneth Ward Church.
+I have since many years been a great fan of the tutorial \fIUnix™ for Poets\fP byKenneth Ward Church.  
+.pdfhref L -D kennethchurch  [kennethchurch]
 \&This note is an investigation of what can be done with a corpus of literary text with very simple tools similar to the ones described by Church in his tutorial. I do not claim that there is anything novel or even significant in this text. Being a scientist, I think like a scientist and don't expect any deep literary theory here.
 .SH
 Finding poems
 .LP
-The ADL text corpus contains
-.pdfhref L -D adlcorpus literary texts.
-\&Since the texts are encoded according to the
-.pdfhref L -D teiguidelines TEI guidelines
-\&it is easy to find poetry in those files. Typically a piece of poetry is encoded as
-.pdfhref L -D tei-ref-lg lines within line groups
+The ADL text corpus containsliterary texts.  
+.pdfhref L -D adlcorpus  [adlcorpus]
+\&Since the texts are encoded according to theTEI guidelines  
+.pdfhref L -D teiguidelines  [teiguidelines]
+\&it is easy to find poetry in those files. Typically a piece of poetry is encoded aslines within line groups  
+.pdfhref L -D tei-ref-lg  [tei-ref-lg]
 \&. More often than not the line groups are embedded in\& \f(CR<div> ... </div>\fP elements.
 .LP
-A poem may look like this in the source. The poem is by
-.pdfhref L -D sophus Sophus Michaëlis (1883).
+A poem may look like this in the source. The poem is bySophus Michaëlis (1883).  
+.pdfhref L -D sophus  [sophus]
 \&
 .DS L
 \f(CR\s-2
@@ -74,16 +72,16 @@ A poem may look like this in the source. The poem is by
 .LP
 The default name space is declared as xmlns="http://www.tei-c.org/ns/1.0", which we in following refer to with the namespace prefix 't'.
 .LP
-The poem comprises four line groups with four, four, three and three lines. That is a very common strophe structure (according to the
-.pdfhref L -D sonnets Sonnets
+The poem comprises four line groups with four, four, three and three lines. That is a very common strophe structure (according to theSonnets  
+.pdfhref L -D sonnets  [sonnets]
 \&article in Wikipedia), at least in Scandinavia. It is not always like that, but they all contain 14 lines.
 .LP
-Shakespeare wrote often his 14 lines typographically in one strophe, whereas Francesco Petrarca wrote them in two strophes with eight and six lines, respectively (again see article
-.pdfhref L -D sonnets Sonnets
+Shakespeare wrote often his 14 lines typographically in one strophe, whereas Francesco Petrarca wrote them in two strophes with eight and six lines, respectively (again see articleSonnets  
+.pdfhref L -D sonnets  [sonnets]
 \&in Wikipedia).
 .LP
-To be more precise, a sonnet has one more characteristics than having 14 lines, the lines should be in
-.pdfhref L -D pentameter iambic pentameter.
+To be more precise, a sonnet has one more characteristics than having 14 lines, the lines should be iniambic pentameter.  
+.pdfhref L -D pentameter  [pentameter]
 \&
 .SH
 Finding sonnets
@@ -142,9 +140,9 @@ Any way, this script calculates the average number of vowels per line in poems w
 .LP
 We use the replace function and a regular expression to remove everything in each line except the vowels. Then we measure the string length which should equal the number of vowels per line and add them together for all lines in the poem. Finally we divide that sum with 14 and get the average number of vowels per line.
 .LP
-For a sonnet it would be about 10,
-.pdfhref L -D hendecasyllable or occasionally a little more.
-\&Danish is a language rich in diftons, which could be another reason for lines deviating from the expected 10 vowels. In the Michaëlis poem quoted above it is 10.4.
+For a sonnet it would be about 10, or occasionally a little more  
+.pdfhref L -D hendecasyllabic  [hendecasyllabic]
+\&. Danish is a language rich in diftons, which could be another reason for lines deviating from the expected 10 vowels. In the Michaëlis poem quoted above it is 10.4.
 .SH
 Strophe structure
 .LP
@@ -374,8 +372,8 @@ and
 .LP
 So while it may fail more often than it succeeds, the successes give results that are reasonable.
 .LP
-The rhyme structure abbaabbacdecde is one is the most common ones found. Also it is one of the socalled Petrarchan rhyme schemes (
-.pdfhref L -D everysonnet Eberhart, 2018
+The rhyme structure abbaabbacdecde is one is the most common ones found. Also it is one of the socalled Petrarchan rhyme schemes (Eberhart, 2018  
+.pdfhref L -D everysonnet  [everysonnet]
 \&).
 .SH
 What are the sonnets about?
@@ -556,8 +554,8 @@ Men more than women, and in particular words implying bravery and male virtues
 .LP
 Remember that these sonnets are by men.
 \fImandom\fP
-implies a man's existence as a grownup man. Originally, in
-.pdfhref L -D oldnorse old norse
+implies a man's existence as a grownup man. Originally, inold norse  
+.pdfhref L -D oldnorse  [oldnorse]
 \&, mand meant, just as in Old English, human. That, however, was when it was doubtful if women were actually human. Baadsmandstrille is a derivative of baadsmand (boatswain) which is another name for a sailor or petty officer. A baadsmandstrille is presumably a song sung by sailors.
 .LP
 Graves occur, for some reason, less than deaths
@@ -580,8 +578,8 @@ indgraves is most likely a kind of
 .SH
 Conclusions
 .LP
-I think I could go on studying this for quite some time. However, I have to conclude this here, before the actual conclusions. There are interesting things to find here, though. Some of them are possible to study using simple methods, such as those described by
-.pdfhref L -D kennethchurch Kenneth Ward Church
+I think I could go on studying this for quite some time. However, I have to conclude this here, before the actual conclusions. There are interesting things to find here, though. Some of them are possible to study using simple methods, such as those described byKenneth Ward Church  
+.pdfhref L -D kennethchurch  [kennethchurch]
 \&in his \fIUnix™ for Poets\fP .
 .LP
 The preliminary result from my armchair text processing exercise supports the notion that life was already in early modern Europe about sex, death and rock n'roll. Since rock wasn't there just yet, people had to be content with sonnets for the time being.
@@ -613,7 +611,7 @@ Eberhart, Larry,
 .pdfhref W -D https://poetscollective.org/everysonnet/tag/abbaabbacdecde/#post-119 https://poetscollective.org/everysonnet/tag/abbaabbacdecde/#post-119
 \fP\s+2
 .XP
-.pdfhref M -N hendecasyllable
+.pdfhref M -N hendecasyllabic
 Hendecasyllable.  In:
 \fIWikipedia\fP 
 .br  

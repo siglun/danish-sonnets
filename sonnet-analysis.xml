@@ -198,7 +198,7 @@
         number of vowels per line.</p>
 
         <p>For a sonnet it would be about 10,
-        <ref target="#hendecasyllable">or occasionally a little more.</ref>
+	or occasionally a little more <ref target="#hendecasyllabic"/>.
         Danish is a language rich in diftons,
         which could be another reason for lines deviating from the expected 10 vowels.
         In the Michaëlis poem quoted above it is 10.4.</p>
@@ -645,7 +645,7 @@
         <p>Remember that these sonnets are by men.
         <hi rend="italic">mandom</hi> implies a man&apos;s existence as a grownup man.
         Originally,
-        in <ref target="#oldnorse">old norse</ref>,
+        in old norse <ref target="#oldnorse"/>,
         mand meant,
         just as in Old English,
         human.
@@ -742,7 +742,7 @@
             <ref target="https://en.wikipedia.org/wiki/Iambic_pentameter"/>
           </bibl>
 
-          <bibl xml:id="hendecasyllable">
+          <bibl xml:id="hendecasyllabic">
             <title level="a">Hendecasyllable</title>
             <title level="m">Wikipedia</title>
             <ref target="https://en.wikipedia.org/wiki/Hendecasyllable"/>

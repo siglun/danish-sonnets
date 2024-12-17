@@ -67,13 +67,13 @@ Notes
 <xsl:template match="t:listBibl">
 <xsl:apply-templates select="t:head"/>
 <xsl:apply-templates select="t:bibl">
-<xsl:sort select="t:author[1]|t:title[1]" data-type="text"/>
+  <xsl:sort select="t:author[1]|t:title[1]" data-type="text"/>
 </xsl:apply-templates>
 </xsl:template>
 
-<xsl:template match="t:bibl">
+<xsl:template match="t:bibl"><xsl:text>
 .XP
-.pdfhref M -N <xsl:value-of select="@xml:id"/><xsl:text>
+.pdfhref M -N </xsl:text><xsl:value-of select="@xml:id"/><xsl:text>
 </xsl:text><xsl:for-each select="t:author|t:editor"><xsl:if test="position() > 1 and position()=last()"><xsl:text> and </xsl:text></xsl:if><xsl:apply-templates/><xsl:if test="position() >= 1 and not(position() = last())"><xsl:text>, </xsl:text></xsl:if></xsl:for-each><xsl:if test="t:date"><xsl:text>,
 </xsl:text><xsl:apply-templates select="t:date"/><xsl:text>. </xsl:text></xsl:if><xsl:if test="t:title">
 <xsl:if test="t:title[@level = 'a']">
@@ -129,7 +129,10 @@ Notes
 </xsl:template>
 
 <xsl:template match="t:ref[contains(substring(@target,1,1),'#')]">
-.pdfhref L -D <xsl:value-of select="substring-after(@target,'#')"/> <xsl:text> </xsl:text> <xsl:apply-templates/> <xsl:text>
+<xsl:apply-templates/>  
+.pdfhref L -D <xsl:value-of select="substring-after(@target,'#')"/> <xsl:text>  [</xsl:text><xsl:value-of select="substring-after(@target,'#')"/><xsl:text>]</xsl:text>
+
+<xsl:text>
 \&amp;</xsl:text></xsl:template>
 
 <xsl:template match="t:ref">
