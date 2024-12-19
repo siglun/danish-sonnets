@@ -131,13 +131,9 @@
         <head>Finding sonnets</head>
 
         <p>You can easily find all poems in the corpus based on a
-        XPATH query like:</p>
+        XPATH query like: <eg xml:space="preserve"><![CDATA[ //t:div[t:lg and @decls] ]]></eg>
 
-        <eg xml:space="preserve"><![CDATA[ 
-        //t:div[t:lg and @decls]
-        ]]></eg>
-
-        <p>We can use that query in XSLT like this:</p>
+        We can use that query in XSLT like this:</p>
 
         <eg xml:space="preserve"><![CDATA[ 
         <xsl:for-each select="//t:div[t:lg and @decls]">

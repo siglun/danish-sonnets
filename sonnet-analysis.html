@@ -331,11 +331,9 @@ p.version {
       </p>
       <h2>Finding sonnets</h2>
       <p>You can easily find all poems in the corpus based on a
-        XPATH query like:</p>
-      <pre> 
-        //t:div[t:lg and @decls]
-        </pre>
-      <p>We can use that query in XSLT like this:</p>
+        XPATH query like: <pre> //t:div[t:lg and @decls] </pre>
+
+        We can use that query in XSLT like this:</p>
       <pre> 
         &lt;xsl:for-each select="//t:div[t:lg and @decls]"&gt;
            &lt;xsl:if test="count(.//t:lg/t:l)=14"&gt;

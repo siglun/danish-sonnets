@@ -90,11 +90,8 @@ Finding sonnets
 .LP
 You can easily find all poems in the corpus based on a XPATH query like:
 .DS L
-\f(CR\s-2 
-        //t:div[t:lg and @decls]
-        \fP
+\f(CR\s-2 //t:div[t:lg and @decls] \fP
 .DE
-.LP
 We can use that query in XSLT like this:
 .DS L
 \f(CR\s-2 
