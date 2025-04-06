@@ -5,12 +5,10 @@ Musings of a software developer
 .AU
 Sigfrid Lundberg
 .AI
-slu@kb.dk
-Digital Transformation
-Royal Danish Library
-Post box 2149
-1016 Copenhagen K
-Denmark
+Independent\**
+.FS
+This research was made when the author was affiliated with Royal Danish Library
+.FE
 .AB
 .LP
 This note discusses how software can recognize sonnets, by analysis of text length, strophe structure and number of syllables per line. It also makes a simple content analysis based on word frequency analyses.

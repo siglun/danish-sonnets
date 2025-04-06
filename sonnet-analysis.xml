@@ -34,12 +34,13 @@
       <docAuthor>
 	<name>Sigfrid Lundberg</name>
 	<address>
-	  <addrLine>slu@kb.dk</addrLine>
+	  <addrLine>Independent<note>This research was made when the author was affiliated with Royal Danish Library</note> </addrLine>
+	  <!-- addrLine>slu@kb.dk</addrLine>
 	  <addrLine>Digital Transformation</addrLine>
 	  <addrLine>Royal Danish Library</addrLine>
 	  <addrLine>Post box 2149</addrLine>
 	  <addrLine>1016 Copenhagen K</addrLine>
-	  <addrLine>Denmark</addrLine>
+	  <addrLine>Denmark</addrLine -->
 	</address>
       </docAuthor>
       <div type="abstract">
