@@ -36,10 +36,10 @@ processing using xmllint.
 The documents are authored in TEI xml and you need xsltproc and GNU
 groff to format them.
 
-There is a ``parameters.sh'' which is sourced all over the place. Edit
+There is a parameters.sh which is sourced all over the place. Edit
 it to set relevant parameters:
 
-``
+```
 SAXON_JAR="/where/your/Saxon-HE-9.9. or better can be found .jar"
 SAXON="java -jar $SAXON_JAR "
 
@@ -47,4 +47,4 @@ PROJECTS="$HOME/projects"
 
 HERE="$PROJECTS/danish-sonnets"
 THERE="$PROJECTS/public-adl-text-sources"
-''
+```
