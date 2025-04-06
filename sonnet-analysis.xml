@@ -35,8 +35,6 @@
 	<name>Sigfrid Lundberg</name>
 	<address>
 	  <addrLine>Independent<note>
-	  Scripts and data are on
-	  <ref target="https://github.com/siglun/danish-sonnets">https://github.com/siglun/danish-sonnets</ref>
 	  This research was made when the author was affiliated with Royal Danish Library.</note></addrLine>
 	  <!-- addrLine>slu@kb.dk</addrLine>
 	  <addrLine>Digital Transformation</addrLine>
@@ -66,6 +64,9 @@
         I do not claim that there is anything novel or even significant in
         this text. Being a scientist, I think like a scientist and don't
         expect any deep literary theory here.</p>
+
+	<p>Scripts and data are available on <ref
+	target="https://github.com/siglun/danish-sonnets">https://github.com/siglun/danish-sonnets</ref></p>
       </div>
       
       <div>

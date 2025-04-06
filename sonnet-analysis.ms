@@ -7,8 +7,6 @@ Sigfrid Lundberg
 .AI
 Independent\**
 .FS
-Scripts and data are on  
-.pdfhref W -D https://github.com/siglun/danish-sonnets https://github.com/siglun/danish-sonnets
 This research was made when the author was affiliated with Royal Danish Library.
 .FE
 .AB
@@ -25,6 +23,9 @@ If there are any sonnets, do they rhyme and what are they about?
 I have since many years been a great fan of the tutorial \fIUnix™ for Poets\fP by
 .pdfhref L -D kennethchurch Kenneth Ward Church.
 \&This note is an investigation of what can be done with a corpus of literary text with very simple tools similar to the ones described by Church in his tutorial. I do not claim that there is anything novel or even significant in this text. Being a scientist, I think like a scientist and don't expect any deep literary theory here.
+.LP
+Scripts and data are available on  
+.pdfhref W -D https://github.com/siglun/danish-sonnets https://github.com/siglun/danish-sonnets
 .SH
 Finding poems
 .LP
