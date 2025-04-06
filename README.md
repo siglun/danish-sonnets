@@ -36,7 +36,7 @@ processing using xmllint.
 The documents are authored in TEI xml and you need xsltproc and GNU
 groff to format them.
 
-There is a parameters.sh which is sourced all over the place. Edit
+There is a ```parameters.sh``` which is sourced all over the place. Edit
 it to set relevant parameters:
 
 ```
