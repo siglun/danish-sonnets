@@ -7,7 +7,9 @@ Sigfrid Lundberg
 .AI
 Independent\**
 .FS
-This research was made when the author was affiliated with Royal Danish Library
+Scripts and data are on  
+.pdfhref W -D https://github.com/siglun/danish-sonnets https://github.com/siglun/danish-sonnets
+This research was made when the author was affiliated with Royal Danish Library.
 .FE
 .AB
 .LP
@@ -424,8 +426,8 @@ There are 160 sonnets in the selection, and the most frequent word occurs in all
 .DE
 .LP
 and this is the list of the same thing, but measured as the grand total  
-.pdfhref W -D https://github.com/siglun/danish-sonnets/blob/main/frequencies.text occurrence of the words in the corpus
-. Number of words in corpus in left column.
+.pdfhref W -D https://github.com/siglun/danish-sonnets/blob/main/frequencies.text occurrence
+of the words in the corpus. Number of words in corpus in left column.
 .DS L
 \f(CR\s-2 
         109 min

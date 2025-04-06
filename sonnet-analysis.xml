@@ -34,7 +34,10 @@
       <docAuthor>
 	<name>Sigfrid Lundberg</name>
 	<address>
-	  <addrLine>Independent<note>This research was made when the author was affiliated with Royal Danish Library</note> </addrLine>
+	  <addrLine>Independent<note>
+	  Scripts and data are on
+	  <ref target="https://github.com/siglun/danish-sonnets">https://github.com/siglun/danish-sonnets</ref>
+	  This research was made when the author was affiliated with Royal Danish Library.</note></addrLine>
 	  <!-- addrLine>slu@kb.dk</addrLine>
 	  <addrLine>Digital Transformation</addrLine>
 	  <addrLine>Royal Danish Library</addrLine>
@@ -515,7 +518,7 @@
         ]]></eg>
 
         <p>and this is the list of the same thing,
-        but measured as the grand total <ref target="frequencies.text">occurrence of the words in the corpus</ref>.
+        but measured as the grand total <ref target="frequencies.text">occurrence</ref> of the words in the corpus.
         Number of words in corpus in left column.</p>
 
         <eg xml:space="preserve"><![CDATA[ 
